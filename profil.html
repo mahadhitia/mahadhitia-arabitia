@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #4B2E4C;
+      color: #F8F9FA;
+    
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    
+      padding: 60px 0 40px 0;
+      opacity: 1;
+      will-change: opacity;
+      }
+      
+    body.fade-out {
+      opacity: 0;
+    }
+
+    /* CONTAINER */
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 0 20px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .container.fade-out {
+      opacity: 0;
+    }
+    
+    .container.loaded .title::after {
+      transform: scaleX(1);
+    }
+
+    /* TITLE */
+    .title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #F6C32E;
+
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* 🔥 GARIS ANIMASI (FIX) */
+    .title::after {
+      content: "";
+      display: block;
+
+      width: 75%;
+      height: 4px;
+      background: #F6C32E;
+
+      margin: 10px auto 0;
+      border-radius: 2px;
+
+      transform: scaleX(0.4);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    body.loaded .title::after {
+      transform: scaleX(1);
+    }
+
+    /* CARD */
+    .card {
+      background: #2E1B2F;
+      padding: 28px 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    
+      width: 100%;        /* 🔥 FULL di HP */
+      max-width: 360px;   /* 🔥 tetap rapi di desktop */
+      margin: 0 auto;
+    }
+
+    /* FOTO */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      border: 4px solid #F6C32E;
+
+      box-shadow: 
+        0 8px 25px rgba(0,0,0,0.6),
+        0 0 0 4px rgba(246,195,46,0.15);
+    }
+
+    /* NAMA */
+    .name {
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* QUOTE (FIX KIRI + KANAN) */
+    .quote {
+      font-size: 14px;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+    
+      width: 100%;           /* 🔥 ikut card */
+      max-width: 100%;       /* 🔥 jangan dibatasi lagi */
+    
+      text-align: left;
+    
+      padding-left: 12px;
+      border-left: 3px solid #F6C32E;
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 26px;
+      }
+    
+      body {
+        padding-top: 60px;
+      }
+    }
+    
+    /* BUTTON HOME (SAMA KAYAK MENU) */
+    .btn-home {
+      width: 60px;
+      height: 60px;
+
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+
+      background: #2E1B2F;
+      color: #F8F9FA;
+
+      font-size: 24px;
+
+      margin: 25px auto 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: all 0.15s ease;
+    }
+
+    .btn-home:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-home:active {
+      transform: translateY(2px);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 16px;
+
+      width: 100%;
+      text-align: center;
+
+      font-size: 12px;
+      opacity: 0.5;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="title">Profil Pengembang</h1>
+
+    <div class="card">
+
+      <img src="image/pp-mahad.jpg" class="profile-img">
+
+      <div class="name">Naufal</div>
+
+      <div class="quote">
+        Assalamu’alaikum.  
+        Perkenalkan, saya Muhammad Naufal Mahadhitia dari Ciwidey, Bandung.  
+      
+        Saya suka belajar hal-hal yang saya minati, salah satunya bahasa Arab.  
+        Web ini awalnya dibuat untuk latihan pribadi, tapi semoga bisa bermanfaat juga untuk teman-teman.  
+      
+        Silakan digunakan dengan baik ya!  
+        Syukran.
+      </div>
+
+    </div>
+
+    <!-- 🔥 GANTI JADI ICON HOME -->
+    <button class="btn-home" onclick="go('index.html')">
+      🏠
+    </button>
+
+  </div>
+
+  <div class="footer">
+    Dibuat oleh Mahadhitia
+  </div>
+
+  <script>
+  function go(url) {
+    const el = document.querySelector(".app");
+    if (el) el.classList.add("fade-out");
+  
+    setTimeout(() => {
+      window.location.href = url;
+    }, 250);
+  }
+  
+  function showPage() {
+    const el = document.querySelector(".app");
+    if (!el) return;
+  
+    el.classList.remove("fade-out");
+    el.classList.add("loaded");
+  }
+  
+  window.addEventListener("load", showPage);
+  window.addEventListener("pageshow", showPage);
+  </script>
+
+</body>
+</html>
