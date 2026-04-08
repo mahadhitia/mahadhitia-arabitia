@@ -230,29 +230,26 @@
   <audio id="clickSound" src="sound/click.mp3" preload="auto"></audio>
   
   <script>
-  function go(url) {
+    function go(url) {
     const el = document.querySelector(".container");
     const audio = document.getElementById("clickSound");
   
-    // 🔊 play audio
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
   
-    // 🎨 fade dikit setelah klik
     setTimeout(() => {
       if (el) el.classList.add("fade-out");
     }, 50);
   
-    // 🚀 pindah setelah audio selesai
     if (audio) {
       audio.onended = () => {
-        window.location.replace(url);
+        window.location.href = url; // 🔥 INI DIUBAH
       };
     } else {
       setTimeout(() => {
-        window.location.replace(url);
+        window.location.href = url; // 🔥 INI DIUBAH
       }, 300);
     }
   }
