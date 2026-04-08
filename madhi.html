@@ -284,7 +284,6 @@
 
 <body>
 <audio id="clickSound" preload="auto" src="sound/click.mp3"></audio>
-<audio id="shortSound" preload="auto" src="sound/short.mp3"></audio>
 
   <div class="app">
     <h1 class="title">Fi'il Madhi</h1>
@@ -308,11 +307,11 @@
 
       <!-- Tombol -->
       <div class="buttons">
-        <button class="generate" onclick="handleClick(this); generateSentence()">
+        <button class="generate" onclick="generateSentence()">
           Buat Kalimat
         </button>
         
-        <button class="answer-btn" onclick="handleClick(this); showAnswer()">
+        <button class="answer-btn" onclick="showAnswer()">
           Lihat Jawaban
         </button>
 
@@ -338,40 +337,7 @@
   
   <script>
   /* =========================
-     🔊 AUDIO
-  ========================= */
-  function playShort() {
-    const audio = document.getElementById("shortSound");
-    if (!audio) return;
-  
-    audio.currentTime = 0;
-    audio.play();
-  }
-  
-  function playClick() {
-    const audio = document.getElementById("clickSound");
-    if (!audio) return;
-  
-    audio.currentTime = 0;
-    audio.play();
-  }
-  
-  /* =========================
-     🔘 HANDLE BUTTON LATIHAN
-     (pakai short.mp3)
-  ========================= */
-  function handleClick(btn) {
-    // animasi
-    btn.classList.add("clicked");
-    setTimeout(() => btn.classList.remove("clicked"), 200);
-  
-    // 🔊 short sound
-    playShort();
-  }
-  
-  /* =========================
-     🚀 NAVIGASI BACK
-     (pakai click.mp3 + delay)
+     🚀 NAVIGASI BACK (ONLY AUDIO)
   ========================= */
   function go(url) {
     const el = document.querySelector(".app");
@@ -382,12 +348,12 @@
   
       audio.play().then(() => {
   
-        // 🔥 BARU fade setelah audio mulai
+        // 🔥 fade setelah audio mulai
         if (el) el.classList.add("fade-out");
   
         setTimeout(() => {
           window.location.href = url;
-        }, 300);
+        }, 500); // 🔥 delay biar ga kepotong
   
       }).catch(() => {
         window.location.href = url;
@@ -413,31 +379,27 @@
   window.addEventListener("pageshow", showPage);
   
   /* =========================
-     📱 UNLOCK AUDIO MOBILE
+     🔓 UNLOCK AUDIO (WAJIB)
   ========================= */
   let audioUnlocked = false;
   
   function unlockAudio() {
     if (audioUnlocked) return;
   
-    const a1 = document.getElementById("clickSound");
-    const a2 = document.getElementById("shortSound");
+    const audio = document.getElementById("clickSound");
   
-    [a1, a2].forEach(audio => {
-      if (audio) {
-        audio.volume = 0; // 🔥 silent unlock
-        audio.play().then(() => {
-          audio.pause();
-          audio.currentTime = 0;
-          audio.volume = 1; // balik normal
-        });
-      }
-    });
+    if (audio) {
+      audio.volume = 0;
+      audio.play().then(() => {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 1;
+      });
+    }
   
     audioUnlocked = true;
   }
   
-  // 🔥 trigger di SEMUA jenis klik
   document.addEventListener("click", unlockAudio, { once: true });
   document.addEventListener("touchstart", unlockAudio, { once: true });
   </script>
