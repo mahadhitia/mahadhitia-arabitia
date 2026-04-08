@@ -340,14 +340,14 @@
         if (el) el.classList.add("fade-out");
   
         setTimeout(() => {
-          window.location.href = "menu.html";
+          window.location.replace("menu.html");
         }, 500);
       })
       .catch(() => {
         if (el) el.classList.add("fade-out");
   
         setTimeout(() => {
-          window.location.href = "menu.html";
+          window.location.replace("menu.html");
         }, 200);
       });
   }
