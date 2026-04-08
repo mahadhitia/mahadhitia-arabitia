@@ -247,11 +247,11 @@
   
     if (audio) {
       audio.onended = () => {
-        window.location.href = url;
+        window.location.replace(url);
       };
     } else {
       setTimeout(() => {
-        window.location.href = url;
+        window.location.replace(url);
       }, 300);
     }
   }
