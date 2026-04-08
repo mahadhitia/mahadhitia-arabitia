@@ -226,14 +226,34 @@
     Dibuat oleh Mahadhitia
   </div>
 
+  <audio id="clickSound" src="sound/click.mp3" preload="auto"></audio>
+  
   <script>
   function go(url) {
     const el = document.querySelector(".container");
-    if (el) el.classList.add("fade-out");
+    const audio = document.getElementById("clickSound");
   
+    // 🔊 play audio
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    // 🎨 fade sedikit setelah klik
     setTimeout(() => {
-      window.location.href = url;
-    }, 250);
+      if (el) el.classList.add("fade-out");
+    }, 50);
+  
+    // 🚀 pindah setelah audio selesai
+    if (audio) {
+      audio.onended = () => {
+        window.location.href = url;
+      };
+    } else {
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
+    }
   }
   
   function showPage() {
@@ -243,6 +263,17 @@
     el.classList.remove("fade-out");
     el.classList.add("loaded");
   }
+  
+  // 🔥 unlock audio HP
+  document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("clickSound");
+    if (audio) {
+      audio.play().then(() => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    }
+  }, { once: true });
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
