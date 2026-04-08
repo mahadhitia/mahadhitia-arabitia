@@ -230,7 +230,7 @@
   <audio id="clickSound" src="sound/click.mp3" preload="auto"></audio>
   
   <script>
-    function go(url) {
+  function go(url) {
     const el = document.querySelector(".container");
     const audio = document.getElementById("clickSound");
   
@@ -245,16 +245,33 @@
   
     if (audio) {
       audio.onended = () => {
-        window.location.href = url; // 🔥 INI DIUBAH
+  
+        // 🔥 LOGIKA PENTING
+        if (url === "index.html") {
+          // balik ke root → replace
+          window.location.replace(url);
+        } else {
+          // ke mode → push (href)
+          window.location.href = url;
+        }
+  
       };
     } else {
       setTimeout(() => {
-        window.location.href = url; // 🔥 INI DIUBAH
+  
+        if (url === "index.html") {
+          window.location.replace(url);
+        } else {
+          window.location.href = url;
+        }
+  
       }, 300);
     }
   }
   
   function showPage() {
+    document.body.style.opacity = 1;
+  
     const el = document.querySelector(".container");
     if (!el) return;
   
@@ -262,7 +279,7 @@
     el.classList.add("loaded");
   }
   
-  // 🔥 unlock audio di HP
+  // unlock audio
   document.addEventListener("touchstart", () => {
     const audio = document.getElementById("clickSound");
     if (audio) {
