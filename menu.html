@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Mode</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* 🔥 no scroll */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #4B2E4C;
+      color: #F8F9FA;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 140px;
+    }
+
+    /* saat keluar halaman */
+    body.fade-out {
+      opacity: 0;
+    }
+
+    /* CONTAINER */
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 700px;
+      padding: 0 20px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .container.fade-out {
+      opacity: 0;
+    }
+    
+    .container.loaded .title::after {
+      transform: scaleX(1);
+    }
+
+    /* TITLE */
+    .title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #F6C32E;
+    
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    
+      letter-spacing: 0.5px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* garis animasi */
+    .title::after {
+      content: "";
+      display: block;
+      width: 75%;
+      max-width: 100%;
+      height: 4px;
+      background: #F6C32E;
+    
+      margin: 10px auto 0;
+      border-radius: 2px;
+      opacity: 0.9;
+    
+      transform: scaleX(0.4);
+      transition: 0.3s ease;
+    }
+    
+    body.loaded .title::after {
+      transform: scaleX(1);
+    }
+    
+    @media (max-width: 480px) {
+      .title {
+        font-size: 28px;
+      }
+    }
+
+    /* CARD */
+    .card {
+      background: #2E1B2F;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+
+      width: 65%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* BUTTON UTAMA */
+    .btn {
+      width: 100%;
+      min-width: 140px;
+    
+      padding: 14px 18px;
+      
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      font-weight: 600;
+      font-size: 16px; /* 🔥 samain */
+    
+      box-shadow: 0 4px 0 #d4a91f;
+      transition: all 0.15s ease;
+    
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
+
+    /* BUTTON HOME */
+    .btn-home {
+      width: 60px;   /* 🔥 kecil, ikut icon */
+      height: 60px;
+    
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+    
+      background: #2E1B2F; /* 🔥 ungu gelap (sama kayak card) */
+      color: #F8F9FA;
+    
+      font-size: 24px;
+    
+      margin: 25px auto 0 auto;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    
+      transition: all 0.15s ease;
+    }
+    
+    .btn-home:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-home:active {
+      transform: translateY(2px);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 16px;
+    
+      width: 100%;
+      text-align: center;
+    
+      font-size: 12px;
+      opacity: 0.5;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">Pilih Mode</h1>
+
+    <div class="card">
+
+      <button class="btn" onclick="go('madhi.html')">
+        Fi'il Madhi
+      </button>
+
+      <button class="btn" onclick="go('mudhari.html')">
+        Fi'il Mudhari'
+      </button>
+
+      <button class="btn" onclick="go('isim.html')">
+        Isim
+      </button>
+
+    </div>
+
+    <!-- 🔥 tombol kembali pindah ke bawah -->
+    <button class="btn-home" onclick="go('index.html')">
+      🏠
+    </button>
+
+  </div>
+
+  <div class="footer">
+    Dibuat oleh Mahadhitia
+  </div>
+
+  <script>
+  function go(url) {
+    const el = document.querySelector(".app");
+    if (el) el.classList.add("fade-out");
+  
+    setTimeout(() => {
+      window.location.href = url;
+    }, 250);
+  }
+  
+  function showPage() {
+    const el = document.querySelector(".app");
+    if (!el) return;
+  
+    el.classList.remove("fade-out");
+    el.classList.add("loaded");
+  }
+  
+  window.addEventListener("load", showPage);
+  window.addEventListener("pageshow", showPage);
+  </script>
+
+</body>
+</html>
