@@ -415,19 +415,31 @@
   /* =========================
      📱 UNLOCK AUDIO MOBILE
   ========================= */
-  document.addEventListener("touchstart", () => {
+  let audioUnlocked = false;
+  
+  function unlockAudio() {
+    if (audioUnlocked) return;
+  
     const a1 = document.getElementById("clickSound");
     const a2 = document.getElementById("shortSound");
   
     [a1, a2].forEach(audio => {
       if (audio) {
+        audio.volume = 0; // 🔥 silent unlock
         audio.play().then(() => {
           audio.pause();
           audio.currentTime = 0;
+          audio.volume = 1; // balik normal
         });
       }
     });
-  }, { once: true });
+  
+    audioUnlocked = true;
+  }
+  
+  // 🔥 trigger di SEMUA jenis klik
+  document.addEventListener("click", unlockAudio, { once: true });
+  document.addEventListener("touchstart", unlockAudio, { once: true });
   </script>
 
 </body>
