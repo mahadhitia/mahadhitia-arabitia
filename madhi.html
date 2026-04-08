@@ -283,7 +283,8 @@
 </head>
 
 <body>
-<audio id="clickSound" preload="auto" src="sound/denielcz-immersivecontrol-button-click-sound-463065.mp3"></audio>
+<audio id="clickSound" preload="auto" src="sound/click.mp3"></audio>
+<audio id="shortSound" preload="auto" src="sound/short.mp3"></audio>
 
   <div class="app">
     <h1 class="title">Fi'il Madhi</h1>
@@ -337,8 +338,16 @@
   
   <script>
   /* =========================
-     🔊 AUDIO CLICK
+     🔊 AUDIO
   ========================= */
+  function playShort() {
+    const audio = document.getElementById("shortSound");
+    if (!audio) return;
+  
+    audio.currentTime = 0;
+    audio.play();
+  }
+  
   function playClick() {
     const audio = document.getElementById("clickSound");
     if (!audio) return;
@@ -348,24 +357,38 @@
   }
   
   /* =========================
-     🚀 NAVIGASI (BACK BUTTON)
+     🔘 HANDLE BUTTON LATIHAN
+     (pakai short.mp3)
+  ========================= */
+  function handleClick(btn) {
+    // animasi
+    btn.classList.add("clicked");
+    setTimeout(() => btn.classList.remove("clicked"), 200);
+  
+    // 🔊 short sound
+    playShort();
+  }
+  
+  /* =========================
+     🚀 NAVIGASI BACK
+     (pakai click.mp3 + delay)
   ========================= */
   function go(url) {
     const el = document.querySelector(".app");
     const audio = document.getElementById("clickSound");
   
-    // 🔊 play audio
+    // 🔊 sound panjang
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
   
-    // 🎨 fade sedikit setelah klik
+    // 🎨 fade halus
     setTimeout(() => {
       if (el) el.classList.add("fade-out");
     }, 80);
   
-    // 🚀 pindah setelah audio selesai
+    // 🚀 pindah setelah sound selesai
     if (audio) {
       audio.onended = () => {
         window.location.href = url;
@@ -378,7 +401,7 @@
   }
   
   /* =========================
-     🎬 LOAD PAGE ANIMATION
+     🎬 LOAD ANIMATION
   ========================= */
   function showPage() {
     const el = document.querySelector(".app");
@@ -395,27 +418,18 @@
      📱 UNLOCK AUDIO MOBILE
   ========================= */
   document.addEventListener("touchstart", () => {
-    const audio = document.getElementById("clickSound");
-    if (audio) {
-      audio.play().then(() => {
-        audio.pause();
-        audio.currentTime = 0;
-      });
-    }
+    const a1 = document.getElementById("clickSound");
+    const a2 = document.getElementById("shortSound");
+  
+    [a1, a2].forEach(audio => {
+      if (audio) {
+        audio.play().then(() => {
+          audio.pause();
+          audio.currentTime = 0;
+        });
+      }
+    });
   }, { once: true });
-  
-  /* =========================
-     🔘 SOUND UNTUK TOMBOL LATIHAN
-     (generate & answer)
-  ========================= */
-  function handleClick(btn) {
-    // animasi tombol
-    btn.classList.add("clicked");
-    setTimeout(() => btn.classList.remove("clicked"), 200);
-  
-    // 🔊 bunyi klik
-    playClick();
-  }
   </script>
 
 </body>
