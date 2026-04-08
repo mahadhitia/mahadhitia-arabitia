@@ -343,22 +343,34 @@
     const el = document.querySelector(".app");
     const audio = document.getElementById("clickSound");
   
-    if (audio) {
-      audio.currentTime = 0;
+    if (!audio) {
+      window.location.href = url;
+      return;
+    }
   
-      audio.play().then(() => {
+    // reset audio
+    audio.currentTime = 0;
   
-        // 🔥 fade setelah audio mulai
-        if (el) el.classList.add("fade-out");
+    // 🔥 trik: force play via user gesture langsung
+    const playPromise = audio.play();
   
-        setTimeout(() => {
-          window.location.href = url;
-        }, 500); // 🔥 delay biar ga kepotong
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          if (el) el.classList.add("fade-out");
   
-      }).catch(() => {
-        window.location.href = url;
-      });
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500);
+        })
+        .catch(() => {
+          // 🔥 fallback kalau browser ngeblok
+          if (el) el.classList.add("fade-out");
   
+          setTimeout(() => {
+            window.location.href = url;
+          }, 200);
+        });
     } else {
       window.location.href = url;
     }
