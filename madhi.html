@@ -377,21 +377,26 @@
     const el = document.querySelector(".app");
     const audio = document.getElementById("clickSound");
   
-    // 🔊 play sound
+    // 🎨 fade dulu (biar responsif)
+    if (el) el.classList.add("fade-out");
+  
+    // 🔊 play audio (PAKAI PROMISE)
     if (audio) {
       audio.currentTime = 0;
-      audio.play();
-    }
   
-    // 🎨 fade
-    setTimeout(() => {
-      if (el) el.classList.add("fade-out");
-    }, 80);
+      audio.play().then(() => {
+        // 🚀 pindah setelah audio mulai (AMAN)
+        setTimeout(() => {
+          window.location.href = url;
+        }, 250);
+      }).catch(() => {
+        // fallback kalau audio gagal
+        window.location.href = url;
+      });
   
-    // 🚀 pindah halaman (PASTI JALAN)
-    setTimeout(() => {
+    } else {
       window.location.href = url;
-    }, 400); // sesuaikan durasi audio click
+    }
   }
   
   /* =========================
