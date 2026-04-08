@@ -377,20 +377,19 @@
     const el = document.querySelector(".app");
     const audio = document.getElementById("clickSound");
   
-    // 🎨 fade dulu (biar responsif)
-    if (el) el.classList.add("fade-out");
-  
-    // 🔊 play audio (PAKAI PROMISE)
     if (audio) {
       audio.currentTime = 0;
   
       audio.play().then(() => {
-        // 🚀 pindah setelah audio mulai (AMAN)
+  
+        // 🔥 BARU fade setelah audio mulai
+        if (el) el.classList.add("fade-out");
+  
         setTimeout(() => {
           window.location.href = url;
-        }, 250);
+        }, 300);
+  
       }).catch(() => {
-        // fallback kalau audio gagal
         window.location.href = url;
       });
   
