@@ -229,7 +229,7 @@
 
   <script>
   function go(url) {
-    const el = document.querySelector(".app");
+    const el = document.querySelector(".container");
     if (el) el.classList.add("fade-out");
   
     setTimeout(() => {
@@ -238,7 +238,7 @@
   }
   
   function showPage() {
-    const el = document.querySelector(".app");
+    const el = document.querySelector(".container");
     if (!el) return;
   
     el.classList.remove("fade-out");
