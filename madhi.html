@@ -334,46 +334,32 @@
     buildPool();
   </script>
 
-  <audio id="clickSound" preload="auto" src="sound/click.mp3"></audio>
   <script>
   /* =========================
      🚀 NAVIGASI BACK (ONLY AUDIO)
   ========================= */
   function go(url) {
     const el = document.querySelector(".app");
-    const audio = document.getElementById("clickSound");
   
-    if (!audio) {
-      window.location.href = url;
-      return;
-    }
+    // 🔥 buat audio fresh (INI KUNCI NYA)
+    const audio = new Audio("sound/click.mp3");
   
-    // reset audio
-    audio.currentTime = 0;
+    audio.play()
+      .then(() => {
+        if (el) el.classList.add("fade-out");
   
-    // 🔥 trik: force play via user gesture langsung
-    const playPromise = audio.play();
+        setTimeout(() => {
+          window.location.href = url;
+        }, 500);
+      })
+      .catch(() => {
+        // fallback kalau masih diblock
+        if (el) el.classList.add("fade-out");
   
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          if (el) el.classList.add("fade-out");
-  
-          setTimeout(() => {
-            window.location.href = url;
-          }, 500);
-        })
-        .catch(() => {
-          // 🔥 fallback kalau browser ngeblok
-          if (el) el.classList.add("fade-out");
-  
-          setTimeout(() => {
-            window.location.href = url;
-          }, 200);
-        });
-    } else {
-      window.location.href = url;
-    }
+        setTimeout(() => {
+          window.location.href = url;
+        }, 200);
+      });
   }
   
   /* =========================
@@ -389,28 +375,6 @@
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
-  
-  /* =========================
-     🔓 UNLOCK AUDIO (WAJIB)
-  ========================= */
-  let audioUnlocked = false;
-  
-  function unlockAudio() {
-    if (audioUnlocked) return;
-  
-    const audio = document.getElementById("clickSound");
-  
-    if (audio) {
-      audio.volume = 0;
-      audio.play().then(() => {
-        audio.pause();
-        audio.currentTime = 0;
-        audio.volume = 1;
-      });
-    }
-  
-    audioUnlocked = true;
-  }
   
   document.addEventListener("click", unlockAudio, { once: true });
   document.addEventListener("touchstart", unlockAudio, { once: true });
