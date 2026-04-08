@@ -330,20 +330,56 @@
 
   <script src="script.js"></script>
   <script>
+    // mode setup
     mode = "madhi";
     buildPool();
   </script>
-
-  <script>
-  function go(url) {
-    const el = document.querySelector(".app");
-    if (el) el.classList.add("fade-out");
   
-    setTimeout(() => {
-      window.location.href = url;
-    }, 250);
+  <script>
+  /* =========================
+     🔊 AUDIO CLICK
+  ========================= */
+  function playClick() {
+    const audio = document.getElementById("clickSound");
+    if (!audio) return;
+  
+    audio.currentTime = 0;
+    audio.play();
   }
   
+  /* =========================
+     🚀 NAVIGASI (BACK BUTTON)
+  ========================= */
+  function go(url) {
+    const el = document.querySelector(".app");
+    const audio = document.getElementById("clickSound");
+  
+    // 🔊 play audio
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    // 🎨 fade sedikit setelah klik
+    setTimeout(() => {
+      if (el) el.classList.add("fade-out");
+    }, 80);
+  
+    // 🚀 pindah setelah audio selesai
+    if (audio) {
+      audio.onended = () => {
+        window.location.href = url;
+      };
+    } else {
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400);
+    }
+  }
+  
+  /* =========================
+     🎬 LOAD PAGE ANIMATION
+  ========================= */
   function showPage() {
     const el = document.querySelector(".app");
     if (!el) return;
@@ -354,6 +390,32 @@
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
+  
+  /* =========================
+     📱 UNLOCK AUDIO MOBILE
+  ========================= */
+  document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("clickSound");
+    if (audio) {
+      audio.play().then(() => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    }
+  }, { once: true });
+  
+  /* =========================
+     🔘 SOUND UNTUK TOMBOL LATIHAN
+     (generate & answer)
+  ========================= */
+  function handleClick(btn) {
+    // animasi tombol
+    btn.classList.add("clicked");
+    setTimeout(() => btn.classList.remove("clicked"), 200);
+  
+    // 🔊 bunyi klik
+    playClick();
+  }
   </script>
 
 </body>
