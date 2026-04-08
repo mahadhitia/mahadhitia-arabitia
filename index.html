@@ -221,9 +221,22 @@
     Dibuat oleh Mahadhitia
   </div>
 
+  <audio id="clickSound" src="sound/click.mp3" preload="auto"></audio>
+  
   <script>
+  function playClick() {
+    const audio = document.getElementById("clickSound");
+    if (!audio) return;
+  
+    audio.currentTime = 0;
+    audio.play();
+  }
+  
   function go(url) {
     const el = document.querySelector(".container");
+  
+    playClick();
+  
     if (el) el.classList.add("fade-out");
   
     setTimeout(() => {
@@ -238,6 +251,22 @@
     el.classList.remove("fade-out");
     el.classList.add("loaded");
   }
+  
+  // 🔥 auto sound semua tombol
+  document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", playClick);
+  });
+  
+  // 🔥 unlock audio mobile
+  document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("clickSound");
+    if (audio) {
+      audio.play().then(() => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    }
+  }, { once: true });
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
