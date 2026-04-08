@@ -281,7 +281,6 @@
 </head>
 
 <body>
-<audio id="clickSound" preload="auto" src="sound/denielcz-immersivecontrol-button-click-sound-463065.mp3"></audio>
 
   <div class="app">
     <h1 class="title">Fi'il Mudhari'</h1>
@@ -305,11 +304,11 @@
 
       <!-- Tombol -->
       <div class="buttons">
-        <button class="generate" onclick="handleClick(this); generateSentence()">
+        <button class="generate" onclick="generateSentence()">
           Buat Kalimat
         </button>
         
-        <button class="answer-btn" onclick="handleClick(this); showAnswer()">
+        <button class="answer-btn" onclick="showAnswer()">
           Lihat Jawaban
         </button>
       </div>
@@ -332,15 +331,35 @@
   </script>
 
   <script>
+  /* =========================
+     🚀 NAVIGASI BACK (ONLY AUDIO)
+  ========================= */
   function go(url) {
     const el = document.querySelector(".app");
-    if (el) el.classList.add("fade-out");
   
-    setTimeout(() => {
-      window.location.href = url;
-    }, 250);
+    // 🔥 audio fresh (fix utama)
+    const audio = new Audio("sound/click.mp3");
+  
+    audio.play()
+      .then(() => {
+        if (el) el.classList.add("fade-out");
+  
+        setTimeout(() => {
+          window.location.href = url;
+        }, 500);
+      })
+      .catch(() => {
+        if (el) el.classList.add("fade-out");
+  
+        setTimeout(() => {
+          window.location.href = url;
+        }, 200);
+      });
   }
   
+  /* =========================
+     🎬 LOAD ANIMATION
+  ========================= */
   function showPage() {
     const el = document.querySelector(".app");
     if (!el) return;
