@@ -377,27 +377,21 @@
     const el = document.querySelector(".app");
     const audio = document.getElementById("clickSound");
   
-    // 🔊 sound panjang
+    // 🔊 play sound
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
   
-    // 🎨 fade halus
+    // 🎨 fade
     setTimeout(() => {
       if (el) el.classList.add("fade-out");
     }, 80);
   
-    // 🚀 pindah setelah sound selesai
-    if (audio) {
-      audio.onended = () => {
-        window.location.href = url;
-      };
-    } else {
-      setTimeout(() => {
-        window.location.href = url;
-      }, 400);
-    }
+    // 🚀 pindah halaman (PASTI JALAN)
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400); // sesuaikan durasi audio click
   }
   
   /* =========================
