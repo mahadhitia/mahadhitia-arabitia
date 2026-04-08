@@ -234,14 +234,26 @@
   
   function go(url) {
     const el = document.querySelector(".container");
+    const audio = document.getElementById("clickSound");
   
-    playClick();
-  
-    if (el) el.classList.add("fade-out");
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
   
     setTimeout(() => {
-      window.location.href = url;
-    }, 250);
+      if (el) el.classList.add("fade-out");
+    }, 50);
+  
+    if (audio) {
+      audio.onended = () => {
+        window.location.href = url;
+      };
+    } else {
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
+    }
   }
   
   function showPage() {
