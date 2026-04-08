@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahadhitia Arabitia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* 🔥 MATIIN SCROLL TOTAL */
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #4B2E4C;
+      color: #F8F9FA;
+    
+      display: block;
+      padding-top: 120px;
+      opacity: 1;
+      will-change: opacity;
+    }
+    
+    /* saat keluar halaman */
+    body.fade-out {
+      opacity: 0;
+    }
+    
+    /* CONTAINER */
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 700px; /* 🔥 dipersempit */
+      padding: 0 20px;
+      margin: 0 auto;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .container.fade-out {
+      opacity: 0;
+    }
+    
+    .container.loaded .title::after {
+      transform: scaleX(1);
+    }
+    
+    /* TITLE */
+    .title {
+      font-size: 42px;
+      font-weight: 800;
+      color: #F6C32E;
+    
+      text-align: center;
+      margin-bottom: 35px;
+      line-height: 1.2;
+    
+      letter-spacing: 0.5px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+    
+    /* garis animasi */
+    .title::after {
+      content: "";
+      display: block;
+    
+      width: 75%;
+      max-width: 100%;
+      height: 4px;
+    
+      background: #F6C32E;
+    
+      margin: 12px auto 0;
+      border-radius: 2px;
+      opacity: 0.9;
+    
+      transform: scaleX(0.4);
+      transform-origin: center; /* 🔥 TAMBAHAN PENTING */
+    
+      transition: transform 0.3s ease; /* 🔥 lebih spesifik */
+    }
+    
+    body.loaded .title::after {
+      transform: scaleX(1);
+    }
+    
+    @media (max-width: 480px) {
+      .title {
+        font-size: 32px;
+      }
+    }
+
+    .subtitle-bottom {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    
+      color: rgba(255,255,255,0.75);
+    
+      margin: 10px auto 30px auto;
+    
+      text-align: center;
+      max-width: 500px;
+    
+      /* 🔥 HAPUS ANIMASI */
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    
+    /* CARD */
+    .card {
+      background: #2E1B2F;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    
+      width: 65%;
+      max-width: 280px; /* 🔥 BATAS IDEAL */
+      margin: 0 auto;
+    }
+    
+    /* BUTTON */
+    .btn {
+      width: 80%; /* 🔥 ikut card */
+      height: 80px;
+    
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+    
+      box-shadow: 0 6px 0 #d4a91f;
+    
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    
+    /* INTERACTION */
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
+    
+    /* ICON */
+    .icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 16px;
+    
+      width: 100%;
+      text-align: center;
+    
+      font-size: 12px;
+      opacity: 0.5;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">Mahadhitia Arabitia</h1>
+
+    <div class="subtitle-bottom">
+      Platform Latihan Bahasa Arab
+    </div>
+
+    <div class="card">
+
+      <button class="btn" onclick="go('menu.html')">
+        <div class="icon">📘</div>
+        Latihan
+      </button>
+
+      <button class="btn" onclick="go('profil.html')">
+        <div class="icon">👨‍💻</div>
+        Profil
+      </button>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    Dibuat oleh Mahadhitia
+  </div>
+
+  <script>
+  function go(url) {
+    const el = document.querySelector(".app");
+    if (el) el.classList.add("fade-out");
+  
+    setTimeout(() => {
+      window.location.href = url;
+    }, 250);
+  }
+  
+  function showPage() {
+    const el = document.querySelector(".app");
+    if (!el) return;
+  
+    el.classList.remove("fade-out");
+    el.classList.add("loaded");
+  }
+  
+  window.addEventListener("load", showPage);
+  window.addEventListener("pageshow", showPage);
+  </script>
+
+</body>
+</html>
