@@ -1219,7 +1219,9 @@ function generateSentence() {
     }
 
     // optional: huruf jar
-    if (Math.random() > 0.5) {
+    const useJar = Math.random() > 0.5;
+
+    if (useJar) {
       const harf = pick(harfJar);
       sentenceAr = harf.ar + " " + sentenceAr;
       sentenceId = harf.id + " " + sentenceId;
@@ -1229,9 +1231,10 @@ function generateSentence() {
     currentQuestion = sentenceId;
 
     currentLabel =
-      num === 1 ? "mufrad" :
-      num === 2 ? "mutsanna" :
-      "jamak";
+      (num === 1 ? "mufrad" :
+       num === 2 ? "mutsanna" :
+       "jamak")
+      + (useJar ? " + jar" : "");
 
     document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
