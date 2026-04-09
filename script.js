@@ -1189,6 +1189,40 @@ let currentQuestion = "";
 let currentLabel = "";
 
 // ======================
+// NAHWU ENGINE
+// ======================
+
+// 1. Number → jadi jar (kasrah)
+function toJarNumber(word) {
+  return word
+    .replace("ُ", "ِ")   // dhammah → kasrah
+    .replace("ٌ", "ٍ");  // tanwin dhammah → tanwin kasrah
+}
+
+// 2. Dual → jadi jar/nasab (ـَيْنِ)
+function toJarDual(word) {
+  return word
+    .replace("َان", "َيْن")
+    .replace("َتَان", "َتَيْن");
+}
+
+// 3. Jamak mudzakkar salim → kontrol ون / ين
+function fixMudzakkarPlural(word, isJar = false) {
+  if (word.endsWith("ون")) {
+    return isJar ? word.replace("ون", "ين") : word;
+  }
+  if (word.endsWith("ين")) {
+    return isJar ? word : word.replace("ين", "ون");
+  }
+  return word; // bukan jamak salim
+}
+
+// 4. Apply jar ke noun plural (upgrade)
+function applyJarPlural(word) {
+  return fixMudzakkarPlural(word, true);
+}
+
+// ======================
 // GENERATE
 // ======================
 function generateSentence() {
@@ -1213,8 +1247,10 @@ function generateSentence() {
       sentenceAr = noun.ar_dual;
       sentenceId = "dua " + noun.id;
 
-    } else {
-      sentenceAr = numberWord + " " + noun.ar_plural;
+    else {
+      const nounFixed = fixMudzakkarPlural(noun.ar_plural, false);
+    
+      sentenceAr = numberWord + " " + nounFixed;
       sentenceId = num + " " + noun.id;
     }
 
@@ -1231,8 +1267,10 @@ function generateSentence() {
         sentenceAr = harf.ar + " " + toJarDual(noun.ar_dual);
       } 
       else {
-        const nounJar = applyJar(noun.ar_plural);
-        sentenceAr = harf.ar + " " + numberWord + " " + nounJar;
+        const numberJar = toJarNumber(numberWord);
+        const nounJar = applyJarPlural(noun.ar_plural);
+      
+        sentenceAr = harf.ar + " " + numberJar + " " + nounJar;
       }
     
       sentenceId = harf.id + " " + sentenceId;
@@ -1622,6 +1660,12 @@ function applyJar(word) {
 
 function toJarDual(word) {
   return word.replace("ان", "ين");
+}
+
+function applyJar(word) {
+  return word
+    .replace("ٌ", "ٍ")
+    .replace("ُ", "ِ");
 }
 
 buildPool();
