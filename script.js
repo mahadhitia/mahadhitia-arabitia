@@ -1661,10 +1661,14 @@ function applyJar(word) {
 // ======================
 
 // tentukan bentuk noun berdasarkan angka
-function getNounFormByNumber(noun, num) {
-  if (num === 1) return noun.ar_singular;
-  if (num === 2) return noun.ar_dual;
-  return noun.ar_plural;
+function getNounForm(num, word) {
+  if (num === 1) {
+    return word.singular;
+  } else if (num === 2) {
+    return word.dual;
+  } else {
+    return word.plural;
+  }
 }
 
 // apply i'rab lengkap
