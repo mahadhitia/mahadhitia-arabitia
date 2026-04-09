@@ -37,6 +37,7 @@ const verbs = [
     key: "jalasa",
     id_present: "duduk",
     id_past: "telah duduk",
+    id_command: "duduk",
   
     past: {
       ana: "جَلَسْتُ",
@@ -95,6 +96,7 @@ const verbs = [
     key: "nasara",
     id_present: "menolong",
     id_past: "telah menolong",
+    id_command: "tolong",
   
     past: {
       ana: "نَصَرْتُ",
@@ -153,6 +155,7 @@ const verbs = [
     key: "daraba",
     id_present: "memukul",
     id_past: "telah memukul",
+    id_command: "pukul",
   
     past: {
       ana: "ضَرَبْتُ",
@@ -211,6 +214,7 @@ const verbs = [
     key: "fataha",
     id_present: "membuka",
     id_past: "telah membuka",
+    id_command: "buka",
   
     past: {
       ana: "فَتَحْتُ",
@@ -269,6 +273,7 @@ const verbs = [
     key: "akala",
     id_present: "makan",
     id_past: "telah makan",
+    id_command: "makan",
   
     past: {
       ana: "أَكَلْتُ",
@@ -327,6 +332,7 @@ const verbs = [
     key: "dzahaba",
     id_present: "pergi",
     id_past: "telah pergi",
+    id_command: "pergi",
   
     past: {
       ana: "ذَهَبْتُ",
@@ -385,6 +391,7 @@ const verbs = [
     key: "ghadhiba",
     id_present: "marah",
     id_past: "telah marah",
+    id_command: "marah",
   
     past: {
       ana: "غَضِبْتُ",
@@ -443,6 +450,7 @@ const verbs = [
     key: "shabara",
     id_present: "sabar",
     id_past: "telah sabar",
+    id_command: "sabar",
   
     past: {
       ana: "صَبَرْتُ",
@@ -501,6 +509,7 @@ const verbs = [
     key: "rafasya",
     id_present: "menendang",
     id_past: "telah menendang",
+    id_command: "tendang",
   
     past: {
       ana: "رَفَشْتُ",
@@ -559,6 +568,7 @@ const verbs = [
     key: "masaka",
     id_present: "memegang",
     id_past: "telah memegang",
+    id_command: "pegang",
   
     past: {
       ana: "مَسَكْتُ",
@@ -617,6 +627,7 @@ const verbs = [
     key: "sakana",
     id_present: "tinggal",
     id_past: "telah tinggal",
+    id_command: "tinggal",
   
     past: {
       ana: "سَكَنْتُ",
@@ -675,6 +686,7 @@ const verbs = [
     key: "raja'a",
     id_present: "kembali",
     id_past: "telah kembali",
+    id_command: "kembali",
   
     past: {
       ana: "رَجَعْتُ",
@@ -733,6 +745,7 @@ const verbs = [
     key: "kataba",
     id_present: "menulis",
     id_past: "telah menulis",
+    id_command: "tulis",
   
     past: {
       ana: "كَتَبْتُ",
@@ -791,6 +804,7 @@ const verbs = [
     key: "sakata",
     id_present: "diam",
     id_past: "telah diam",
+    id_command: "diam",
   
     past: {
       ana: "سَكَتُّ",
@@ -849,6 +863,7 @@ const verbs = [
     key: "nazhara",
     id_present: "melihat",
     id_past: "telah melihat",
+    id_command: "lihat",
   
     past: {
       ana: "نَظَرْتُ",
@@ -907,6 +922,7 @@ const verbs = [
     key: "jaa",
     id_present: "datang",
     id_past: "telah datang",
+    id_command: "datang",
   
     past: {
       ana: "جِئْتُ",
@@ -965,6 +981,7 @@ const verbs = [
     key: "tawaddha",
     id_present: "berwudhu",
     id_past: "telah berwudhu",
+    id_command: "wudhu",
   
     past: {
       ana: "تَوَضَّأْتُ",
@@ -1023,6 +1040,7 @@ const verbs = [
     key: "shalla",
     id_present: "shalat",
     id_past: "telah shalat",
+    id_command: "shalat",
   
     past: {
       ana: "صَلَّيْتُ",
@@ -1165,11 +1183,11 @@ function generateSentence() {
 
   } else if (mode === "amr") {
     verbAr = verb.amr[subject.key];
-    verbId = verb.id_present + "lah!";
+    verbId = verb.id_command + "lah!";
   
   } else if (mode === "nahyi") {
     verbAr = verb.nahyi[subject.key];
-    verbId = "jangan " + verb.id_present + "!";
+    verbId = "jangan " + verb.id_command + "!";;
   }
 
   // ======================
