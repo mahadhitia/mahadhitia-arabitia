@@ -1,4 +1,4 @@
-const modes = ["madhi", "mudhari", "noun"];
+const modes = ["madhi", "mudhari", "amr", "noun"];
 let modeIndex = 0;
 let mode = modes[modeIndex];
 let current = "";
@@ -1108,71 +1108,92 @@ let currentLabel = "";
 // GENERATE
 // ======================
 function generateSentence() {
+
+  // ======================
+  // MODE ISIM
+  // ======================
   if (mode === "noun") {
     if (nounIndex >= nounPool.length) {
       shuffle(nounPool);
       nounIndex = 0;
     }
-  
-    const item = nounPool[nounIndex];
-    nounIndex++;
-  
+
+    const item = nounPool[nounIndex++];
     const noun = item.noun;
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
-  
+
     const sentenceId = isyarah.id + " " + noun.id;
     const sentenceAr = isyarah.ar + " " + noun.ar;
-  
-    current = sentenceAr;
-  
-    document.getElementById("question").innerText = sentenceId;
-  
-    const labelText = noun.gender === "m" ? "mudzakkar" : "muannats";
 
+    current = sentenceAr;
     currentQuestion = sentenceId;
-    currentLabel = labelText;
-    document.getElementById("label").innerText = labelText;
-  
+    currentLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
+
+    document.getElementById("question").innerText = sentenceId;
+    document.getElementById("label").innerText = currentLabel;
+
     document.getElementById("answer").innerText = "";
     document.getElementById("answerWrap").style.display = "none";
 
     setTimeout(() => playQuestion(), 100);
-  
     return;
   }
-  
+
+  // ======================
+  // MODE FI'IL
+  // ======================
   if (index >= pool.length) {
     shuffle(pool);
     index = 0;
   }
 
-  const item = pool[index];
-  index++;
+  const { subject, verb } = pool[index++];
 
-  const subject = item.subject;
-  const verb = item.verb;
+  let verbAr = "";
+  let verbId = "";
 
-  let verbAr;
-  let verbId;
-
+  // ======================
+  // PILIH BENTUK FI'IL
+  // ======================
   if (mode === "madhi") {
     verbAr = verb.past[subject.key];
     verbId = verb.id_past;
-  } else {
+
+  } else if (mode === "mudhari") {
     verbAr = verb.present[subject.key];
     verbId = verb.id_present;
+
+  } else if (mode === "amr") {
+    verbAr = verb.amr[subject.key];
+    verbId = "perintah " + verb.id_present;
   }
 
-  const sentenceId = subject.id + " " + verbId;
-  const sentenceAr = subject.ar + " " + verbAr;
+  // ======================
+  // SUSUN KALIMAT
+  // ======================
+  let sentenceAr = "";
+  let sentenceId = "";
 
+  if (mode === "amr") {
+    // ❗ TANPA SUBJECT
+    sentenceAr = verbAr;
+    sentenceId = verbId;
+    currentLabel = "fi'il amr";
+
+  } else {
+    sentenceAr = subject.ar + " " + verbAr;
+    sentenceId = subject.id + " " + verbId;
+    currentLabel = subject.label;
+  }
+
+  // ======================
+  // OUTPUT
+  // ======================
   current = sentenceAr;
-
   currentQuestion = sentenceId;
-  currentLabel = subject.label;
 
   document.getElementById("question").innerText = sentenceId;
-  document.getElementById("label").innerText = subject.label;
+  document.getElementById("label").innerText = currentLabel;
 
   document.getElementById("answer").innerText = "";
   document.getElementById("answerWrap").style.display = "none";
@@ -1191,7 +1212,16 @@ function buildPool() {
   pool = [];
 
   subjects.forEach(subject => {
+    if (mode === "amr" && !subject.key.includes("ant")) {
+      return;
+    }
+  
     verbs.forEach(verb => {
+    
+      if (mode === "amr") {
+        if (!verb.amr || !verb.amr[subject.key]) return;
+      }
+    
       pool.push({
         subject,
         verb
@@ -1266,8 +1296,13 @@ function toggleMode() {
 
   if (mode === "madhi") {
     btn.innerText = "Fi'il Madhi";
+  
   } else if (mode === "mudhari") {
     btn.innerText = "Fi'il Mudhari'";
+  
+  } else if (mode === "amr") {
+    btn.innerText = "Fi'il Amr";
+  
   } else {
     btn.innerText = "Kata Benda";
   }
