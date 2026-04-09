@@ -234,44 +234,30 @@
     const el = document.querySelector(".container");
     const audio = document.getElementById("clickSound");
   
+    // 🔊 play audio
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
   
+    // 🎨 fade dikit setelah klik
     setTimeout(() => {
       if (el) el.classList.add("fade-out");
     }, 50);
   
+    // 🚀 pindah setelah audio selesai
     if (audio) {
       audio.onended = () => {
-  
-        // 🔥 LOGIKA PENTING
-        if (url === "index.html") {
-          // balik ke root → replace
-          window.location.replace(url);
-        } else {
-          // ke mode → push (href)
-          window.location.href = url;
-        }
-  
+        window.location.replace(url);
       };
     } else {
       setTimeout(() => {
-  
-        if (url === "index.html") {
-          window.location.replace(url);
-        } else {
-          window.location.href = url;
-        }
-  
+        window.location.replace(url);
       }, 300);
     }
   }
   
   function showPage() {
-    document.body.style.opacity = 1;
-  
     const el = document.querySelector(".container");
     if (!el) return;
   
@@ -279,7 +265,7 @@
     el.classList.add("loaded");
   }
   
-  // unlock audio
+  // 🔥 unlock audio di HP
   document.addEventListener("touchstart", () => {
     const audio = document.getElementById("clickSound");
     if (audio) {
