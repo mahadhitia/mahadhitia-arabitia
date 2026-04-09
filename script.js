@@ -1584,15 +1584,27 @@ function activatePage(pageId) {
 }
 
 function getNumberWord(num, gender) {
-  const n = numbers.find(n => n.num === num);
+  const number = numbers.find(n => n.num === num);
 
-  if (num >= 3 && num <= 10) {
-    // kebalikan gender
-    return gender === "m" ? n.ar_f : n.ar_m;
+  if (!number) return "";
+
+  // 1 & 2 → normal
+  if (num === 1) {
+    return gender === "m" ? "وَاحِدٌ" : "وَاحِدَةٌ";
   }
 
-  return gender === "m" ? n.ar_m : n.ar_f;
-}
+  if (num === 2) {
+    return gender === "m" ? "اِثْنَانِ" : "اِثْنَتَانِ";
+  }
 
+  // 🔥 3–10 → KEBALIKAN
+  if (num >= 3 && num <= 10) {
+    return gender === "m"
+      ? number.ar_f
+      : number.ar_m;
+  }
+
+  return "";
+}
 buildPool();
 buildNounPool();
