@@ -1146,7 +1146,8 @@ const nouns = [
 const harfJar = [
   { ar: "مِنْ", id: "dari" },
   { ar: "إِلَى", id: "ke" },
-  { ar: "عَنْ", id: "dari (tentang)" },
+  { ar: "عَنْ", id: "dari" },
+  { ar: "عَنْ", id: "tentang" },
   { ar: "عَلَى", id: "di atas" },
   { ar: "فِي", id: "di dalam" },
   { ar: "بِ", id: "dengan" },
