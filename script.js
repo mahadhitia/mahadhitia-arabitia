@@ -1147,11 +1147,9 @@ const harfJar = [
   { ar: "مِنْ", id: "dari" },
   { ar: "إِلَى", id: "ke" },
   { ar: "عَنْ", id: "dari" },
-  { ar: "عَنْ", id: "tentang" },
   { ar: "عَلَى", id: "di atas" },
   { ar: "فِي", id: "di dalam" },
   { ar: "بِ", id: "dengan" },
-  { ar: "لِ", id: "milik" },
   { ar: "لِ", id: "untuk" },
   { ar: "كَ", id: "seperti" },
   { ar: "حَتَّى", id: "hingga" },
@@ -1225,10 +1223,21 @@ function generateSentence() {
 
     if (useJar) {
       const harf = pick(harfJar);
-      sentenceAr = harf.ar + " " + sentenceAr;
+    
+      if (num === 1) {
+        sentenceAr = harf.ar + " " + applyJar(noun.ar_singular);
+      } 
+      else if (num === 2) {
+        sentenceAr = harf.ar + " " + toJarDual(noun.ar_dual);
+      } 
+      else {
+        const nounJar = applyJar(noun.ar_plural);
+        sentenceAr = harf.ar + " " + numberWord + " " + nounJar;
+      }
+    
       sentenceId = harf.id + " " + sentenceId;
     }
-
+    
     current = sentenceAr;
     currentQuestion = sentenceId;
 
@@ -1606,5 +1615,14 @@ function getNumberWord(num, gender) {
 
   return "";
 }
+
+function applyJar(word) {
+  return word + "ٍ";
+}
+
+function toJarDual(word) {
+  return word.replace("ان", "ين");
+}
+
 buildPool();
 buildNounPool();
