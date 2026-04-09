@@ -1,4 +1,4 @@
-const modes = ["madhi", "mudhari", "amr", "noun"];
+const modes = ["madhi", "mudhari", "amr", "nahyi", "noun"];
 let modeIndex = 0;
 let mode = modes[modeIndex];
 let current = "";
@@ -1166,6 +1166,10 @@ function generateSentence() {
   } else if (mode === "amr") {
     verbAr = verb.amr[subject.key];
     verbId = "perintah " + verb.id_present;
+  
+  } else if (mode === "nahyi") {
+    verbAr = verb.nahyi[subject.key];
+    verbId = "jangan " + verb.id_present;
   }
 
   // ======================
@@ -1174,12 +1178,11 @@ function generateSentence() {
   let sentenceAr = "";
   let sentenceId = "";
 
-  if (mode === "amr") {
-    // ❗ TANPA SUBJECT
+  if (mode === "amr" || mode === "nahyi") {
     sentenceAr = verbAr;
     sentenceId = verbId;
-    currentLabel = "fi'il amr";
-
+    currentLabel = mode === "amr" ? "fi'il amr" : "fi'il nahyi";
+  
   } else {
     sentenceAr = subject.ar + " " + verbAr;
     sentenceId = subject.id + " " + verbId;
@@ -1212,7 +1215,7 @@ function buildPool() {
   pool = [];
 
   subjects.forEach(subject => {
-    if (mode === "amr" && !subject.key.includes("ant")) {
+    if ((mode === "amr" || mode === "nahyi") && !subject.key.includes("ant")) {
       return;
     }
   
@@ -1220,6 +1223,10 @@ function buildPool() {
     
       if (mode === "amr") {
         if (!verb.amr || !verb.amr[subject.key]) return;
+      }
+      
+      if (mode === "nahyi") {
+        if (!verb.nahyi || !verb.nahyi[subject.key]) return;
       }
     
       pool.push({
@@ -1302,6 +1309,9 @@ function toggleMode() {
   
   } else if (mode === "amr") {
     btn.innerText = "Fi'il Amr";
+  
+  } else if (mode === "nahyi") {
+    btn.innerText = "Fi'il Nahyi";
   
   } else {
     btn.innerText = "Kata Benda";
