@@ -775,5 +775,12 @@ document.body.addEventListener("click", () => {
   }
 }, { once: true });
 
+function activatePage(pageId) {
+  const page = document.getElementById(pageId);
+  if (!page) return;
+
+  page.classList.add("loaded");
+}
+
 buildPool();
 buildNounPool();
