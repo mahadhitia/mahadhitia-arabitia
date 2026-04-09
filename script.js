@@ -1100,347 +1100,44 @@ const verbs = [
 // KATA BENDA
 // ======================
 const nouns = [
-  {
-    id: "buku",
-    ar_singular: "كِتَابٌ",
-    ar_dual: "كِتَابَانِ",
-    ar_plural: "كُتُبٌ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "mobil",
-    ar_singular: "سَيَّارَةٌ",
-    ar_dual: "سَيَّارَتَانِ",
-    ar_plural: "سَيَّارَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "papan tulis",
-    ar_singular: "سَبُّورَةٌ",
-    ar_dual: "سَبُّورَتَانِ",
-    ar_plural: "سَبُّورَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "karpet",
-    ar_singular: "بِسَاطٌ",
-    ar_dual: "بِسَاطَانِ",
-    ar_plural: "بُسُطٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "guru",
-    ar_singular: "مُدَرِّسٌ",
-    ar_dual: "مُدَرِّسَانِ",
-    ar_plural: "مُدَرِّسِينَ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "dokter",
-    ar_singular: "طَبِيبٌ",
-    ar_dual: "طَبِيبَانِ",
-    ar_plural: "أَطِبَّاءٍ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "insinyur",
-    ar_singular: "مُهَنْدِسٌ",
-    ar_dual: "مُهَنْدِسَانِ",
-    ar_plural: "مُهَنْدِسِينَ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "murid",
-    ar_singular: "طَالِبٌ",
-    ar_dual: "طَالِبَانِ",
-    ar_plural: "طُلَّابٍ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "ustadz",
-    ar_singular: "أُسْتَاذٌ",
-    ar_dual: "أُسْتَاذَانِ",
-    ar_plural: "أَسَاتِذَةٍ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "matahari",
-    ar_singular: "شَمْسٌ",
-    ar_dual: "شَمْسَانِ",
-    ar_plural: "شُمُوسٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "masjid",
-    ar_singular: "مَسْجِدٌ",
-    ar_dual: "مَسْجِدَانِ",
-    ar_plural: "مَسَاجِدُ",
-    gender: "m",
-    type: "object"
-  },
-
-  {
-    id: "nasi",
-    ar_singular: "رُزٌّ",
-    ar_dual: "رُزَّانِ",
-    ar_plural: "أَرُزٍّ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "pena",
-    ar_singular: "قَلَمٌ",
-    ar_dual: "قَلَمَانِ",
-    ar_plural: "أَقْلَامٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "pelajaran",
-    ar_singular: "دَرْسٌ",
-    ar_dual: "دَرْسَانِ",
-    ar_plural: "دُرُوسٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "muslim",
-    ar_singular: "مُسْلِمٌ",
-    ar_dual: "مُسْلِمَانِ",
-    ar_plural: "مُسْلِمِينَ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "muslimah",
-    ar_singular: "مُسْلِمَةٌ",
-    ar_dual: "مُسْلِمَتَانِ",
-    ar_plural: "مُسْلِمَاتٍ",
-    gender: "f",
-    type: "profession"
-  },
-  
-  {
-    id: "tembok",
-    ar_singular: "جِدَارٌ",
-    ar_dual: "جِدَارَانِ",
-    ar_plural: "جُدُرٌ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "keluarga",
-    ar_singular: "أُسْرَةٌ",
-    ar_dual: "أُسْرَتَانِ",
-    ar_plural: "أُسَرٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "pohon",
-    ar_singular: "شَجَرَةٌ",
-    ar_dual: "شَجَرَتَانِ",
-    ar_plural: "أَشْجَارٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "ayah",
-    ar_singular: "وَالِدٌ",
-    ar_dual: "وَالِدَانِ",
-    ar_plural: "وَالِدُونَ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "ibu",
-    ar_singular: "وَالِدَةٌ",
-    ar_dual: "وَالِدَتَانِ",
-    ar_plural: "وَالِدَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "gambar",
-    ar_singular: "صُورَةٌ",
-    ar_dual: "صُورَتَانِ",
-    ar_plural: "صُوَرٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "saudara laki-laki",
-    ar_singular: "أَخٌ",
-    ar_dual: "أَخَوَانِ",
-    ar_plural: "إِخْوَةٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "saudara perempuan",
-    ar_singular: "أُخْتٌ",
-    ar_dual: "أُخْتَانِ",
-    ar_plural: "أَخَوَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "guru",
-    ar_singular: "مُعَلِّمٌ",
-    ar_dual: "مُعَلِّمَانِ",
-    ar_plural: "مُعَلِّمِينَ",
-    gender: "m",
-    type: "profession"
-  },
-  
-  {
-    id: "guru",
-    ar_singular: "مُعَلِّمَةٌ",
-    ar_dual: "مُعَلِّمَتَانِ",
-    ar_plural: "مُعَلِّمَاتٍ",
-    gender: "f",
-    type: "profession"
-  },
-  
-  {
-    id: "kakek",
-    ar_singular: "جَدٌّ",
-    ar_dual: "جَدَّانِ",
-    ar_plural: "أَجْدَادٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "nenek",
-    ar_singular: "جَدَّةٌ",
-    ar_dual: "جَدَّتَانِ",
-    ar_plural: "جَدَّاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "paman",
-    ar_singular: "عَمٌّ",
-    ar_dual: "عَمَّانِ",
-    ar_plural: "أَعْمَامٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "bibi",
-    ar_singular: "عَمَّةٌ",
-    ar_dual: "عَمَّتَانِ",
-    ar_plural: "عَمَّاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "anak laki-laki",
-    ar_singular: "اِبْنٌ",
-    ar_dual: "اِبْنَانِ",
-    ar_plural: "أَبْنَاءٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "anak perempuan",
-    ar_singular: "بِنْتٌ",
-    ar_dual: "بِنْتَانِ",
-    ar_plural: "بَنَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "kamar mandi",
-    ar_singular: "حَمَّامٌ",
-    ar_dual: "حَمَّامَانِ",
-    ar_plural: "حَمَّامَاتٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "ruangan",
-    ar_singular: "غُرْفَةٌ",
-    ar_dual: "غُرْفَتَانِ",
-    ar_plural: "غُرَفٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "mushola",
-    ar_singular: "مُصَلًّى",
-    ar_dual: "مُصَلَّيَانِ",
-    ar_plural: "مُصَلَّيَاتٍ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "mantel",
-    ar_singular: "مِعْطَفٌ",
-    ar_dual: "مِعْطَفَانِ",
-    ar_plural: "مَعَاطِفُ",
-    gender: "m",
-    type: "object"
-  },
-  
-  {
-    id: "kacamata",
-    ar_singular: "نَظَّارَةٌ",
-    ar_dual: "نَظَّارَتَانِ",
-    ar_plural: "نَظَّارَاتٍ",
-    gender: "f",
-    type: "object"
-  },
-  
-  {
-    id: "anak (umum)",
-    ar_singular: "وَلَدٌ",
-    ar_dual: "وَلَدَانِ",
-    ar_plural: "أَوْلَادٍ",
-    gender: "m",
-    type: "object"
-  }
+  { id: "buku", ar_singular: "كِتَاب", ar_dual: "كِتَابَان", ar_plural: "كُتُب", gender: "m", type: "object" },
+  { id: "mobil", ar_singular: "سَيَّارَة", ar_dual: "سَيَّارَتَان", ar_plural: "سَيَّارَات", gender: "f", type: "object" },
+  { id: "papan tulis", ar_singular: "سَبُّورَة", ar_dual: "سَبُّورَتَان", ar_plural: "سَبُّورَات", gender: "f", type: "object" },
+  { id: "karpet", ar_singular: "بِسَاط", ar_dual: "بِسَاطَان", ar_plural: "بُسُط", gender: "m", type: "object" },
+  { id: "guru", ar_singular: "مُدَرِّس", ar_dual: "مُدَرِّسَان", ar_plural: "مُدَرِّسِين", gender: "m", type: "profession" },
+  { id: "dokter", ar_singular: "طَبِيب", ar_dual: "طَبِيبَان", ar_plural: "أَطِبَّاء", gender: "m", type: "profession" },
+  { id: "insinyur", ar_singular: "مُهَنْدِس", ar_dual: "مُهَنْدِسَان", ar_plural: "مُهَنْدِسِين", gender: "m", type: "profession" },
+  { id: "murid", ar_singular: "طَالِب", ar_dual: "طَالِبَان", ar_plural: "طُلَّاب", gender: "m", type: "profession" },
+  { id: "ustadz", ar_singular: "أُسْتَاذ", ar_dual: "أُسْتَاذَان", ar_plural: "أَسَاتِذَة", gender: "m", type: "profession" },
+  { id: "matahari", ar_singular: "شَمْس", ar_dual: "شَمْسَان", ar_plural: "شُمُوس", gender: "f", type: "object" },
+  { id: "masjid", ar_singular: "مَسْجِد", ar_dual: "مَسْجِدَان", ar_plural: "مَسَاجِد", gender: "m", type: "object" },
+  { id: "nasi", ar_singular: "رُزّ", ar_dual: "رُزَّان", ar_plural: "أَرُزّ", gender: "m", type: "object" },
+  { id: "pena", ar_singular: "قَلَم", ar_dual: "قَلَمَان", ar_plural: "أَقْلَام", gender: "m", type: "object" },
+  { id: "pelajaran", ar_singular: "دَرْس", ar_dual: "دَرْسَان", ar_plural: "دُرُوس", gender: "m", type: "object" },
+  { id: "muslim", ar_singular: "مُسْلِم", ar_dual: "مُسْلِمَان", ar_plural: "مُسْلِمِين", gender: "m", type: "profession" },
+  { id: "muslimah", ar_singular: "مُسْلِمَة", ar_dual: "مُسْلِمَتَان", ar_plural: "مُسْلِمَات", gender: "f", type: "profession" },
+  { id: "tembok", ar_singular: "جِدَار", ar_dual: "جِدَارَان", ar_plural: "جُدُر", gender: "m", type: "object" },
+  { id: "keluarga", ar_singular: "أُسْرَة", ar_dual: "أُسْرَتَان", ar_plural: "أُسَر", gender: "f", type: "object" },
+  { id: "pohon", ar_singular: "شَجَرَة", ar_dual: "شَجَرَتَان", ar_plural: "أَشْجَار", gender: "f", type: "object" },
+  { id: "ayah", ar_singular: "وَالِد", ar_dual: "وَالِدَان", ar_plural: "وَالِدُون", gender: "m", type: "object" },
+  { id: "ibu", ar_singular: "وَالِدَة", ar_dual: "وَالِدَتَان", ar_plural: "وَالِدَات", gender: "f", type: "object" },
+  { id: "gambar", ar_singular: "صُورَة", ar_dual: "صُورَتَان", ar_plural: "صُوَر", gender: "f", type: "object" },
+  { id: "saudara laki-laki", ar_singular: "أَخ", ar_dual: "أَخَوَان", ar_plural: "إِخْوَة", gender: "m", type: "object" },
+  { id: "saudara perempuan", ar_singular: "أُخْت", ar_dual: "أُخْتَان", ar_plural: "أَخَوَات", gender: "f", type: "object" },
+  { id: "guru", ar_singular: "مُعَلِّم", ar_dual: "مُعَلِّمَان", ar_plural: "مُعَلِّمِين", gender: "m", type: "profession" },
+  { id: "guru", ar_singular: "مُعَلِّمَة", ar_dual: "مُعَلِّمَتَان", ar_plural: "مُعَلِّمَات", gender: "f", type: "profession" },
+  { id: "kakek", ar_singular: "جَدّ", ar_dual: "جَدَّان", ar_plural: "أَجْدَاد", gender: "m", type: "object" },
+  { id: "nenek", ar_singular: "جَدَّة", ar_dual: "جَدَّتَان", ar_plural: "جَدَّات", gender: "f", type: "object" },
+  { id: "paman", ar_singular: "عَمّ", ar_dual: "عَمَّان", ar_plural: "أَعْمَام", gender: "m", type: "object" },
+  { id: "bibi", ar_singular: "عَمَّة", ar_dual: "عَمَّتَان", ar_plural: "عَمَّات", gender: "f", type: "object" },
+  { id: "anak laki-laki", ar_singular: "اِبْن", ar_dual: "اِبْنَان", ar_plural: "أَبْنَاء", gender: "m", type: "object" },
+  { id: "anak perempuan", ar_singular: "بِنْت", ar_dual: "بِنْتَان", ar_plural: "بَنَات", gender: "f", type: "object" },
+  { id: "kamar mandi", ar_singular: "حَمَّام", ar_dual: "حَمَّامَان", ar_plural: "حَمَّامَات", gender: "m", type: "object" },
+  { id: "ruangan", ar_singular: "غُرْفَة", ar_dual: "غُرْفَتَان", ar_plural: "غُرَف", gender: "f", type: "object" },
+  { id: "mushola", ar_singular: "مُصَلّى", ar_dual: "مُصَلَّيَان", ar_plural: "مُصَلَّيَات", gender: "m", type: "object" },
+  { id: "mantel", ar_singular: "مِعْطَف", ar_dual: "مِعْطَفَان", ar_plural: "مَعَاطِف", gender: "m", type: "object" },
+  { id: "kacamata", ar_singular: "نَظَّارَة", ar_dual: "نَظَّارَتَان", ar_plural: "نَظَّارَات", gender: "f", type: "object" },
+  { id: "anak (umum)", ar_singular: "وَلَد", ar_dual: "وَلَدَان", ar_plural: "أَوْلَاد", gender: "m", type: "object" }
 ];
 
 // ======================
