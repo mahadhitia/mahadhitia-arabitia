@@ -1,4 +1,4 @@
-const modes = ["madhi", "mudhari", "amr", "nahyi", "noun"];
+const modes = ["madhi", "mudhari", "amr", "nahyi", "noun", "adad"];
 let modeIndex = 0;
 let mode = modes[modeIndex];
 let current = "";
@@ -1442,6 +1442,45 @@ const nouns = [
     type: "object"
   }
 ];
+
+// ======================
+// PREPOSISI/HURUF JAR
+// ======================
+const harfJar = [
+  { ar: "مِنْ", id: "dari" },
+  { ar: "إِلَى", id: "ke" },
+  { ar: "عَنْ", id: "dari (tentang)" },
+  { ar: "عَلَى", id: "di atas" },
+  { ar: "فِي", id: "di dalam" },
+  { ar: "بِ", id: "dengan" },
+  { ar: "لِ", id: "milik / untuk" },
+  { ar: "كَ", id: "seperti" },
+  { ar: "حَتَّى", id: "hingga" },
+  { ar: "مَعَ", id: "bersama" },
+  { ar: "بَيْنَ", id: "di antara" },
+  { ar: "عِنْدَ", id: "di sisi" },
+  { ar: "تَحْتَ", id: "di bawah" },
+  { ar: "فَوْقَ", id: "di atas" },
+  { ar: "قَبْلَ", id: "sebelum" },
+  { ar: "بَعْدَ", id: "sesudah" }
+];
+
+// ======================
+// NOMOR
+// ======================
+const numbers = [
+  { num: 1, ar_m: "وَاحِدٌ", ar_f: "وَاحِدَةٌ" },
+  { num: 2, ar_m: "اِثْنَانِ", ar_f: "اِثْنَتَانِ" },
+  { num: 3, ar_m: "ثَلَاثَةُ", ar_f: "ثَلَاثُ" },
+  { num: 4, ar_m: "أَرْبَعَةُ", ar_f: "أَرْبَعُ" },
+  { num: 5, ar_m: "خَمْسَةُ", ar_f: "خَمْسُ" },
+  { num: 6, ar_m: "سِتَّةُ", ar_f: "سِتُّ" },
+  { num: 7, ar_m: "سَبْعَةُ", ar_f: "سَبْعُ" },
+  { num: 8, ar_m: "ثَمَانِيَةُ", ar_f: "ثَمَانٍ" },
+  { num: 9, ar_m: "تِسْعَةُ", ar_f: "تِسْعُ" },
+  { num: 10, ar_m: "عَشَرَةُ", ar_f: "عَشْرُ" }
+];
+
 // ======================
 // RANDOM
 // ======================
@@ -1456,6 +1495,56 @@ let currentLabel = "";
 // GENERATE
 // ======================
 function generateSentence() {
+  
+  // ======================
+  // MODE ADAD
+  // ======================
+  if (mode === "adad") {
+
+    const noun = pick(nouns);
+    const num = Math.floor(Math.random() * 10) + 1;
+    const numberWord = getNumberWord(num, noun.gender);
+
+    let sentenceAr = "";
+    let sentenceId = "";
+
+    if (num === 1) {
+      sentenceAr = noun.ar_singular;
+      sentenceId = "satu " + noun.id;
+
+    } else if (num === 2) {
+      sentenceAr = noun.ar_dual;
+      sentenceId = "dua " + noun.id;
+
+    } else {
+      sentenceAr = numberWord + " " + noun.ar_plural;
+      sentenceId = num + " " + noun.id;
+    }
+
+    // optional: huruf jar
+    if (Math.random() > 0.5) {
+      const harf = pick(harfJar);
+      sentenceAr = harf.ar + " " + sentenceAr;
+      sentenceId = harf.id + " " + sentenceId;
+    }
+
+    current = sentenceAr;
+    currentQuestion = sentenceId;
+
+    currentLabel =
+      num === 1 ? "mufrad" :
+      num === 2 ? "mutsanna" :
+      "jamak";
+
+    document.getElementById("question").innerText = sentenceId;
+    document.getElementById("label").innerText = currentLabel;
+
+    document.getElementById("answer").innerText = "";
+    document.getElementById("answerWrap").style.display = "none";
+
+    setTimeout(() => playQuestion(), 100);
+    return;
+  }
 
   // ======================
   // MODE ISIM
@@ -1514,10 +1603,10 @@ function generateSentence() {
   } else if (mode === "amr") {
     verbAr = verb.amr[subject.key];
     verbId = verb.id_command + "lah!";
-  
+
   } else if (mode === "nahyi") {
     verbAr = verb.nahyi[subject.key];
-    verbId = "jangan " + verb.id_command + "!";;
+    verbId = "jangan " + verb.id_command + "!";
   }
 
   // ======================
@@ -1530,7 +1619,7 @@ function generateSentence() {
     sentenceAr = verbAr;
     sentenceId = verbId;
     currentLabel = subject.label;
-  
+
   } else {
     sentenceAr = subject.ar + " " + verbAr;
     sentenceId = subject.id + " " + verbId;
@@ -1777,6 +1866,17 @@ function activatePage(pageId) {
   if (!page) return;
 
   page.classList.add("loaded");
+}
+
+function getNumberWord(num, gender) {
+  const n = numbers.find(n => n.num === num);
+
+  if (num >= 3 && num <= 10) {
+    // kebalikan gender
+    return gender === "m" ? n.ar_f : n.ar_m;
+  }
+
+  return gender === "m" ? n.ar_m : n.ar_f;
 }
 
 buildPool();
