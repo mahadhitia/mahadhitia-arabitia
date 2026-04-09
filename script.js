@@ -1165,11 +1165,11 @@ function generateSentence() {
 
   } else if (mode === "amr") {
     verbAr = verb.amr[subject.key];
-    verbId = "perintah " + verb.id_present;
+    verbId = verb.id_present + "lah!";
   
   } else if (mode === "nahyi") {
     verbAr = verb.nahyi[subject.key];
-    verbId = "jangan " + verb.id_present;
+    verbId = "jangan " + verb.id_present + "!";
   }
 
   // ======================
@@ -1181,7 +1181,7 @@ function generateSentence() {
   if (mode === "amr" || mode === "nahyi") {
     sentenceAr = verbAr;
     sentenceId = verbId;
-    currentLabel = mode === "amr" ? "fi'il amr" : "fi'il nahyi";
+    currentLabel = subject.label;
   
   } else {
     sentenceAr = subject.ar + " " + verbAr;
