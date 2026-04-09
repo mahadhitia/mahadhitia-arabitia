@@ -1100,17 +1100,104 @@ const verbs = [
 // KATA BENDA
 // ======================
 const nouns = [
-  { id: "buku", ar: "كِتَابٌ", gender: "m", type: "object" },
-  { id: "mobil", ar: "سَيَّارَةٌ", gender: "f", type: "object" },
-  { id: "papan tulis", ar: "سَبُّورَةٌ", gender: "f", type: "object" },
-  { id: "karpet", ar: "بِسَاطٌ", gender: "m", type: "object" },
-  { id: "guru", ar: "مُدَرِّسٌ", gender: "m", type: "profession" },
-  { id: "dokter", ar: "طَبِيبٌ", gender: "m", type: "profession" },
-  { id: "insinyur", ar: "مُهَنْدِسٌ", gender: "m", type: "profession" },
-  { id: "murid", ar: "طَالِبٌ", gender: "m", type: "profession" },
-  { id: "ustadz", ar: "أُسْتَاذٌ", gender: "m", type: "profession" },
-  { id: "matahari", ar: "شَمْسٌ", gender: "m", type: "object" },
-  { id: "masjid", ar: "مَسْجِدٌ", gender: "m", type: "object" }
+  {
+    id: "buku",
+    ar_singular: "كِتَابٌ",
+    ar_dual: "كِتَابَانِ",
+    ar_plural: "كُتُبٍ",
+    gender: "m",
+    type: "object"
+  },
+  
+  {
+    id: "mobil",
+    ar_singular: "سَيَّارَةٌ",
+    ar_dual: "سَيَّارَتَانِ",
+    ar_plural: "سَيَّارَاتٍ",
+    gender: "f",
+    type: "object"
+  },
+  
+  {
+    id: "papan tulis",
+    ar_singular: "سَبُّورَةٌ",
+    ar_dual: "سَبُّورَتَانِ",
+    ar_plural: "سَبُّورَاتٍ",
+    gender: "f",
+    type: "object"
+  },
+  
+  {
+    id: "karpet",
+    ar_singular: "بِسَاطٌ",
+    ar_dual: "بِسَاطَانِ",
+    ar_plural: "بُسُطٍ",
+    gender: "m",
+    type: "object"
+  },
+  
+  {
+    id: "guru",
+    ar_singular: "مُدَرِّسٌ",
+    ar_dual: "مُدَرِّسَانِ",
+    ar_plural: "مُدَرِّسِينَ",
+    gender: "m",
+    type: "profession"
+  },
+  
+  {
+    id: "dokter",
+    ar_singular: "طَبِيبٌ",
+    ar_dual: "طَبِيبَانِ",
+    ar_plural: "أَطِبَّاءٍ",
+    gender: "m",
+    type: "profession"
+  },
+  
+  {
+    id: "insinyur",
+    ar_singular: "مُهَنْدِسٌ",
+    ar_dual: "مُهَنْدِسَانِ",
+    ar_plural: "مُهَنْدِسِينَ",
+    gender: "m",
+    type: "profession"
+  },
+  
+  {
+    id: "murid",
+    ar_singular: "طَالِبٌ",
+    ar_dual: "طَالِبَانِ",
+    ar_plural: "طُلَّابٍ",
+    gender: "m",
+    type: "profession"
+  },
+  
+  {
+    id: "ustadz",
+    ar_singular: "أُسْتَاذٌ",
+    ar_dual: "أُسْتَاذَانِ",
+    ar_plural: "أَسَاتِذَةٍ",
+    gender: "m",
+    type: "profession"
+  },
+  
+  {
+    id: "matahari",
+    ar_singular: "شَمْسٌ",
+    ar_dual: "شَمْسَانِ",
+    ar_plural: "شُمُوسٍ",
+    gender: "f",
+    type: "object"
+  },
+  
+  {
+    id: "masjid",
+    ar_singular: "مَسْجِدٌ",
+    ar_dual: "مَسْجِدَانِ",
+    ar_plural: "مَسَاجِدُ",
+    gender: "m",
+    type: "object"
+  }
 ];
 // ======================
 // RANDOM
