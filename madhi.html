@@ -29,6 +29,11 @@
       align-items: center;
     
       height: 100dvh;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    body.loaded {
       opacity: 1;
     }
     
@@ -366,11 +371,9 @@
      🎬 LOAD ANIMATION
   ========================= */
   function showPage() {
-    const el = document.querySelector(".app");
-    if (!el) return;
-  
-    el.classList.remove("fade-out");
-    el.classList.add("loaded");
+    requestAnimationFrame(() => {
+      document.body.classList.add("loaded");
+    });
   }
   
   window.addEventListener("load", showPage);
