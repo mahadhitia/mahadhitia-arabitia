@@ -28,6 +28,12 @@
       justify-content: center;
       align-items: flex-start;
       padding-top: 140px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    body.loaded {
+      opacity: 1;
     }
 
     /* saat keluar halaman */
@@ -258,11 +264,9 @@
   }
   
   function showPage() {
-    const el = document.querySelector(".container");
-    if (!el) return;
-  
-    el.classList.remove("fade-out");
-    el.classList.add("loaded");
+    requestAnimationFrame(() => {
+      document.body.classList.add("loaded");
+    });
   }
   
   // 🔥 unlock audio di HP
