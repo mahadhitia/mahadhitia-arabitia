@@ -1137,7 +1137,7 @@ const nouns = [
   { id: "mushola", ar_singular: "مُصَلّى", ar_dual: "مُصَلَّيَان", ar_plural: "مُصَلَّيَات", gender: "m", type: "object" },
   { id: "mantel", ar_singular: "مِعْطَف", ar_dual: "مِعْطَفَان", ar_plural: "مَعَاطِف", gender: "m", type: "object" },
   { id: "kacamata", ar_singular: "نَظَّارَة", ar_dual: "نَظَّارَتَان", ar_plural: "نَظَّارَات", gender: "f", type: "object" },
-  { id: "anak (umum)", ar_singular: "وَلَد", ar_dual: "وَلَدَان", ar_plural: "أَوْلَاد", gender: "m", type: "object" }
+  { id: "anak", ar_singular: "وَلَد", ar_dual: "وَلَدَان", ar_plural: "أَوْلَاد", gender: "m", type: "object" }
 ];
 
 // ======================
