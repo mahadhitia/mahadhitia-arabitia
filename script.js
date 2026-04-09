@@ -1738,24 +1738,37 @@ function toggleMode() {
 
   const btn = document.getElementById("modeBtn");
 
+  // ======================
+  // SET LABEL BUTTON
+  // ======================
   if (mode === "madhi") {
     btn.innerText = "Fi'il Madhi";
-  
+
   } else if (mode === "mudhari") {
     btn.innerText = "Fi'il Mudhari'";
-  
+
   } else if (mode === "amr") {
     btn.innerText = "Fi'il Amr";
-  
+
   } else if (mode === "nahyi") {
     btn.innerText = "Fi'il Nahyi";
-  
-  } else {
-    btn.innerText = "Kata Benda";
+
+  } else if (mode === "adad") {
+    btn.innerText = "'Adad";
+
+  } else if (mode === "noun") {
+    btn.innerText = "Isim";
   }
 
+  // ======================
+  // BUILD DATA
+  // ======================
   if (mode === "noun") {
     buildNounPool();
+
+  } else if (mode === "adad") {
+    index = 0;
+
   } else {
     buildPool();
   }
