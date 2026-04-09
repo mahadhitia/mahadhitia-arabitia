@@ -247,11 +247,11 @@
     // 🚀 pindah setelah audio selesai
     if (audio) {
       audio.onended = () => {
-        window.location.href = "index.html";
+        window.location.replace(url);
       };
     } else {
       setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.replace(url);
       }, 300);
     }
   }
