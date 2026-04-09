@@ -232,7 +232,6 @@
     audio.play();
   }
   
-  // 🔥 INDEX = ROOT → SEMUA replace
   function go(url) {
     const el = document.querySelector(".container");
     const audio = document.getElementById("clickSound");
@@ -248,7 +247,7 @@
   
     if (audio) {
       audio.onended = () => {
-        window.location.replace(url); // 🔥 tetap replace
+        window.location.replace(url);
       };
     } else {
       setTimeout(() => {
@@ -258,8 +257,6 @@
   }
   
   function showPage() {
-    document.body.style.opacity = 1;
-  
     const el = document.querySelector(".container");
     if (!el) return;
   
@@ -267,7 +264,12 @@
     el.classList.add("loaded");
   }
   
-  // unlock audio
+  // 🔥 auto sound semua tombol
+  document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", playClick);
+  });
+  
+  // 🔥 unlock audio mobile
   document.addEventListener("touchstart", () => {
     const audio = document.getElementById("clickSound");
     if (audio) {
