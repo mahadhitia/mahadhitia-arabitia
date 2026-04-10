@@ -1277,44 +1277,879 @@ const verbs = [
 // KATA BENDA
 // ======================
 const nouns = [
-  { id: "buku", ar_singular: "كِتَاب", ar_dual: "كِتَابَان", ar_plural: "كُتُب", gender: "m", type: "object" },
-  { id: "mobil", ar_singular: "سَيَّارَة", ar_dual: "سَيَّارَتَان", ar_plural: "سَيَّارَات", gender: "f", type: "object" },
-  { id: "papan tulis", ar_singular: "سَبُّورَة", ar_dual: "سَبُّورَتَان", ar_plural: "سَبُّورَات", gender: "f", type: "object" },
-  { id: "karpet", ar_singular: "بِسَاط", ar_dual: "بِسَاطَان", ar_plural: "بُسُط", gender: "m", type: "object" },
-  { id: "guru", ar_singular: "مُدَرِّس", ar_dual: "مُدَرِّسَان", ar_plural: "مُدَرِّسِين", gender: "m", type: "profession" },
-  { id: "dokter", ar_singular: "طَبِيب", ar_dual: "طَبِيبَان", ar_plural: "أَطِبَّاء", gender: "m", type: "profession" },
-  { id: "insinyur", ar_singular: "مُهَنْدِس", ar_dual: "مُهَنْدِسَان", ar_plural: "مُهَنْدِسِين", gender: "m", type: "profession" },
-  { id: "murid", ar_singular: "طَالِب", ar_dual: "طَالِبَان", ar_plural: "طُلَّاب", gender: "m", type: "profession" },
-  { id: "ustadz", ar_singular: "أُسْتَاذ", ar_dual: "أُسْتَاذَان", ar_plural: "أَسَاتِذَة", gender: "m", type: "profession" },
-  { id: "matahari", ar_singular: "شَمْس", ar_dual: "شَمْسَان", ar_plural: "شُمُوس", gender: "f", type: "object" },
-  { id: "masjid", ar_singular: "مَسْجِد", ar_dual: "مَسْجِدَان", ar_plural: "مَسَاجِد", gender: "m", type: "object" },
-  { id: "nasi", ar_singular: "رُزّ", ar_dual: "رُزَّان", ar_plural: "أَرُزّ", gender: "m", type: "object" },
-  { id: "pena", ar_singular: "قَلَم", ar_dual: "قَلَمَان", ar_plural: "أَقْلَام", gender: "m", type: "object" },
-  { id: "pelajaran", ar_singular: "دَرْس", ar_dual: "دَرْسَان", ar_plural: "دُرُوس", gender: "m", type: "object" },
-  { id: "muslim", ar_singular: "مُسْلِم", ar_dual: "مُسْلِمَان", ar_plural: "مُسْلِمِين", gender: "m", type: "profession" },
-  { id: "muslimah", ar_singular: "مُسْلِمَة", ar_dual: "مُسْلِمَتَان", ar_plural: "مُسْلِمَات", gender: "f", type: "profession" },
-  { id: "tembok", ar_singular: "جِدَار", ar_dual: "جِدَارَان", ar_plural: "جُدُر", gender: "m", type: "object" },
-  { id: "keluarga", ar_singular: "أُسْرَة", ar_dual: "أُسْرَتَان", ar_plural: "أُسَر", gender: "f", type: "object" },
-  { id: "pohon", ar_singular: "شَجَرَة", ar_dual: "شَجَرَتَان", ar_plural: "أَشْجَار", gender: "f", type: "object" },
-  { id: "ayah", ar_singular: "وَالِد", ar_dual: "وَالِدَان", ar_plural: "وَالِدُون", gender: "m", type: "object" },
-  { id: "ibu", ar_singular: "وَالِدَة", ar_dual: "وَالِدَتَان", ar_plural: "وَالِدَات", gender: "f", type: "object" },
-  { id: "gambar", ar_singular: "صُورَة", ar_dual: "صُورَتَان", ar_plural: "صُوَر", gender: "f", type: "object" },
-  { id: "saudara laki-laki", ar_singular: "أَخ", ar_dual: "أَخَوَان", ar_plural: "إِخْوَة", gender: "m", type: "object" },
-  { id: "saudara perempuan", ar_singular: "أُخْت", ar_dual: "أُخْتَان", ar_plural: "أَخَوَات", gender: "f", type: "object" },
-  { id: "guru", ar_singular: "مُعَلِّم", ar_dual: "مُعَلِّمَان", ar_plural: "مُعَلِّمِين", gender: "m", type: "profession" },
-  { id: "guru", ar_singular: "مُعَلِّمَة", ar_dual: "مُعَلِّمَتَان", ar_plural: "مُعَلِّمَات", gender: "f", type: "profession" },
-  { id: "kakek", ar_singular: "جَدّ", ar_dual: "جَدَّان", ar_plural: "أَجْدَاد", gender: "m", type: "object" },
-  { id: "nenek", ar_singular: "جَدَّة", ar_dual: "جَدَّتَان", ar_plural: "جَدَّات", gender: "f", type: "object" },
-  { id: "paman", ar_singular: "عَمّ", ar_dual: "عَمَّان", ar_plural: "أَعْمَام", gender: "m", type: "object" },
-  { id: "bibi", ar_singular: "عَمَّة", ar_dual: "عَمَّتَان", ar_plural: "عَمَّات", gender: "f", type: "object" },
-  { id: "anak laki-laki", ar_singular: "اِبْن", ar_dual: "اِبْنَان", ar_plural: "أَبْنَاء", gender: "m", type: "object" },
-  { id: "anak perempuan", ar_singular: "بِنْت", ar_dual: "بِنْتَان", ar_plural: "بَنَات", gender: "f", type: "object" },
-  { id: "kamar mandi", ar_singular: "حَمَّام", ar_dual: "حَمَّامَان", ar_plural: "حَمَّامَات", gender: "m", type: "object" },
-  { id: "ruangan", ar_singular: "غُرْفَة", ar_dual: "غُرْفَتَان", ar_plural: "غُرَف", gender: "f", type: "object" },
-  { id: "mushola", ar_singular: "مُصَلّى", ar_dual: "مُصَلَّيَان", ar_plural: "مُصَلَّيَات", gender: "m", type: "object" },
-  { id: "mantel", ar_singular: "مِعْطَف", ar_dual: "مِعْطَفَان", ar_plural: "مَعَاطِف", gender: "m", type: "object" },
-  { id: "kacamata", ar_singular: "نَظَّارَة", ar_dual: "نَظَّارَتَان", ar_plural: "نَظَّارَات", gender: "f", type: "object" },
-  { id: "anak", ar_singular: "وَلَد", ar_dual: "وَلَدَان", ar_plural: "أَوْلَاد", gender: "m", type: "object" }
+  {
+    id: "buku",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "كِتَابٌ",
+        nasb: "كِتَابًا",
+        jar: "كِتَابٍ"
+      },
+      dual: {
+        raf: "كِتَابَانِ",
+        nasb: "كِتَابَيْنِ",
+        jar: "كِتَابَيْنِ"
+      },
+      plural: {
+        raf: "كُتُبٌ",
+        nasb: "كُتُبٍ",
+        jar: "كُتُبٍ"
+      }
+    }
+  },
+
+  {
+    id: "mobil",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "سَيَّارَةٌ",
+        nasb: "سَيَّارَةً",
+        jar: "سَيَّارَةٍ"
+      },
+      dual: {
+        raf: "سَيَّارَتَانِ",
+        nasb: "سَيَّارَتَيْنِ",
+        jar: "سَيَّارَتَيْنِ"
+      },
+      plural: {
+        raf: "سَيَّارَاتٌ",
+        nasb: "سَيَّارَاتٍ",
+        jar: "سَيَّارَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "papan tulis",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "سَبُّورَةٌ",
+        nasb: "سَبُّورَةً",
+        jar: "سَبُّورَةٍ"
+      },
+      dual: {
+        raf: "سَبُّورَتَانِ",
+        nasb: "سَبُّورَتَيْنِ",
+        jar: "سَبُّورَتَيْنِ"
+      },
+      plural: {
+        raf: "سَبُّورَاتٌ",
+        nasb: "سَبُّورَاتٍ",
+        jar: "سَبُّورَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "karpet",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "بِسَاطٌ",
+        nasb: "بِسَاطًا",
+        jar: "بِسَاطٍ"
+      },
+      dual: {
+        raf: "بِسَاطَانِ",
+        nasb: "بِسَاطَيْنِ",
+        jar: "بِسَاطَيْنِ"
+      },
+      plural: {
+        raf: "بُسُطٌ",
+        nasb: "بُسُطٍ",
+        jar: "بُسُطٍ"
+      }
+    }
+  },
+
+  {
+    id: "guru",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُدَرِّسٌ",
+        nasb: "مُدَرِّسًا",
+        jar: "مُدَرِّسٍ"
+      },
+      dual: {
+        raf: "مُدَرِّسَانِ",
+        nasb: "مُدَرِّسَيْنِ",
+        jar: "مُدَرِّسَيْنِ"
+      },
+      plural: {
+        raf: "مُدَرِّسُونَ",
+        nasb: "مُدَرِّسِينَ",
+        jar: "مُدَرِّسِينَ"
+      }
+    }
+  },
+  
+  {
+    id: "dokter",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "طَبِيبٌ",
+        nasb: "طَبِيبًا",
+        jar: "طَبِيبٍ"
+      },
+      dual: {
+        raf: "طَبِيبَانِ",
+        nasb: "طَبِيبَيْنِ",
+        jar: "طَبِيبَيْنِ"
+      },
+      plural: {
+        raf: "أَطِبَّاءُ",
+        nasb: "أَطِبَّاءَ",
+        jar: "أَطِبَّاءِ"
+      }
+    }
+  },
+
+  {
+    id: "insinyur",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُهَنْدِسٌ",
+        nasb: "مُهَنْدِسًا",
+        jar: "مُهَنْدِسٍ"
+      },
+      dual: {
+        raf: "مُهَنْدِسَانِ",
+        nasb: "مُهَنْدِسَيْنِ",
+        jar: "مُهَنْدِسَيْنِ"
+      },
+      plural: {
+        raf: "مُهَنْدِسُونَ",
+        nasb: "مُهَنْدِسِينَ",
+        jar: "مُهَنْدِسِينَ"
+      }
+    }
+  },
+
+  {
+    id: "murid",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "طَالِبٌ",
+        nasb: "طَالِبًا",
+        jar: "طَالِبٍ"
+      },
+      dual: {
+        raf: "طَالِبَانِ",
+        nasb: "طَالِبَيْنِ",
+        jar: "طَالِبَيْنِ"
+      },
+      plural: {
+        raf: "طُلَّابٌ",
+        nasb: "طُلَّابٍ",
+        jar: "طُلَّابٍ"
+      }
+    }
+  },
+
+  {
+    id: "ustadz",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "أُسْتَاذٌ",
+        nasb: "أُسْتَاذًا",
+        jar: "أُسْتَاذٍ"
+      },
+      dual: {
+        raf: "أُسْتَاذَانِ",
+        nasb: "أُسْتَاذَيْنِ",
+        jar: "أُسْتَاذَيْنِ"
+      },
+      plural: {
+        raf: "أَسَاتِذَةٌ",
+        nasb: "أَسَاتِذَةً",
+        jar: "أَسَاتِذَةٍ"
+      }
+    }
+  },
+
+  {
+    id: "matahari",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "شَمْسٌ",
+        nasb: "شَمْسًا",
+        jar: "شَمْسٍ"
+      },
+      dual: {
+        raf: "شَمْسَانِ",
+        nasb: "شَمْسَيْنِ",
+        jar: "شَمْسَيْنِ"
+      },
+      plural: {
+        raf: "شُمُوسٌ",
+        nasb: "شُمُوسٍ",
+        jar: "شُمُوسٍ"
+      }
+    }
+  },
+  
+  {
+    id: "masjid",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "مَسْجِدٌ",
+        nasb: "مَسْجِدًا",
+        jar: "مَسْجِدٍ"
+      },
+      dual: {
+        raf: "مَسْجِدَانِ",
+        nasb: "مَسْجِدَيْنِ",
+        jar: "مَسْجِدَيْنِ"
+      },
+      plural: {
+        raf: "مَسَاجِدُ",
+        nasb: "مَسَاجِدَ",
+        jar: "مَسَاجِدَ"
+      }
+    }
+  },
+
+  {
+    id: "nasi",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "رُزٌّ",
+        nasb: "رُزًّا",
+        jar: "رُزٍّ"
+      },
+      dual: {
+        raf: "رُزَّانِ",
+        nasb: "رُزَّيْنِ",
+        jar: "رُزَّيْنِ"
+      },
+      plural: {
+        raf: "أَرُزٌّ",
+        nasb: "أَرُزًّا",
+        jar: "أَرُزٍّ"
+      }
+    }
+  },
+
+  {
+    id: "pena",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "قَلَمٌ",
+        nasb: "قَلَمًا",
+        jar: "قَلَمٍ"
+      },
+      dual: {
+        raf: "قَلَمَانِ",
+        nasb: "قَلَمَيْنِ",
+        jar: "قَلَمَيْنِ"
+      },
+      plural: {
+        raf: "أَقْلَامٌ",
+        nasb: "أَقْلَامٍ",
+        jar: "أَقْلَامٍ"
+      }
+    }
+  },
+
+  {
+    id: "pelajaran",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "دَرْسٌ",
+        nasb: "دَرْسًا",
+        jar: "دَرْسٍ"
+      },
+      dual: {
+        raf: "دَرْسَانِ",
+        nasb: "دَرْسَيْنِ",
+        jar: "دَرْسَيْنِ"
+      },
+      plural: {
+        raf: "دُرُوسٌ",
+        nasb: "دُرُوسٍ",
+        jar: "دُرُوسٍ"
+      }
+    }
+  },
+
+  {
+    id: "muslim",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُسْلِمٌ",
+        nasb: "مُسْلِمًا",
+        jar: "مُسْلِمٍ"
+      },
+      dual: {
+        raf: "مُسْلِمَانِ",
+        nasb: "مُسْلِمَيْنِ",
+        jar: "مُسْلِمَيْنِ"
+      },
+      plural: {
+        raf: "مُسْلِمُونَ",
+        nasb: "مُسْلِمِينَ",
+        jar: "مُسْلِمِينَ"
+      }
+    }
+  },
+  
+  {
+    id: "muslimah",
+    gender: "f",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُسْلِمَةٌ",
+        nasb: "مُسْلِمَةً",
+        jar: "مُسْلِمَةٍ"
+      },
+      dual: {
+        raf: "مُسْلِمَتَانِ",
+        nasb: "مُسْلِمَتَيْنِ",
+        jar: "مُسْلِمَتَيْنِ"
+      },
+      plural: {
+        raf: "مُسْلِمَاتٌ",
+        nasb: "مُسْلِمَاتٍ",
+        jar: "مُسْلِمَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "tembok",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "جِدَارٌ",
+        nasb: "جِدَارًا",
+        jar: "جِدَارٍ"
+      },
+      dual: {
+        raf: "جِدَارَانِ",
+        nasb: "جِدَارَيْنِ",
+        jar: "جِدَارَيْنِ"
+      },
+      plural: {
+        raf: "جُدُرٌ",
+        nasb: "جُدُرٍ",
+        jar: "جُدُرٍ"
+      }
+    }
+  },
+
+  {
+    id: "keluarga",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "أُسْرَةٌ",
+        nasb: "أُسْرَةً",
+        jar: "أُسْرَةٍ"
+      },
+      dual: {
+        raf: "أُسْرَتَانِ",
+        nasb: "أُسْرَتَيْنِ",
+        jar: "أُسْرَتَيْنِ"
+      },
+      plural: {
+        raf: "أُسَرٌ",
+        nasb: "أُسَرٍ",
+        jar: "أُسَرٍ"
+      }
+    }
+  },
+
+  {
+    id: "pohon",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "شَجَرَةٌ",
+        nasb: "شَجَرَةً",
+        jar: "شَجَرَةٍ"
+      },
+      dual: {
+        raf: "شَجَرَتَانِ",
+        nasb: "شَجَرَتَيْنِ",
+        jar: "شَجَرَتَيْنِ"
+      },
+      plural: {
+        raf: "أَشْجَارُ",
+        nasb: "أَشْجَارَ",
+        jar: "أَشْجَارَ"
+      }
+    }
+  },
+
+  {
+    id: "ayah",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "وَالِدٌ",
+        nasb: "وَالِدًا",
+        jar: "وَالِدٍ"
+      },
+      dual: {
+        raf: "وَالِدَانِ",
+        nasb: "وَالِدَيْنِ",
+        jar: "وَالِدَيْنِ"
+      },
+      plural: {
+        raf: "وَالِدُونَ",
+        nasb: "وَالِدِينَ",
+        jar: "وَالِدِينَ"
+      }
+    }
+  },
+  
+  {
+    id: "ibu",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "وَالِدَةٌ",
+        nasb: "وَالِدَةً",
+        jar: "وَالِدَةٍ"
+      },
+      dual: {
+        raf: "وَالِدَتَانِ",
+        nasb: "وَالِدَتَيْنِ",
+        jar: "وَالِدَتَيْنِ"
+      },
+      plural: {
+        raf: "وَالِدَاتٌ",
+        nasb: "وَالِدَاتٍ",
+        jar: "وَالِدَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "gambar",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "صُورَةٌ",
+        nasb: "صُورَةً",
+        jar: "صُورَةٍ"
+      },
+      dual: {
+        raf: "صُورَتَانِ",
+        nasb: "صُورَتَيْنِ",
+        jar: "صُورَتَيْنِ"
+      },
+      plural: {
+        raf: "صُوَرٌ",
+        nasb: "صُوَرٍ",
+        jar: "صُوَرٍ"
+      }
+    }
+  },
+
+  {
+    id: "saudara laki-laki",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "أَخٌ",
+        nasb: "أَخًا",
+        jar: "أَخٍ"
+      },
+      dual: {
+        raf: "أَخَوَانِ",
+        nasb: "أَخَوَيْنِ",
+        jar: "أَخَوَيْنِ"
+      },
+      plural: {
+        raf: "إِخْوَةٌ",
+        nasb: "إِخْوَةً",
+        jar: "إِخْوَةٍ"
+      }
+    }
+  },
+
+  {
+    id: "saudara perempuan",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "أُخْتٌ",
+        nasb: "أُخْتًا",
+        jar: "أُخْتٍ"
+      },
+      dual: {
+        raf: "أُخْتَانِ",
+        nasb: "أُخْتَيْنِ",
+        jar: "أُخْتَيْنِ"
+      },
+      plural: {
+        raf: "أَخَوَاتٌ",
+        nasb: "أَخَوَاتٍ",
+        jar: "أَخَوَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "guru",
+    gender: "m",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُعَلِّمٌ",
+        nasb: "مُعَلِّمًا",
+        jar: "مُعَلِّمٍ"
+      },
+      dual: {
+        raf: "مُعَلِّمَانِ",
+        nasb: "مُعَلِّمَيْنِ",
+        jar: "مُعَلِّمَيْنِ"
+      },
+      plural: {
+        raf: "مُعَلِّمُونَ",
+        nasb: "مُعَلِّمِينَ",
+        jar: "مُعَلِّمِينَ"
+      }
+    }
+  },
+  
+  {
+    id: "guru perempuan",
+    gender: "f",
+    type: "profession",
+    ar: {
+      singular: {
+        raf: "مُعَلِّمَةٌ",
+        nasb: "مُعَلِّمَةً",
+        jar: "مُعَلِّمَةٍ"
+      },
+      dual: {
+        raf: "مُعَلِّمَتَانِ",
+        nasb: "مُعَلِّمَتَيْنِ",
+        jar: "مُعَلِّمَتَيْنِ"
+      },
+      plural: {
+        raf: "مُعَلِّمَاتٌ",
+        nasb: "مُعَلِّمَاتٍ",
+        jar: "مُعَلِّمَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "kakek",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "جَدٌّ",
+        nasb: "جَدًّا",
+        jar: "جَدٍّ"
+      },
+      dual: {
+        raf: "جَدَّانِ",
+        nasb: "جَدَّيْنِ",
+        jar: "جَدَّيْنِ"
+      },
+      plural: {
+        raf: "أَجْدَادٌ",
+        nasb: "أَجْدَادٍ",
+        jar: "أَجْدَادٍ"
+      }
+    }
+  },
+
+  {
+    id: "nenek",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "جَدَّةٌ",
+        nasb: "جَدَّةً",
+        jar: "جَدَّةٍ"
+      },
+      dual: {
+        raf: "جَدَّتَانِ",
+        nasb: "جَدَّتَيْنِ",
+        jar: "جَدَّتَيْنِ"
+      },
+      plural: {
+        raf: "جَدَّاتٌ",
+        nasb: "جَدَّاتٍ",
+        jar: "جَدَّاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "paman",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "عَمٌّ",
+        nasb: "عَمًّا",
+        jar: "عَمٍّ"
+      },
+      dual: {
+        raf: "عَمَّانِ",
+        nasb: "عَمَّيْنِ",
+        jar: "عَمَّيْنِ"
+      },
+      plural: {
+        raf: "أَعْمَامٌ",
+        nasb: "أَعْمَامٍ",
+        jar: "أَعْمَامٍ"
+      }
+    }
+  },
+
+  {
+    id: "bibi",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "عَمَّةٌ",
+        nasb: "عَمَّةً",
+        jar: "عَمَّةٍ"
+      },
+      dual: {
+        raf: "عَمَّتَانِ",
+        nasb: "عَمَّتَيْنِ",
+        jar: "عَمَّتَيْنِ"
+      },
+      plural: {
+        raf: "عَمَّاتٌ",
+        nasb: "عَمَّاتٍ",
+        jar: "عَمَّاتٍ"
+      }
+    }
+  },
+  
+  {
+    id: "anak_l",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "اِبْنٌ",
+        nasb: "اِبْنًا",
+        jar: "اِبْنٍ"
+      },
+      dual: {
+        raf: "اِبْنَانِ",
+        nasb: "اِبْنَيْنِ",
+        jar: "اِبْنَيْنِ"
+      },
+      plural: {
+        raf: "أَبْنَاءُ",
+        nasb: "أَبْنَاءَ",
+        jar: "أَبْنَاءِ"
+      }
+    }
+  },
+
+  {
+    id: "anak_p",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "بِنْتٌ",
+        nasb: "بِنْتًا",
+        jar: "بِنْتٍ"
+      },
+      dual: {
+        raf: "بِنْتَانِ",
+        nasb: "بِنْتَيْنِ",
+        jar: "بِنْتَيْنِ"
+      },
+      plural: {
+        raf: "بَنَاتٌ",
+        nasb: "بَنَاتٍ",
+        jar: "بَنَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "kamar_mandi",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "حَمَّامٌ",
+        nasb: "حَمَّامًا",
+        jar: "حَمَّامٍ"
+      },
+      dual: {
+        raf: "حَمَّامَانِ",
+        nasb: "حَمَّامَيْنِ",
+        jar: "حَمَّامَيْنِ"
+      },
+      plural: {
+        raf: "حَمَّامَاتٌ",
+        nasb: "حَمَّامَاتٍ",
+        jar: "حَمَّامَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "ruangan",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "غُرْفَةٌ",
+        nasb: "غُرْفَةً",
+        jar: "غُرْفَةٍ"
+      },
+      dual: {
+        raf: "غُرْفَتَانِ",
+        nasb: "غُرْفَتَيْنِ",
+        jar: "غُرْفَتَيْنِ"
+      },
+      plural: {
+        raf: "غُرَفٌ",
+        nasb: "غُرَفٍ",
+        jar: "غُرَفٍ"
+      }
+    }
+  },
+  
+  {
+    id: "mushola",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "مُصَلًّى",
+        nasb: "مُصَلًّى",
+        jar: "مُصَلًّى"
+      },
+      dual: {
+        raf: "مُصَلَّيَانِ",
+        nasb: "مُصَلَّيَيْنِ",
+        jar: "مُصَلَّيَيْنِ"
+      },
+      plural: {
+        raf: "مُصَلَّيَاتٌ",
+        nasb: "مُصَلَّيَاتٍ",
+        jar: "مُصَلَّيَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "mantel",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "مِعْطَفٌ",
+        nasb: "مِعْطَفًا",
+        jar: "مِعْطَفٍ"
+      },
+      dual: {
+        raf: "مِعْطَفَانِ",
+        nasb: "مِعْطَفَيْنِ",
+        jar: "مِعْطَفَيْنِ"
+      },
+      plural: {
+        raf: "مَعَاطِفُ",
+        nasb: "مَعَاطِفَ",
+        jar: "مَعَاطِفَ"
+      }
+    }
+  },
+
+  {
+    id: "kacamata",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "نَظَّارَةٌ",
+        nasb: "نَظَّارَةً",
+        jar: "نَظَّارَةٍ"
+      },
+      dual: {
+        raf: "نَظَّارَتَانِ",
+        nasb: "نَظَّارَتَيْنِ",
+        jar: "نَظَّارَتَيْنِ"
+      },
+      plural: {
+        raf: "نَظَّارَاتٌ",
+        nasb: "نَظَّارَاتٍ",
+        jar: "نَظَّارَاتٍ"
+      }
+    }
+  },
+
+  {
+    id: "anak_umum",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: {
+        raf: "وَلَدٌ",
+        nasb: "وَلَدًا",
+        jar: "وَلَدٍ"
+      },
+      dual: {
+        raf: "وَلَدَانِ",
+        nasb: "وَلَدَيْنِ",
+        jar: "وَلَدَيْنِ"
+      },
+      plural: {
+        raf: "أَوْلَادٌ",
+        nasb: "أَوْلَادٍ",
+        jar: "أَوْلَادٍ"
+      }
+    }
+  }
 ];
 
 // ======================
@@ -1343,16 +2178,76 @@ const harfJar = [
 // NOMOR
 // ======================
 const numbers = [
-  { num: 1, ar_m: "وَاحِدٌ", ar_f: "وَاحِدَةٌ" },
-  { num: 2, ar_m: "اِثْنَانِ", ar_f: "اِثْنَتَانِ" },
-  { num: 3, ar_m: "ثَلَاثَةُ", ar_f: "ثَلَاثُ" },
-  { num: 4, ar_m: "أَرْبَعَةُ", ar_f: "أَرْبَعُ" },
-  { num: 5, ar_m: "خَمْسَةُ", ar_f: "خَمْسُ" },
-  { num: 6, ar_m: "سِتَّةُ", ar_f: "سِتُّ" },
-  { num: 7, ar_m: "سَبْعَةُ", ar_f: "سَبْعُ" },
-  { num: 8, ar_m: "ثَمَانِيَةُ", ar_f: "ثَمَانٍ" },
-  { num: 9, ar_m: "تِسْعَةُ", ar_f: "تِسْعُ" },
-  { num: 10, ar_m: "عَشَرَةُ", ar_f: "عَشْرُ" }
+  {
+    num: 1,
+    ar: {
+      m: { raf: "وَاحِدٌ", nasb: "وَاحِدًا", jar: "وَاحِدٍ" },
+      f: { raf: "وَاحِدَةٌ", nasb: "وَاحِدَةً", jar: "وَاحِدَةٍ" }
+    }
+  },
+  {
+    num: 2,
+    ar: {
+      m: { raf: "اِثْنَانِ", nasb: "اِثْنَيْنِ", jar: "اِثْنَيْنِ" },
+      f: { raf: "اِثْنَتَانِ", nasb: "اِثْنَتَيْنِ", jar: "اِثْنَتَيْنِ" }
+    }
+  },
+  {
+    num: 3,
+    ar: {
+      m: { raf: "ثَلَاثَةُ", nasb: "ثَلَاثَةَ", jar: "ثَلَاثَةِ" },
+      f: { raf: "ثَلَاثُ", nasb: "ثَلَاثَ", jar: "ثَلَاثِ" }
+    }
+  },
+  {
+    num: 4,
+    ar: {
+      m: { raf: "أَرْبَعَةُ", nasb: "أَرْبَعَةَ", jar: "أَرْبَعَةِ" },
+      f: { raf: "أَرْبَعُ", nasb: "أَرْبَعَ", jar: "أَرْبَعِ" }
+    }
+  },
+  {
+    num: 5,
+    ar: {
+      m: { raf: "خَمْسَةُ", nasb: "خَمْسَةَ", jar: "خَمْسَةِ" },
+      f: { raf: "خَمْسُ", nasb: "خَمْسَ", jar: "خَمْسِ" }
+    }
+  },
+  {
+    num: 6,
+    ar: {
+      m: { raf: "سِتَّةُ", nasb: "سِتَّةَ", jar: "سِتَّةِ" },
+      f: { raf: "سِتُّ", nasb: "سِتَّ", jar: "سِتِّ" }
+    }
+  },
+  {
+    num: 7,
+    ar: {
+      m: { raf: "سَبْعَةُ", nasb: "سَبْعَةَ", jar: "سَبْعَةِ" },
+      f: { raf: "سَبْعُ", nasb: "سَبْعَ", jar: "سَبْعِ" }
+    }
+  },
+  {
+    num: 8,
+    ar: {
+      m: { raf: "ثَمَانِيَةُ", nasb: "ثَمَانِيَةَ", jar: "ثَمَانِيَةِ" },
+      f: { raf: "ثَمَانٍ", nasb: "ثَمَانِيَ", jar: "ثَمَانِيَ" }
+    }
+  },
+  {
+    num: 9,
+    ar: {
+      m: { raf: "تِسْعَةُ", nasb: "تِسْعَةَ", jar: "تِسْعَةِ" },
+      f: { raf: "تِسْعُ", nasb: "تِسْعَ", jar: "تِسْعِ" }
+    }
+  },
+  {
+    num: 10,
+    ar: {
+      m: { raf: "عَشَرَةُ", nasb: "عَشَرَةَ", jar: "عَشَرَةِ" },
+      f: { raf: "عَشْرُ", nasb: "عَشْرَ", jar: "عَشْرِ" }
+    }
+  }
 ];
 
 // ======================
@@ -1930,6 +2825,28 @@ function detectNounType(noun, num) {
   }
 
   return "broken";
+}
+
+function generateAdad({ number, noun, harf }) {
+  const isJar = !!harf;
+
+  const irob = isJar ? "jar" : "raf";
+
+  // 1. pilih bentuk number
+  const numForm = number.ar[ الجنس ][irob];
+
+  // 2. kategori angka
+  if (number.num === 1) {
+    return noun.ar.singular[irob] + " " + numForm;
+  }
+
+  if (number.num === 2) {
+    return noun.ar.dual[irob];
+  }
+
+  if (number.num >= 3 && number.num <= 10) {
+    return numForm + " " + noun.ar.plural.jar;
+  }
 }
   
 buildPool();
