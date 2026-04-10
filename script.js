@@ -1339,6 +1339,21 @@ const harfJar = [
   { ar: "بَعْدَ", id: "sesudah" }
 ];
 
+const harf = pick(harfJar)
+
+let numberWord = numbers[n][gender]
+let nounForm = selectNounForm(noun, n)
+
+if (harf) {
+  numberWord = toJarNumber(numberWord)
+
+  if (n === 2) {
+    nounForm = toJarDual(nounForm)
+  } else if (n >= 3) {
+    nounForm = applyJarPlural(nounForm)
+  }
+}
+
 // ======================
 // NOMOR
 // ======================
@@ -1371,9 +1386,7 @@ let currentLabel = "";
 
 // 1. Number → jadi jar (kasrah)
 function toJarNumber(word) {
-  return word
-    .replace("ُ", "ِ")   // dhammah → kasrah
-    .replace("ٌ", "ٍ");  // tanwin dhammah → tanwin kasrah
+  return word.replace(/ُ|ٌ/g, (m) => m === "ُ" ? "ِ" : "ٍ");
 }
 
 // 2. Dual → jadi jar/nasab (ـَيْنِ)
