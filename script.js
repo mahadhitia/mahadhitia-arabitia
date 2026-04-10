@@ -1339,21 +1339,6 @@ const harfJar = [
   { ar: "بَعْدَ", id: "sesudah" }
 ];
 
-const harf = pick(harfJar)
-
-let numberWord = numbers[n][gender]
-let nounForm = selectNounForm(noun, n)
-
-if (harf) {
-  numberWord = toJarNumber(numberWord)
-
-  if (n === 2) {
-    nounForm = toJarDual(nounForm)
-  } else if (n >= 3) {
-    nounForm = applyJarPlural(nounForm)
-  }
-}
-
 // ======================
 // NOMOR
 // ======================
@@ -1999,6 +1984,25 @@ function applyAdadJarIfNeeded(word, category, caseType, isNumber = false) {
   if (category === "plural") return fixMudzakkarPlural(word, true);
 
   return toJarNumber(word);
+}
+
+function generateAdad() {
+  const number = Math.floor(Math.random() * 10) + 1
+  const noun = pick(nouns)
+  const harfObj = pick(harfJar)
+
+  const caseType = "jar" // karena ada harf
+
+  const phrase = generateAdadPhrase({
+    number,
+    noun,
+    caseType,
+    harf: harfObj.ar
+  })
+
+  current = phrase
+
+  render()
 }
 
 let currentHarf = null;
