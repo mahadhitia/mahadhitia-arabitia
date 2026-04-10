@@ -1968,7 +1968,7 @@ const nouns = [
   },
   
   {
-    id: "anak_l",
+    id: "anak laki-laki",
     gender: "m",
     type: "object",
     ar: {
@@ -1991,7 +1991,7 @@ const nouns = [
   },
 
   {
-    id: "anak_p",
+    id: "anak perempuan",
     gender: "f",
     type: "object",
     ar: {
@@ -2014,7 +2014,7 @@ const nouns = [
   },
 
   {
-    id: "kamar_mandi",
+    id: "kamar mandi",
     gender: "m",
     type: "object",
     ar: {
@@ -2129,7 +2129,7 @@ const nouns = [
   },
 
   {
-    id: "anak_umum",
+    id: "anak",
     gender: "m",
     type: "object",
     ar: {
