@@ -1342,18 +1342,18 @@ const harfJar = [
 // ======================
 // NOMOR
 // ======================
-const numbers = {
-  1: { m: "وَاحِد", f: "وَاحِدَة" },
-  2: { m: "اِثْنَان", f: "اِثْنَتَان" },
-  3: { m: "ثَلَاثَة", f: "ثَلَاث" },
-  4: { m: "أَرْبَعَة", f: "أَرْبَع" },
-  5: { m: "خَمْسَة", f: "خَمْس" },
-  6: { m: "سِتَّة", f: "سِتّ" },
-  7: { m: "سَبْعَة", f: "سَبْع" },
-  8: { m: "ثَمَانِيَة", f: "ثَمَان" },
-  9: { m: "تِسْعَة", f: "تِسْع" },
-  10:{ m: "عَشَرَة", f: "عَشْر" }
-};
+const numbers = [
+  { num: 1, ar_m: "وَاحِدٌ", ar_f: "وَاحِدَةٌ" },
+  { num: 2, ar_m: "اِثْنَانِ", ar_f: "اِثْنَتَانِ" },
+  { num: 3, ar_m: "ثَلَاثَةُ", ar_f: "ثَلَاثُ" },
+  { num: 4, ar_m: "أَرْبَعَةُ", ar_f: "أَرْبَعُ" },
+  { num: 5, ar_m: "خَمْسَةُ", ar_f: "خَمْسُ" },
+  { num: 6, ar_m: "سِتَّةُ", ar_f: "سِتُّ" },
+  { num: 7, ar_m: "سَبْعَةُ", ar_f: "سَبْعُ" },
+  { num: 8, ar_m: "ثَمَانِيَةُ", ar_f: "ثَمَانٍ" },
+  { num: 9, ar_m: "تِسْعَةُ", ar_f: "تِسْعُ" },
+  { num: 10, ar_m: "عَشَرَةُ", ar_f: "عَشْرُ" }
+];
 
 // ======================
 // RANDOM
@@ -1371,7 +1371,9 @@ let currentLabel = "";
 
 // 1. Number → jadi jar (kasrah)
 function toJarNumber(word) {
-  return word.replace(/ُ|ٌ/g, (m) => m === "ُ" ? "ِ" : "ٍ");
+  return word
+    .replace("ُ", "ِ")   // dhammah → kasrah
+    .replace("ٌ", "ٍ");  // tanwin dhammah → tanwin kasrah
 }
 
 // 2. Dual → jadi jar/nasab (ـَيْنِ)
@@ -1398,60 +1400,6 @@ function applyJarPlural(word) {
 }
 
 // ======================
-// 🧠 ADAD ENGINE
-// ======================
-
-function classifyNumber(n) {
-  if (n === 1) return "singular";
-  if (n === 2) return "dual";
-  if (n >= 3 && n <= 10) return "plural";
-}
-
-function selectNounForm(noun, category) {
-  if (category === "singular") return noun.ar_singular;
-  if (category === "dual") return noun.ar_dual;
-  if (category === "plural") return noun.ar_plural;
-}
-
-function getNumberGender(number, nounGender) {
-  if (number >= 3 && number <= 10) {
-    return nounGender === "m" ? "f" : "m";
-  }
-  return nounGender;
-}
-
-function selectNumberForm(number, gender) {
-  return numbers[number][gender];
-}
-
-function applyJarIfNeeded(word, category, caseType, isNumber = false) {
-  if (caseType !== "jar") return word;
-
-  if (isNumber) {
-    return toJarNumber(word);
-  }
-
-  if (category === "dual") return toJarDual(word);
-  if (category === "plural") return fixMudzakkarPlural(word, true);
-
-  return toJarNumber(word);
-}
-
-function generateAdadPhrase({ number, noun, caseType = null, harf = null }) {
-  const category = classifyNumber(number);
-
-  let nounWord = selectNounForm(noun, category);
-  const numGender = getNumberGender(number, noun.gender);
-  let numberWord = selectNumberForm(number, numGender);
-
-  nounWord = applyJarIfNeeded(nounWord, category, caseType);
-  numberWord = applyJarIfNeeded(numberWord, "number", caseType);
-
-  if (harf) return `${harf} ${numberWord} ${nounWord}`;
-  return `${numberWord} ${nounWord}`;
-}
-
-// ======================
 // GENERATE
 // ======================
 function generateSentence() {
@@ -1460,46 +1408,71 @@ function generateSentence() {
   // MODE ADAD
   // ======================
   if (mode === "adad") {
-    const number = Math.floor(Math.random() * 10) + 1;
-    const noun = nouns[Math.floor(Math.random() * nouns.length)];
-    const useJar = Math.random() > 0.5;
 
-    let harf = null;
-    let caseType = null;
+    const noun = pick(nouns);
+    const num = Math.floor(Math.random() * 10) + 1;
+    const numberWord = getNumberWord(num, noun.gender);
 
-    if (useJar) {
-      const chosenHarf = pick(harfJar);
-      harf = chosenHarf.ar;
-      caseType = "jar";
+    let sentenceAr = "";
+    let sentenceId = "";
+
+    const type = detectNounType(noun, num);
+
+    let nounForm;
+    
+    if (num === 1) nounForm = noun.ar_singular;
+    else if (num === 2) nounForm = noun.ar_dual;
+    else nounForm = noun.ar_plural;
+
+    if (num === 1) {
+      sentenceAr = nounForm;
+      sentenceId = "satu " + noun.id;
+    
+    } else if (num === 2) {
+      sentenceAr = nounForm;
+      sentenceId = "dua " + noun.id;
+    
+    } else {
+      sentenceAr = numberWord + " " + nounForm;
+      sentenceId = num + " " + noun.id;
     }
 
-    const result = generateAdadPhrase({
-      number,
-      noun,
-      caseType,
-      harf
-    });
+    // optional: huruf jar
+    const useJar = Math.random() > 0.5;
 
-    current = result;
-    currentQuestion = `${number} ${noun.id}`;
-    currentLabel = classifyNumber(number);
+    const harf = pick(harfJar);
+    if (useJar) {
+      const nounJar = applySimpleIrab(nounForm, type, "jar");
+      
+      if (num === 1 || num === 2) {
+        sentenceAr = harf.ar + " " + nounJar;
+      } else {
+        const numberJar = toJarNumber(numberWord);
+        sentenceAr = harf.ar + " " + numberJar + " " + nounJar;
+      }
+    
+      sentenceId = harf.id + " " + sentenceId;
+    }
+    
+    current = sentenceAr;
+    currentQuestion = sentenceId;
 
-    console.log("[ui] rendering adad", {
-      mode,
-      currentQuestion,
-      current,
-      currentLabel
-    });
+    currentLabel =
+      (num === 1 ? "mufrad" :
+       num === 2 ? "mutsanna" :
+       "jamak")
+      + (useJar ? " + jar" : "");
 
-    document.getElementById("question").innerText = currentQuestion;
-    document.getElementById("answer").innerText = current;
+    document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
-    document.getElementById("answerWrap").style.display = "block";
+
+    document.getElementById("answer").innerText = "";
+    document.getElementById("answerWrap").style.display = "none";
 
     setTimeout(() => playQuestion(), 100);
     return;
   }
-  
+
   // ======================
   // MODE ISIM
   // ======================
@@ -1957,169 +1930,6 @@ function detectNounType(noun, num) {
   }
 
   return "broken";
-}
-
-function selectNounForm(noun, category) {
-  if (category === "singular") return noun.ar_singular;
-  if (category === "dual") return noun.ar_dual;
-  if (category === "plural") return noun.ar_plural;
-}
-
-function getNumberGender(number, nounGender) {
-  if (number >= 3 && number <= 10) {
-    return nounGender === "m" ? "f" : "m";
-  }
-  return nounGender;
-}
-
-function selectNumberForm(number, gender) {
-  return numbers[number][gender];
-}
-
-function applyAdadJarIfNeeded(word, category, caseType, isNumber = false) {
-  if (caseType !== "jar") return word;
-
-  if (isNumber) return toJarNumber(word);
-  if (category === "dual") return toJarDual(word);
-  if (category === "plural") return fixMudzakkarPlural(word, true);
-
-  return toJarNumber(word);
-}
-
-function generateAdad() {
-  const number = Math.floor(Math.random() * 10) + 1
-  const noun = pick(nouns)
-  const harfObj = pick(harfJar)
-
-  const caseType = "jar" // karena ada harf
-
-  const phrase = generateAdadPhrase({
-    number,
-    noun,
-    caseType,
-    harf: harfObj.ar
-  })
-
-  current = phrase
-
-  render()
-}
-
-let currentHarf = null;
-
-function generateAdadPhrase({ number, noun, caseType = null, harf = null }) {
-  const category = classifyNumber(number);
-  if (!category || !noun) {
-    console.log("[adad] invalid input", { number, noun, caseType, harf });
-    return "";
-  }
-
-  let nounWord = selectNounForm(noun, category);
-  const numGender = getNumberGender(number, noun.gender);
-  let numberWord = selectNumberForm(number, numGender);
-
-  if (!nounWord || !numberWord) {
-    console.log("[adad] undefined word", {
-      number,
-      noun,
-      category,
-      numGender,
-      nounWord,
-      numberWord
-    });
-    return "";
-  }
-
-  nounWord = applyAdadJarIfNeeded(nounWord, category, caseType, false);
-  numberWord = applyAdadJarIfNeeded(numberWord, "number", caseType, true);
-
-  const phrase = harf ? `${harf} ${numberWord} ${nounWord}` : `${numberWord} ${nounWord}`;
-
-  console.log("[adad] generated phrase", {
-    number,
-    noun: noun.id,
-    category,
-    caseType,
-    harf,
-    numberWord,
-    nounWord,
-    phrase
-  });
-
-  return phrase;
-}
-
-// ======================
-// CORE ENGINE (FINAL)
-// ======================
-
-function getForm(n) {
-  if (n === 1) return "mufrad";
-  if (n === 2) return "mutsanna";
-  return "jamak";
-}
-
-function applyIrab(word, { form, irab, isMarifah }) {
-
-  // ===== MA'RIFAT =====
-  if (isMarifah) {
-    word = "ال" + word;
-  }
-
-  // ======================
-  // MUFRAD
-  // ======================
-  if (form === "mufrad") {
-    if (isMarifah) return word;
-
-    if (irab === "rafa") return word + "ٌ";
-    if (irab === "nashab") return word + "ً";
-    if (irab === "jar") return word + "ٍ";
-  }
-
-  // ======================
-  // MUTSANNA
-  // ======================
-  if (form === "mutsanna") {
-    if (irab === "rafa") return word; // default: ـان
-    if (irab === "nashab" || irab === "jar") {
-      return word.replace(/ان$/, "ين");
-    }
-  }
-
-  // ======================
-  // JAMAK MUDZAKKAR
-  // ======================
-  if (word.endsWith("ون") || word.endsWith("ين")) {
-    if (irab === "rafa") return word.replace(/ين$/, "ون");
-    if (irab === "nashab" || irab === "jar") {
-      return word.replace(/ون$/, "ين");
-    }
-  }
-
-  // ======================
-  // JAMAK MUANNATS
-  // ======================
-  if (word.endsWith("ات")) {
-    if (isMarifah) return word;
-
-    if (irab === "rafa") return word + "ٌ";
-    if (irab === "nashab") return word + "ٍ";
-    if (irab === "jar") return word + "ٍ";
-  }
-
-  // ======================
-  // JAMAK TAKSIR
-  // ======================
-  if (form === "jamak") {
-    if (isMarifah) return word;
-
-    if (irab === "rafa") return word + "ٌ";
-    if (irab === "nashab") return word + "ً";
-    if (irab === "jar") return word + "ٍ";
-  }
-
-  return word;
 }
   
 buildPool();
