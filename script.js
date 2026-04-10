@@ -2351,14 +2351,17 @@ function generateSentence() {
     } else {
       // 3–10: number + jamak majrur (noun selalu jar setelah angka)
       const numWordRaf = getNumberWord(num, noun.gender);
-      const numWordJar = getNumberWord(num, noun.gender)
-        .replace("ُ", "ِ").replace("ُ", "ِ"); // kasrah angka
+      const numWordJar = applyJarToNumber(
+        getNumberWord(num, noun.gender)
+      )
   
       if (useJar) {
-        sentenceAr = harf.ar + " " + numWordJar + " " + nounJar;
+        const nounWord = selectNounForm(num, noun);
+        sentenceAr = harf.ar + " " + numWordJar + " " + nounWord;
         sentenceId = harf.id + " " + num + " " + noun.id;
       } else {
-        sentenceAr = numWordRaf + " " + nounJar; // noun tetap jar setelah angka
+        const nounWord = selectNounForm(num, noun);
+        sentenceAr = numWordRaf + " " + nounWord;
         sentenceId = num + " " + noun.id;
       }
     }
@@ -2796,6 +2799,18 @@ function detectNounType(noun, num) {
   }
 
   return "broken";
+}
+
+function selectNounForm(num, noun) {
+  if (num === 1) return noun.ar.singular.raf;
+  if (num === 2) return noun.ar.dual.raf;
+
+  // 3–10
+  return noun.ar.plural.jar;
+}
+
+function applyJarToNumber(word) {
+  return word.replace("ُ", "ِ").replace("ٌ", "ٍ");
 }
   
 buildPool();
