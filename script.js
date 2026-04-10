@@ -1464,34 +1464,42 @@ function generateSentence() {
   if (mode === "adad") {
     const number = Math.floor(Math.random() * 10) + 1;
     const noun = nouns[Math.floor(Math.random() * nouns.length)];
-  
     const useJar = Math.random() > 0.5;
-  
+
     let harf = null;
     let caseType = null;
-  
+
     if (useJar) {
       const chosenHarf = pick(harfJar);
       harf = chosenHarf.ar;
       caseType = "jar";
     }
-  
+
     const result = generateAdadPhrase({
       number,
       noun,
       caseType,
       harf
     });
-  
+
     current = result;
-  
-    document.getElementById("question").innerText =
-      `${number} ${noun.id}`;
-  
-    document.getElementById("answer").innerText = result;
-  
-    document.getElementById("label").innerText =
-      classifyNumber(number);
+    currentQuestion = `${number} ${noun.id}`;
+    currentLabel = classifyNumber(number);
+
+    console.log("[ui] rendering adad", {
+      mode,
+      currentQuestion,
+      current,
+      currentLabel
+    });
+
+    document.getElementById("question").innerText = currentQuestion;
+    document.getElementById("answer").innerText = current;
+    document.getElementById("label").innerText = currentLabel;
+    document.getElementById("answerWrap").style.display = "block";
+
+    setTimeout(() => playQuestion(), 100);
+    return;
   }
   
   // ======================
@@ -1970,8 +1978,8 @@ function selectNumberForm(number, gender) {
   return numbers[number][gender];
 }
 
-function applyJarIfNeeded(word, category, isNumber = false) {
-  if (!currentHarf) return word;
+function applyAdadJarIfNeeded(word, category, caseType, isNumber = false) {
+  if (caseType !== "jar") return word;
 
   if (isNumber) return toJarNumber(word);
   if (category === "dual") return toJarDual(word);
@@ -1982,41 +1990,46 @@ function applyJarIfNeeded(word, category, isNumber = false) {
 
 let currentHarf = null;
 
-function generateAdad() {
-  const n = Math.floor(Math.random() * 10) + 1;
-  const noun = pick(nouns);
-  const harf = pick(harfJar);
-
-  const form = getForm(n);
-
-  // karena pakai harf jar → selalu jar
-  const irab = "jar";
-
-  // pilih bentuk noun
-  let word;
-  if (form === "mufrad") word = noun.ar_singular;
-  else if (form === "mutsanna") word = noun.ar_dual;
-  else word = noun.ar_plural;
-
-  // apply i’rab
-  word = applyIrab(word, {
-    form,
-    irab,
-    isMarifah: false
-  });
-
-  // gender angka (3–10 kebalik)
-  let gender = noun.gender;
-  if (n >= 3 && n <= 10) {
-    gender = gender === "m" ? "f" : "m";
+function generateAdadPhrase({ number, noun, caseType = null, harf = null }) {
+  const category = classifyNumber(number);
+  if (!category || !noun) {
+    console.log("[adad] invalid input", { number, noun, caseType, harf });
+    return "";
   }
 
-  let numberWord = numbers[n][gender];
+  let nounWord = selectNounForm(noun, category);
+  const numGender = getNumberGender(number, noun.gender);
+  let numberWord = selectNumberForm(number, numGender);
 
-  // angka ikut jar
-  numberWord = toJarNumber(numberWord);
+  if (!nounWord || !numberWord) {
+    console.log("[adad] undefined word", {
+      number,
+      noun,
+      category,
+      numGender,
+      nounWord,
+      numberWord
+    });
+    return "";
+  }
 
-  return `${harf.ar} ${numberWord} ${word}`;
+  nounWord = applyAdadJarIfNeeded(nounWord, category, caseType, false);
+  numberWord = applyAdadJarIfNeeded(numberWord, "number", caseType, true);
+
+  const phrase = harf ? `${harf} ${numberWord} ${nounWord}` : `${numberWord} ${nounWord}`;
+
+  console.log("[adad] generated phrase", {
+    number,
+    noun: noun.id,
+    category,
+    caseType,
+    harf,
+    numberWord,
+    nounWord,
+    phrase
+  });
+
+  return phrase;
 }
 
 // ======================
