@@ -2303,67 +2303,75 @@ function generateSentence() {
   // MODE ADAD
   // ======================
   if (mode === "adad") {
-
     const noun = pick(nouns);
     const num = Math.floor(Math.random() * 10) + 1;
-    const numberWord = getNumberWord(num, noun.gender);
-
+  
     let sentenceAr = "";
     let sentenceId = "";
-
-    const type = detectNounType(noun, num);
-
-    let nounForm;
-    
-    if (num === 1) nounForm = noun.ar_singular;
-    else if (num === 2) nounForm = noun.ar_dual;
-    else nounForm = noun.ar_plural;
-
+    let labelType = "";
+  
+    // Ambil bentuk noun yang benar
+    let nounRaf, nounJar;
+  
     if (num === 1) {
-      sentenceAr = nounForm;
-      sentenceId = "satu " + noun.id;
-    
+      nounRaf = noun.ar.singular.raf;
+      nounJar = noun.ar.singular.jar;
+      labelType = "mufrad";
     } else if (num === 2) {
-      sentenceAr = nounForm;
-      sentenceId = "dua " + noun.id;
-    
+      nounRaf = noun.ar.dual.raf;
+      nounJar = noun.ar.dual.jar;
+      labelType = "mutsanna";
     } else {
-      sentenceAr = numberWord + " " + nounForm;
-      sentenceId = num + " " + noun.id;
+      nounRaf = noun.ar.plural.raf;
+      nounJar = noun.ar.plural.jar;
+      labelType = "jamak";
     }
-
-    // optional: huruf jar
+  
     const useJar = Math.random() > 0.5;
-
     const harf = pick(harfJar);
-    if (useJar) {
-      const nounJar = applySimpleIrab(nounForm, type, "jar");
-      
-      if (num === 1 || num === 2) {
+  
+    if (num === 1) {
+      if (useJar) {
         sentenceAr = harf.ar + " " + nounJar;
+        sentenceId = harf.id + " satu " + noun.id;
       } else {
-        const numberJar = toJarNumber(numberWord);
-        sentenceAr = harf.ar + " " + numberJar + " " + nounJar;
+        sentenceAr = nounRaf;
+        sentenceId = "satu " + noun.id;
       }
-    
-      sentenceId = harf.id + " " + sentenceId;
+  
+    } else if (num === 2) {
+      if (useJar) {
+        sentenceAr = harf.ar + " " + nounJar;
+        sentenceId = harf.id + " dua " + noun.id;
+      } else {
+        sentenceAr = nounRaf;
+        sentenceId = "dua " + noun.id;
+      }
+  
+    } else {
+      // 3–10: number + jamak majrur (noun selalu jar setelah angka)
+      const numWordRaf = getNumberWord(num, noun.gender);
+      const numWordJar = getNumberWord(num, noun.gender)
+        .replace("ُ", "ِ").replace("ُ", "ِ"); // kasrah angka
+  
+      if (useJar) {
+        sentenceAr = harf.ar + " " + numWordJar + " " + nounJar;
+        sentenceId = harf.id + " " + num + " " + noun.id;
+      } else {
+        sentenceAr = numWordRaf + " " + nounJar; // noun tetap jar setelah angka
+        sentenceId = num + " " + noun.id;
+      }
     }
-    
+  
     current = sentenceAr;
     currentQuestion = sentenceId;
-
-    currentLabel =
-      (num === 1 ? "mufrad" :
-       num === 2 ? "mutsanna" :
-       "jamak")
-      + (useJar ? " + jar" : "");
-
+    currentLabel = labelType + (useJar ? " + jar" : "");
+  
     document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
-
     document.getElementById("answer").innerText = "";
     document.getElementById("answerWrap").style.display = "none";
-
+  
     setTimeout(() => playQuestion(), 100);
     return;
   }
@@ -2382,7 +2390,7 @@ function generateSentence() {
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
 
     const sentenceId = isyarah.id + " " + noun.id;
-    const sentenceAr = isyarah.ar + " " + noun.ar_singular;
+    const sentenceAr = isyarah.ar + " " + noun.ar.singular.raf;
 
     current = sentenceAr;
     currentQuestion = sentenceId;
@@ -2703,23 +2711,18 @@ function activatePage(pageId) {
   page.classList.add("loaded");
 }
 
+// GANTI JADI:
 function getNumberWord(num, gender) {
   const n = numbers.find(n => n.num === num);
   if (!n) return "";
 
+  // Angka 3-10: polarity terbalik (noun m → pakai bentuk f, dan sebaliknya)
   if (num >= 3 && num <= 10) {
-    return gender === "m" ? n.ar_f : n.ar_m;
+    return gender === "m" ? n.ar.f.raf : n.ar.m.raf;
   }
 
-  return gender === "m" ? n.ar_m : n.ar_f;
-}
-
-function applyJar(word) {
-  return word + "ٍ";
-}
-
-function toJarDual(word) {
-  return word.replace("ان", "ين");
+  // Angka 1-2: gender sesuai noun
+  return gender === "m" ? n.ar.m.raf : n.ar.f.raf;
 }
 
 function applyJar(word) {
@@ -2762,38 +2765,6 @@ function applyIrab(word, state) {
   return word; // rafa'
 }
 
-  function applySimpleIrab(word, type, state) {
-  // state: rafa | jar
-
-  if (type === "dual") {
-    if (state === "jar") {
-      return word.replace("َان", "َيْن").replace("َتَان", "َتَيْن");
-    }
-    return word;
-  }
-
-  if (type === "jamak_mudzakkar") {
-    if (state === "jar") {
-      return word.replace("ون", "ين");
-    }
-    return word.replace("ين", "ون");
-  }
-
-  if (type === "jamak_muannats") {
-    if (state === "jar") {
-      return word.replace("ات", "اتِ");
-    }
-    return word.replace("ات", "اتُ");
-  }
-
-  // mufrad
-  if (state === "jar") {
-    return word + "ٍ"; // simple aja
-  }
-
-  return word;
-}
-
 function applySimpleIrab(word, type, caseType) {
   if (caseType !== "jar") return word;
 
@@ -2825,28 +2796,6 @@ function detectNounType(noun, num) {
   }
 
   return "broken";
-}
-
-function generateAdad({ number, noun, harf }) {
-  const isJar = !!harf;
-
-  const irob = isJar ? "jar" : "raf";
-
-  // 1. pilih bentuk number
-  const numForm = number.ar[ الجنس ][irob];
-
-  // 2. kategori angka
-  if (number.num === 1) {
-    return noun.ar.singular[irob] + " " + numForm;
-  }
-
-  if (number.num === 2) {
-    return noun.ar.dual[irob];
-  }
-
-  if (number.num >= 3 && number.num <= 10) {
-    return numForm + " " + noun.ar.plural.jar;
-  }
 }
   
 buildPool();
