@@ -388,9 +388,6 @@ function getRandomForm() {
   const forms = ["singular", "dual", "plural"];
   return forms[Math.floor(Math.random() * forms.length)];
 }
-  
-buildPool();
-buildNounPool();
 
 window.generateSentence = generateSentence;
 window.showAnswer = showAnswer;
@@ -400,5 +397,10 @@ window.buildPool = buildPool;
 window.buildNounPool = buildNounPool;
 window.setMode = function(newMode) {
   mode = newMode;
-  buildPool();
+
+  if (mode === "noun") {
+    buildNounPool();
+  } else {
+    buildPool();
+  }
 };
