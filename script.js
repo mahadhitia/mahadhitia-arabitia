@@ -56,7 +56,7 @@ function generateSentence() {
       nounIndex = 0;
     }
 
-    const item = pick(nounPool);
+    const item = nounPool[nounIndex++];
     const noun = item.noun;
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
     const form = getRandomForm();
@@ -124,6 +124,7 @@ function generateSentence() {
     index = 0;
   }
 
+  if (pool.length === 0) return;
   const { subject, verb } = pool[index++];
 
   let verbAr = "";
