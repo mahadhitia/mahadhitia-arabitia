@@ -1281,61 +1281,67 @@ const nouns = [
     id: "buku",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "كِتَابٌ",
       dual: "كِتَابَانِ",
       plural: "كُتُبٌ"
     }
   },
-
+  
   {
     id: "mobil",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "سَيَّارَةٌ",
       dual: "سَيَّارَتَانِ",
       plural: "سَيَّارَاتٌ"
     }
   },
-
+  
   {
     id: "papan tulis",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "سَبُّورَةٌ",
       dual: "سَبُّورَتَانِ",
       plural: "سَبُّورَاتٌ"
     }
   },
-
+  
   {
     id: "karpet",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "بِسَاطٌ",
       dual: "بِسَاطَانِ",
       plural: "بُسُطٌ"
     }
   },
-
+  
   {
     id: "guru",
     gender: "m",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُدَرِّسٌ",
       dual: "مُدَرِّسَانِ",
       plural: "مُدَرِّسُونَ"
     }
   },
-
+  
   {
     id: "dokter",
     gender: "m",
     type: "profession",
+    pluralType: "taksir",
     ar: {
       singular: "طَبِيبٌ",
       dual: "طَبِيبَانِ",
@@ -1347,6 +1353,7 @@ const nouns = [
     id: "insinyur",
     gender: "m",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُهَنْدِسٌ",
       dual: "مُهَنْدِسَانِ",
@@ -1358,6 +1365,7 @@ const nouns = [
     id: "murid",
     gender: "m",
     type: "profession",
+    pluralType: "taksir",
     ar: {
       singular: "طَالِبٌ",
       dual: "طَالِبَانِ",
@@ -1369,6 +1377,7 @@ const nouns = [
     id: "ustadz",
     gender: "m",
     type: "profession",
+    pluralType: "taksir",
     ar: {
       singular: "أُسْتَاذٌ",
       dual: "أُسْتَاذَانِ",
@@ -1380,6 +1389,7 @@ const nouns = [
     id: "matahari",
     gender: "f",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "شَمْسٌ",
       dual: "شَمْسَانِ",
@@ -1391,6 +1401,7 @@ const nouns = [
     id: "masjid",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "مَسْجِدٌ",
       dual: "مَسْجِدَانِ",
@@ -1402,6 +1413,7 @@ const nouns = [
     id: "nasi",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "رُزٌّ",
       dual: "رُزَّانِ",
@@ -1413,6 +1425,7 @@ const nouns = [
     id: "pena",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "قَلَمٌ",
       dual: "قَلَمَانِ",
@@ -1424,6 +1437,7 @@ const nouns = [
     id: "pelajaran",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "دَرْسٌ",
       dual: "دَرْسَانِ",
@@ -1435,6 +1449,7 @@ const nouns = [
     id: "muslim",
     gender: "m",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُسْلِمٌ",
       dual: "مُسْلِمَانِ",
@@ -1446,6 +1461,7 @@ const nouns = [
     id: "muslimah",
     gender: "f",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُسْلِمَةٌ",
       dual: "مُسْلِمَتَانِ",
@@ -1457,6 +1473,7 @@ const nouns = [
     id: "tembok",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "جِدَارٌ",
       dual: "جِدَارَانِ",
@@ -1468,6 +1485,7 @@ const nouns = [
     id: "keluarga",
     gender: "f",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "أُسْرَةٌ",
       dual: "أُسْرَتَانِ",
@@ -1479,6 +1497,7 @@ const nouns = [
     id: "pohon",
     gender: "f",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "شَجَرَةٌ",
       dual: "شَجَرَتَانِ",
@@ -1490,6 +1509,7 @@ const nouns = [
     id: "ayah",
     gender: "m",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "وَالِدٌ",
       dual: "وَالِدَانِ",
@@ -1501,6 +1521,7 @@ const nouns = [
     id: "ibu",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "وَالِدَةٌ",
       dual: "وَالِدَتَانِ",
@@ -1512,6 +1533,7 @@ const nouns = [
     id: "gambar",
     gender: "f",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "صُورَةٌ",
       dual: "صُورَتَانِ",
@@ -1523,6 +1545,7 @@ const nouns = [
     id: "saudara laki-laki",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "أَخٌ",
       dual: "أَخَوَانِ",
@@ -1534,6 +1557,7 @@ const nouns = [
     id: "saudara perempuan",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "أُخْتٌ",
       dual: "أُخْتَانِ",
@@ -1545,6 +1569,7 @@ const nouns = [
     id: "guru",
     gender: "m",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُعَلِّمٌ",
       dual: "مُعَلِّمَانِ",
@@ -1556,6 +1581,7 @@ const nouns = [
     id: "guru perempuan",
     gender: "f",
     type: "profession",
+    pluralType: "salim",
     ar: {
       singular: "مُعَلِّمَةٌ",
       dual: "مُعَلِّمَتَانِ",
@@ -1567,6 +1593,7 @@ const nouns = [
     id: "kakek",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "جَدٌّ",
       dual: "جَدَّانِ",
@@ -1578,6 +1605,7 @@ const nouns = [
     id: "nenek",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "جَدَّةٌ",
       dual: "جَدَّتَانِ",
@@ -1589,6 +1617,7 @@ const nouns = [
     id: "paman",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "عَمٌّ",
       dual: "عَمَّانِ",
@@ -1600,6 +1629,7 @@ const nouns = [
     id: "bibi",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "عَمَّةٌ",
       dual: "عَمَّتَانِ",
@@ -1611,6 +1641,7 @@ const nouns = [
     id: "anak laki-laki",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "اِبْنٌ",
       dual: "اِبْنَانِ",
@@ -1622,6 +1653,7 @@ const nouns = [
     id: "anak perempuan",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "بِنْتٌ",
       dual: "بِنْتَانِ",
@@ -1633,6 +1665,7 @@ const nouns = [
     id: "kamar mandi",
     gender: "m",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "حَمَّامٌ",
       dual: "حَمَّامَانِ",
@@ -1644,6 +1677,7 @@ const nouns = [
     id: "ruangan",
     gender: "f",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "غُرْفَةٌ",
       dual: "غُرْفَتَانِ",
@@ -1655,6 +1689,7 @@ const nouns = [
     id: "mushola",
     gender: "m",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "مُصَلًّى",
       dual: "مُصَلَّيَانِ",
@@ -1666,17 +1701,19 @@ const nouns = [
     id: "mantel",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "مِعْطَفٌ",
       dual: "مِعْطَفَانِ",
       plural: "مَعَاطِفُ"
     }
   },
-
+  
   {
     id: "kacamata",
     gender: "f",
     type: "object",
+    pluralType: "salim",
     ar: {
       singular: "نَظَّارَةٌ",
       dual: "نَظَّارَتَانِ",
@@ -1688,6 +1725,7 @@ const nouns = [
     id: "anak",
     gender: "m",
     type: "object",
+    pluralType: "taksir",
     ar: {
       singular: "وَلَدٌ",
       dual: "وَلَدَانِ",
@@ -1723,13 +1761,52 @@ function generateSentence() {
     const item = nounPool[nounIndex++];
     const noun = item.noun;
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
+    const form = getRandomForm();
 
-    const sentenceId = isyarah.id + " " + noun.id;
-    const sentenceAr = isyarah.ar + " " + noun.ar.singular;
+    let nounAr = "";
+    let sentenceId = "";
+    let labelJumlah = "";
+    
+    // ======================
+    // PILIH BENTUK
+    // ======================
+    if (form === "singular") {
+      nounAr = noun.ar.singular;
+      sentenceId = isyarah.id + " " + noun.id;
+      labelJumlah = "mufrad";
+    
+    } else if (form === "dual") {
+      nounAr = noun.ar.dual;
+      sentenceId = isyarah.id + " dua " + noun.id;
+      labelJumlah = "mutsanna";
+    
+    } else {
+      nounAr = noun.ar.plural;
+      sentenceId = isyarah.id + " banyak " + noun.id;
+    
+      if (noun.pluralType === "taksir") {
+        labelJumlah = "jamak taksir";
+      } else {
+        labelJumlah = "jamak";
+      }
+    }
+    
+    // ======================
+    // FINAL
+    // ======================
+    const sentenceAr = isyarah.ar + " " + nounAr;
+    
+    current = sentenceAr;
+    currentQuestion = sentenceId;
+    if (labelJumlah === "jamak taksir") {
+      currentLabel = "jamak taksir";
+    } else {
+      const genderLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
+      currentLabel = labelJumlah + " " + genderLabel;
+    }
 
     current = sentenceAr;
     currentQuestion = sentenceId;
-    currentLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
 
     document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
@@ -1854,7 +1931,8 @@ function buildNounPool() {
           noun: {
             id: noun.id,
             ar: noun.ar,
-            gender: "m"
+            gender: noun.gender,
+            pluralType: noun.pluralType
           },
           type
         });
@@ -1868,7 +1946,8 @@ function buildNounPool() {
               dual: toFeminine(noun.ar.dual),
               plural: toFeminine(noun.ar.plural)
             },
-            gender: "f"
+            gender: "f",
+            pluralType: noun.pluralType
           },
           type
         });
@@ -2012,11 +2091,6 @@ function getIsimIsyarahFixed(gender, distance) {
   }
 }
 
-function toFeminine(word) {
-  if (word.endsWith("ة")) return word;
-  return word + "ة";
-}
-
 function handleClick(el) {
   playClickSound();
 
@@ -2042,6 +2116,11 @@ function activatePage(pageId) {
   if (!page) return;
 
   page.classList.add("loaded");
+}
+
+function getRandomForm() {
+  const forms = ["singular", "dual", "plural"];
+  return forms[Math.floor(Math.random() * forms.length)];
 }
   
 buildPool();
