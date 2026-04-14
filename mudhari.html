@@ -173,18 +173,18 @@
     }
     
     .generate:active {
-      box-shadow: 0 1px 0 #d4a91f;
+      box-shadow: 0 2px 0 #d4a91f;
     }
     
     .answer-btn {
       background: #4B2E4C;
       color: #F8F9FA;
       border: none;
-      box-shadow: 0 4px 0 #2E1B2F; /* 🔥 tambahin ini */
+      box-shadow: 0 4px 0 #2E1B2F;
     }
 
     .answer-btn:active {
-      box-shadow: 0 1px 0 #2E1B2F;
+      box-shadow: 0 2px 0 #2E1B2F;
     }
   
     .footer {
@@ -210,21 +210,11 @@
     }
     
     button:active {
-      transform: translateY(2px) scale(0.98);
+      transform: translateY(2px);
     }
   
     button:hover {
       transform: translateY(-1px);
-    }
-
-    button.clicked {
-      animation: clickBounce 0.2s ease;
-    }
-    
-    @keyframes clickBounce {
-      0% { transform: scale(1); }
-      50% { transform: scale(0.94); }
-      100% { transform: scale(1); }
     }
     
     .generate:hover,
