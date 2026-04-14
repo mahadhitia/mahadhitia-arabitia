@@ -391,3 +391,10 @@ function getRandomForm() {
   
 buildPool();
 buildNounPool();
+
+window.generateSentence = generateSentence;
+window.showAnswer = showAnswer;
+window.playQuestion = playQuestion;
+window.playAnswer = playAnswer;
+window.buildPool = buildPool;
+window.buildNounPool = buildNounPool;
