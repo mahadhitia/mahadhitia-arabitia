@@ -1564,18 +1564,6 @@ const nouns = [
       plural: "أَخَوَاتٌ"
     }
   },
-
-  {
-    id: "guru",
-    gender: "m",
-    type: "profession",
-    pluralType: "salim",
-    ar: {
-      singular: "مُعَلِّمٌ",
-      dual: "مُعَلِّمَانِ",
-      plural: "مُعَلِّمُونَ"
-    }
-  },
   
   {
     id: "guru perempuan",
@@ -1758,7 +1746,7 @@ function generateSentence() {
       nounIndex = 0;
     }
 
-    const item = nounPool[nounIndex++];
+    const item = pick(nounPool);
     const noun = item.noun;
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
     const form = getRandomForm();
