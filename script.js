@@ -1,4 +1,4 @@
-const modes = ["madhi", "mudhari", "amr", "nahyi", "noun", "adad"];
+const modes = ["madhi", "mudhari", "amr", "nahyi", "noun"];
 let modeIndex = 0;
 let mode = modes[modeIndex];
 let current = "";
@@ -1282,21 +1282,9 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "كِتَابٌ",
-        nasb: "كِتَابًا",
-        jar: "كِتَابٍ"
-      },
-      dual: {
-        raf: "كِتَابَانِ",
-        nasb: "كِتَابَيْنِ",
-        jar: "كِتَابَيْنِ"
-      },
-      plural: {
-        raf: "كُتُبٌ",
-        nasb: "كُتُباً",
-        jar: "كُتُبٍ"
-      }
+      singular: "كِتَابٌ",
+      dual: "كِتَابَانِ",
+      plural: "كُتُبٌ"
     }
   },
 
@@ -1305,21 +1293,9 @@ const nouns = [
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "سَيَّارَةٌ",
-        nasb: "سَيَّارَةً",
-        jar: "سَيَّارَةٍ"
-      },
-      dual: {
-        raf: "سَيَّارَتَانِ",
-        nasb: "سَيَّارَتَيْنِ",
-        jar: "سَيَّارَتَيْنِ"
-      },
-      plural: {
-        raf: "سَيَّارَاتٌ",
-        nasb: "سَيَّارَاتٍ",
-        jar: "سَيَّارَاتٍ"
-      }
+      singular: "سَيَّارَةٌ",
+      dual: "سَيَّارَتَانِ",
+      plural: "سَيَّارَاتٌ"
     }
   },
 
@@ -1328,21 +1304,9 @@ const nouns = [
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "سَبُّورَةٌ",
-        nasb: "سَبُّورَةً",
-        jar: "سَبُّورَةٍ"
-      },
-      dual: {
-        raf: "سَبُّورَتَانِ",
-        nasb: "سَبُّورَتَيْنِ",
-        jar: "سَبُّورَتَيْنِ"
-      },
-      plural: {
-        raf: "سَبُّورَاتٌ",
-        nasb: "سَبُّورَاتٍ",
-        jar: "سَبُّورَاتٍ"
-      }
+      singular: "سَبُّورَةٌ",
+      dual: "سَبُّورَتَانِ",
+      plural: "سَبُّورَاتٌ"
     }
   },
 
@@ -1351,21 +1315,9 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "بِسَاطٌ",
-        nasb: "بِسَاطًا",
-        jar: "بِسَاطٍ"
-      },
-      dual: {
-        raf: "بِسَاطَانِ",
-        nasb: "بِسَاطَيْنِ",
-        jar: "بِسَاطَيْنِ"
-      },
-      plural: {
-        raf: "بُسُطٌ",
-        nasb: "بُسُطًا",
-        jar: "بُسُطٍ"
-      }
+      singular: "بِسَاطٌ",
+      dual: "بِسَاطَانِ",
+      plural: "بُسُطٌ"
     }
   },
 
@@ -1374,44 +1326,20 @@ const nouns = [
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُدَرِّسٌ",
-        nasb: "مُدَرِّسًا",
-        jar: "مُدَرِّسٍ"
-      },
-      dual: {
-        raf: "مُدَرِّسَانِ",
-        nasb: "مُدَرِّسَيْنِ",
-        jar: "مُدَرِّسَيْنِ"
-      },
-      plural: {
-        raf: "مُدَرِّسُونَ",
-        nasb: "مُدَرِّسِينَ",
-        jar: "مُدَرِّسِينَ"
-      }
+      singular: "مُدَرِّسٌ",
+      dual: "مُدَرِّسَانِ",
+      plural: "مُدَرِّسُونَ"
     }
   },
-  
+
   {
     id: "dokter",
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "طَبِيبٌ",
-        nasb: "طَبِيبًا",
-        jar: "طَبِيبٍ"
-      },
-      dual: {
-        raf: "طَبِيبَانِ",
-        nasb: "طَبِيبَيْنِ",
-        jar: "طَبِيبَيْنِ"
-      },
-      plural: {
-        raf: "أَطِبَّاءُ",
-        nasb: "أَطِبَّاءَ",
-        jar: "أَطِبَّاءِ"
-      }
+      singular: "طَبِيبٌ",
+      dual: "طَبِيبَانِ",
+      plural: "أَطِبَّاءُ"
     }
   },
 
@@ -1420,90 +1348,42 @@ const nouns = [
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُهَنْدِسٌ",
-        nasb: "مُهَنْدِسًا",
-        jar: "مُهَنْدِسٍ"
-      },
-      dual: {
-        raf: "مُهَنْدِسَانِ",
-        nasb: "مُهَنْدِسَيْنِ",
-        jar: "مُهَنْدِسَيْنِ"
-      },
-      plural: {
-        raf: "مُهَنْدِسُونَ",
-        nasb: "مُهَنْدِسِينَ",
-        jar: "مُهَنْدِسِينَ"
-      }
+      singular: "مُهَنْدِسٌ",
+      dual: "مُهَنْدِسَانِ",
+      plural: "مُهَنْدِسُونَ"
     }
   },
-
+  
   {
     id: "murid",
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "طَالِبٌ",
-        nasb: "طَالِبًا",
-        jar: "طَالِبٍ"
-      },
-      dual: {
-        raf: "طَالِبَانِ",
-        nasb: "طَالِبَيْنِ",
-        jar: "طَالِبَيْنِ"
-      },
-      plural: {
-        raf: "طُلَّابٌ",
-        nasb: "طُلَّابًا",
-        jar: "طُلَّابٍ"
-      }
+      singular: "طَالِبٌ",
+      dual: "طَالِبَانِ",
+      plural: "طُلَّابٌ"
     }
   },
-
+  
   {
     id: "ustadz",
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "أُسْتَاذٌ",
-        nasb: "أُسْتَاذًا",
-        jar: "أُسْتَاذٍ"
-      },
-      dual: {
-        raf: "أُسْتَاذَانِ",
-        nasb: "أُسْتَاذَيْنِ",
-        jar: "أُسْتَاذَيْنِ"
-      },
-      plural: {
-        raf: "أَسَاتِذَةٌ",
-        nasb: "أَسَاتِذَةً",
-        jar: "أَسَاتِذَةٍ"
-      }
+      singular: "أُسْتَاذٌ",
+      dual: "أُسْتَاذَانِ",
+      plural: "أَسَاتِذَةٌ"
     }
   },
-
+  
   {
     id: "matahari",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "شَمْسٌ",
-        nasb: "شَمْسًا",
-        jar: "شَمْسٍ"
-      },
-      dual: {
-        raf: "شَمْسَانِ",
-        nasb: "شَمْسَيْنِ",
-        jar: "شَمْسَيْنِ"
-      },
-      plural: {
-        raf: "شُمُوسٌ",
-        nasb: "شُمُوسًا",
-        jar: "شُمُوسٍ"
-      }
+      singular: "شَمْسٌ",
+      dual: "شَمْسَانِ",
+      plural: "شُمُوسٌ"
     }
   },
   
@@ -1512,44 +1392,20 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "مَسْجِدٌ",
-        nasb: "مَسْجِدًا",
-        jar: "مَسْجِدٍ"
-      },
-      dual: {
-        raf: "مَسْجِدَانِ",
-        nasb: "مَسْجِدَيْنِ",
-        jar: "مَسْجِدَيْنِ"
-      },
-      plural: {
-        raf: "مَسَاجِدُ",
-        nasb: "مَسَاجِدَ",
-        jar: "مَسَاجِدَ"
-      }
+      singular: "مَسْجِدٌ",
+      dual: "مَسْجِدَانِ",
+      plural: "مَسَاجِدُ"
     }
   },
-
+  
   {
     id: "nasi",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "رُزٌّ",
-        nasb: "رُزًّا",
-        jar: "رُزٍّ"
-      },
-      dual: {
-        raf: "رُزَّانِ",
-        nasb: "رُزَّيْنِ",
-        jar: "رُزَّيْنِ"
-      },
-      plural: {
-        raf: "رُزٌّ",
-        nasb: "رُزًّا",
-        jar: "رُزٍّ"
-      }
+      singular: "رُزٌّ",
+      dual: "رُزَّانِ",
+      plural: "رُزٌّ"
     }
   },
 
@@ -1558,67 +1414,31 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "قَلَمٌ",
-        nasb: "قَلَمًا",
-        jar: "قَلَمٍ"
-      },
-      dual: {
-        raf: "قَلَمَانِ",
-        nasb: "قَلَمَيْنِ",
-        jar: "قَلَمَيْنِ"
-      },
-      plural: {
-        raf: "أَقْلَامٌ",
-        nasb: "أَقْلَامًا",
-        jar: "أَقْلَامٍ"
-      }
+      singular: "قَلَمٌ",
+      dual: "قَلَمَانِ",
+      plural: "أَقْلَامٌ"
     }
   },
-
+  
   {
     id: "pelajaran",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "دَرْسٌ",
-        nasb: "دَرْسًا",
-        jar: "دَرْسٍ"
-      },
-      dual: {
-        raf: "دَرْسَانِ",
-        nasb: "دَرْسَيْنِ",
-        jar: "دَرْسَيْنِ"
-      },
-      plural: {
-        raf: "دُرُوسٌ",
-        nasb: "دُرُوسًا",
-        jar: "دُرُوسٍ"
-      }
+      singular: "دَرْسٌ",
+      dual: "دَرْسَانِ",
+      plural: "دُرُوسٌ"
     }
   },
-
+  
   {
     id: "muslim",
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُسْلِمٌ",
-        nasb: "مُسْلِمًا",
-        jar: "مُسْلِمٍ"
-      },
-      dual: {
-        raf: "مُسْلِمَانِ",
-        nasb: "مُسْلِمَيْنِ",
-        jar: "مُسْلِمَيْنِ"
-      },
-      plural: {
-        raf: "مُسْلِمُونَ",
-        nasb: "مُسْلِمِينَ",
-        jar: "مُسْلِمِينَ"
-      }
+      singular: "مُسْلِمٌ",
+      dual: "مُسْلِمَانِ",
+      plural: "مُسْلِمُونَ"
     }
   },
   
@@ -1627,67 +1447,31 @@ const nouns = [
     gender: "f",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُسْلِمَةٌ",
-        nasb: "مُسْلِمَةً",
-        jar: "مُسْلِمَةٍ"
-      },
-      dual: {
-        raf: "مُسْلِمَتَانِ",
-        nasb: "مُسْلِمَتَيْنِ",
-        jar: "مُسْلِمَتَيْنِ"
-      },
-      plural: {
-        raf: "مُسْلِمَاتٌ",
-        nasb: "مُسْلِمَاتٍ",
-        jar: "مُسْلِمَاتٍ"
-      }
+      singular: "مُسْلِمَةٌ",
+      dual: "مُسْلِمَتَانِ",
+      plural: "مُسْلِمَاتٌ"
     }
   },
-
+  
   {
     id: "tembok",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "جِدَارٌ",
-        nasb: "جِدَارًا",
-        jar: "جِدَارٍ"
-      },
-      dual: {
-        raf: "جِدَارَانِ",
-        nasb: "جِدَارَيْنِ",
-        jar: "جِدَارَيْنِ"
-      },
-      plural: {
-        raf: "جُدُرٌ",
-        nasb: "جُدُرًا",
-        jar: "جُدُرٍ"
-      }
+      singular: "جِدَارٌ",
+      dual: "جِدَارَانِ",
+      plural: "جُدُرٌ"
     }
   },
-
+  
   {
     id: "keluarga",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "أُسْرَةٌ",
-        nasb: "أُسْرَةً",
-        jar: "أُسْرَةٍ"
-      },
-      dual: {
-        raf: "أُسْرَتَانِ",
-        nasb: "أُسْرَتَيْنِ",
-        jar: "أُسْرَتَيْنِ"
-      },
-      plural: {
-        raf: "أُسَرٌ",
-        nasb: "أُسَرًا",
-        jar: "أُسَرٍ"
-      }
+      singular: "أُسْرَةٌ",
+      dual: "أُسْرَتَانِ",
+      plural: "أُسَرٌ"
     }
   },
 
@@ -1696,44 +1480,20 @@ const nouns = [
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "شَجَرَةٌ",
-        nasb: "شَجَرَةً",
-        jar: "شَجَرَةٍ"
-      },
-      dual: {
-        raf: "شَجَرَتَانِ",
-        nasb: "شَجَرَتَيْنِ",
-        jar: "شَجَرَتَيْنِ"
-      },
-      plural: {
-        raf: "أَشْجَارٌ",
-        nasb: "أَشْجَارًا",
-        jar: "أَشْجَارٍ"
-      }
+      singular: "شَجَرَةٌ",
+      dual: "شَجَرَتَانِ",
+      plural: "أَشْجَارٌ"
     }
   },
-
+  
   {
     id: "ayah",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "وَالِدٌ",
-        nasb: "وَالِدًا",
-        jar: "وَالِدٍ"
-      },
-      dual: {
-        raf: "وَالِدَانِ",
-        nasb: "وَالِدَيْنِ",
-        jar: "وَالِدَيْنِ"
-      },
-      plural: {
-        raf: "وَالِدُونَ",
-        nasb: "وَالِدِينَ",
-        jar: "وَالِدِينَ"
-      }
+      singular: "وَالِدٌ",
+      dual: "وَالِدَانِ",
+      plural: "وَالِدُونَ"
     }
   },
   
@@ -1742,90 +1502,42 @@ const nouns = [
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "وَالِدَةٌ",
-        nasb: "وَالِدَةً",
-        jar: "وَالِدَةٍ"
-      },
-      dual: {
-        raf: "وَالِدَتَانِ",
-        nasb: "وَالِدَتَيْنِ",
-        jar: "وَالِدَتَيْنِ"
-      },
-      plural: {
-        raf: "وَالِدَاتٌ",
-        nasb: "وَالِدَاتٍ",
-        jar: "وَالِدَاتٍ"
-      }
+      singular: "وَالِدَةٌ",
+      dual: "وَالِدَتَانِ",
+      plural: "وَالِدَاتٌ"
     }
   },
-
+  
   {
     id: "gambar",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "صُورَةٌ",
-        nasb: "صُورَةً",
-        jar: "صُورَةٍ"
-      },
-      dual: {
-        raf: "صُورَتَانِ",
-        nasb: "صُورَتَيْنِ",
-        jar: "صُورَتَيْنِ"
-      },
-      plural: {
-        raf: "صُوَرٌ",
-        nasb: "صُوَرًا",
-        jar: "صُوَرٍ"
-      }
+      singular: "صُورَةٌ",
+      dual: "صُورَتَانِ",
+      plural: "صُوَرٌ"
     }
   },
-
+  
   {
     id: "saudara laki-laki",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "أَخٌ",
-        nasb: "أَخًا",
-        jar: "أَخٍ"
-      },
-      dual: {
-        raf: "أَخَوَانِ",
-        nasb: "أَخَوَيْنِ",
-        jar: "أَخَوَيْنِ"
-      },
-      plural: {
-        raf: "إِخْوَةٌ",
-        nasb: "إِخْوَةً",
-        jar: "إِخْوَةٍ"
-      }
+      singular: "أَخٌ",
+      dual: "أَخَوَانِ",
+      plural: "إِخْوَةٌ"
     }
   },
-
+  
   {
     id: "saudara perempuan",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "أُخْتٌ",
-        nasb: "أُخْتًا",
-        jar: "أُخْتٍ"
-      },
-      dual: {
-        raf: "أُخْتَانِ",
-        nasb: "أُخْتَيْنِ",
-        jar: "أُخْتَيْنِ"
-      },
-      plural: {
-        raf: "أَخَوَاتٌ",
-        nasb: "أَخَوَاتٍ",
-        jar: "أَخَوَاتٍ"
-      }
+      singular: "أُخْتٌ",
+      dual: "أُخْتَانِ",
+      plural: "أَخَوَاتٌ"
     }
   },
 
@@ -1834,21 +1546,9 @@ const nouns = [
     gender: "m",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُعَلِّمٌ",
-        nasb: "مُعَلِّمًا",
-        jar: "مُعَلِّمٍ"
-      },
-      dual: {
-        raf: "مُعَلِّمَانِ",
-        nasb: "مُعَلِّمَيْنِ",
-        jar: "مُعَلِّمَيْنِ"
-      },
-      plural: {
-        raf: "مُعَلِّمُونَ",
-        nasb: "مُعَلِّمِينَ",
-        jar: "مُعَلِّمِينَ"
-      }
+      singular: "مُعَلِّمٌ",
+      dual: "مُعَلِّمَانِ",
+      plural: "مُعَلِّمُونَ"
     }
   },
   
@@ -1857,113 +1557,53 @@ const nouns = [
     gender: "f",
     type: "profession",
     ar: {
-      singular: {
-        raf: "مُعَلِّمَةٌ",
-        nasb: "مُعَلِّمَةً",
-        jar: "مُعَلِّمَةٍ"
-      },
-      dual: {
-        raf: "مُعَلِّمَتَانِ",
-        nasb: "مُعَلِّمَتَيْنِ",
-        jar: "مُعَلِّمَتَيْنِ"
-      },
-      plural: {
-        raf: "مُعَلِّمَاتٌ",
-        nasb: "مُعَلِّمَاتٍ",
-        jar: "مُعَلِّمَاتٍ"
-      }
+      singular: "مُعَلِّمَةٌ",
+      dual: "مُعَلِّمَتَانِ",
+      plural: "مُعَلِّمَاتٌ"
     }
   },
-
+  
   {
     id: "kakek",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "جَدٌّ",
-        nasb: "جَدًّا",
-        jar: "جَدٍّ"
-      },
-      dual: {
-        raf: "جَدَّانِ",
-        nasb: "جَدَّيْنِ",
-        jar: "جَدَّيْنِ"
-      },
-      plural: {
-        raf: "أَجْدَادٌ",
-        nasb: "أَجْدَادًا",
-        jar: "أَجْدَادٍ"
-      }
+      singular: "جَدٌّ",
+      dual: "جَدَّانِ",
+      plural: "أَجْدَادٌ"
     }
   },
-
+  
   {
     id: "nenek",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "جَدَّةٌ",
-        nasb: "جَدَّةً",
-        jar: "جَدَّةٍ"
-      },
-      dual: {
-        raf: "جَدَّتَانِ",
-        nasb: "جَدَّتَيْنِ",
-        jar: "جَدَّتَيْنِ"
-      },
-      plural: {
-        raf: "جَدَّاتٌ",
-        nasb: "جَدَّاتٍ",
-        jar: "جَدَّاتٍ"
-      }
+      singular: "جَدَّةٌ",
+      dual: "جَدَّتَانِ",
+      plural: "جَدَّاتٌ"
     }
   },
-
+  
   {
     id: "paman",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "عَمٌّ",
-        nasb: "عَمًّا",
-        jar: "عَمٍّ"
-      },
-      dual: {
-        raf: "عَمَّانِ",
-        nasb: "عَمَّيْنِ",
-        jar: "عَمَّيْنِ"
-      },
-      plural: {
-        raf: "أَعْمَامٌ",
-        nasb: "أَعْمَامًا",
-        jar: "أَعْمَامٍ"
-      }
+      singular: "عَمٌّ",
+      dual: "عَمَّانِ",
+      plural: "أَعْمَامٌ"
     }
   },
-
+  
   {
     id: "bibi",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "عَمَّةٌ",
-        nasb: "عَمَّةً",
-        jar: "عَمَّةٍ"
-      },
-      dual: {
-        raf: "عَمَّتَانِ",
-        nasb: "عَمَّتَيْنِ",
-        jar: "عَمَّتَيْنِ"
-      },
-      plural: {
-        raf: "عَمَّاتٌ",
-        nasb: "عَمَّاتٍ",
-        jar: "عَمَّاتٍ"
-      }
+      singular: "عَمَّةٌ",
+      dual: "عَمَّتَانِ",
+      plural: "عَمَّاتٌ"
     }
   },
   
@@ -1972,90 +1612,42 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "اِبْنٌ",
-        nasb: "اِبْنًا",
-        jar: "اِبْنٍ"
-      },
-      dual: {
-        raf: "اِبْنَانِ",
-        nasb: "اِبْنَيْنِ",
-        jar: "اِبْنَيْنِ"
-      },
-      plural: {
-        raf: "أَبْنَاءُ",
-        nasb: "أَبْنَاءَ",
-        jar: "أَبْنَاءِ"
-      }
+      singular: "اِبْنٌ",
+      dual: "اِبْنَانِ",
+      plural: "أَبْنَاءُ"
     }
   },
-
+  
   {
     id: "anak perempuan",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "بِنْتٌ",
-        nasb: "بِنْتًا",
-        jar: "بِنْتٍ"
-      },
-      dual: {
-        raf: "بِنْتَانِ",
-        nasb: "بِنْتَيْنِ",
-        jar: "بِنْتَيْنِ"
-      },
-      plural: {
-        raf: "بَنَاتٌ",
-        nasb: "بَنَاتٍ",
-        jar: "بَنَاتٍ"
-      }
+      singular: "بِنْتٌ",
+      dual: "بِنْتَانِ",
+      plural: "بَنَاتٌ"
     }
   },
-
+  
   {
     id: "kamar mandi",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "حَمَّامٌ",
-        nasb: "حَمَّامًا",
-        jar: "حَمَّامٍ"
-      },
-      dual: {
-        raf: "حَمَّامَانِ",
-        nasb: "حَمَّامَيْنِ",
-        jar: "حَمَّامَيْنِ"
-      },
-      plural: {
-        raf: "حَمَّامَاتٌ",
-        nasb: "حَمَّامَاتٍ",
-        jar: "حَمَّامَاتٍ"
-      }
+      singular: "حَمَّامٌ",
+      dual: "حَمَّامَانِ",
+      plural: "حَمَّامَاتٌ"
     }
   },
-
+  
   {
     id: "ruangan",
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "غُرْفَةٌ",
-        nasb: "غُرْفَةً",
-        jar: "غُرْفَةٍ"
-      },
-      dual: {
-        raf: "غُرْفَتَانِ",
-        nasb: "غُرْفَتَيْنِ",
-        jar: "غُرْفَتَيْنِ"
-      },
-      plural: {
-        raf: "غُرَفٌ",
-        nasb: "غُرَفًا",
-        jar: "غُرَفٍ"
-      }
+      singular: "غُرْفَةٌ",
+      dual: "غُرْفَتَانِ",
+      plural: "غُرَفٌ"
     }
   },
   
@@ -2064,44 +1656,20 @@ const nouns = [
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "مُصَلًّى",
-        nasb: "مُصَلًّى",
-        jar: "مُصَلًّى"
-      },
-      dual: {
-        raf: "مُصَلَّيَانِ",
-        nasb: "مُصَلَّيَيْنِ",
-        jar: "مُصَلَّيَيْنِ"
-      },
-      plural: {
-        raf: "مُصَلَّيَاتٌ",
-        nasb: "مُصَلَّيَاتٍ",
-        jar: "مُصَلَّيَاتٍ"
-      }
+      singular: "مُصَلًّى",
+      dual: "مُصَلَّيَانِ",
+      plural: "مُصَلَّيَاتٌ"
     }
   },
-
+  
   {
     id: "mantel",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "مِعْطَفٌ",
-        nasb: "مِعْطَفًا",
-        jar: "مِعْطَفٍ"
-      },
-      dual: {
-        raf: "مِعْطَفَانِ",
-        nasb: "مِعْطَفَيْنِ",
-        jar: "مِعْطَفَيْنِ"
-      },
-      plural: {
-        raf: "مَعَاطِفُ",
-        nasb: "مَعَاطِفَ",
-        jar: "مَعَاطِفَ"
-      }
+      singular: "مِعْطَفٌ",
+      dual: "مِعْطَفَانِ",
+      plural: "مَعَاطِفُ"
     }
   },
 
@@ -2110,144 +1678,22 @@ const nouns = [
     gender: "f",
     type: "object",
     ar: {
-      singular: {
-        raf: "نَظَّارَةٌ",
-        nasb: "نَظَّارَةً",
-        jar: "نَظَّارَةٍ"
-      },
-      dual: {
-        raf: "نَظَّارَتَانِ",
-        nasb: "نَظَّارَتَيْنِ",
-        jar: "نَظَّارَتَيْنِ"
-      },
-      plural: {
-        raf: "نَظَّارَاتٌ",
-        nasb: "نَظَّارَاتٍ",
-        jar: "نَظَّارَاتٍ"
-      }
+      singular: "نَظَّارَةٌ",
+      dual: "نَظَّارَتَانِ",
+      plural: "نَظَّارَاتٌ"
     }
   },
-
+  
   {
     id: "anak",
     gender: "m",
     type: "object",
     ar: {
-      singular: {
-        raf: "وَلَدٌ",
-        nasb: "وَلَدًا",
-        jar: "وَلَدٍ"
-      },
-      dual: {
-        raf: "وَلَدَانِ",
-        nasb: "وَلَدَيْنِ",
-        jar: "وَلَدَيْنِ"
-      },
-      plural: {
-        raf: "أَوْلَادٌ",
-        nasb: "أَوْلَادًا",
-        jar: "أَوْلَادٍ"
-      }
-    }
-  }
-];
-
-// ======================
-// PREPOSISI/HURUF JAR
-// ======================
-const harfJar = [
-  { ar: "مِنْ", id: "dari" },
-  { ar: "إِلَى", id: "ke" },
-  { ar: "عَنْ", id: "dari" },
-  { ar: "عَلَى", id: "di atas" },
-  { ar: "فِي", id: "di dalam" },
-  { ar: "بِ", id: "dengan" },
-  { ar: "لِ", id: "untuk" },
-  { ar: "كَ", id: "seperti" },
-  { ar: "حَتَّى", id: "hingga" },
-  { ar: "مَعَ", id: "bersama" },
-  { ar: "بَيْنَ", id: "di antara" },
-  { ar: "عِنْدَ", id: "di sisi" },
-  { ar: "تَحْتَ", id: "di bawah" },
-  { ar: "فَوْقَ", id: "di atas" },
-  { ar: "قَبْلَ", id: "sebelum" },
-  { ar: "بَعْدَ", id: "sesudah" }
-];
-
-// ======================
-// NOMOR
-// ======================
-const numbers = [
-  {
-    num: 1,
-    ar: {
-      m: { raf: "وَاحِدٌ", nasb: "وَاحِدًا", jar: "وَاحِدٍ" },
-      f: { raf: "وَاحِدَةٌ", nasb: "وَاحِدَةً", jar: "وَاحِدَةٍ" }
+      singular: "وَلَدٌ",
+      dual: "وَلَدَانِ",
+      plural: "أَوْلَادٌ"
     }
   },
-  {
-    num: 2,
-    ar: {
-      m: { raf: "اِثْنَانِ", nasb: "اِثْنَيْنِ", jar: "اِثْنَيْنِ" },
-      f: { raf: "اِثْنَتَانِ", nasb: "اِثْنَتَيْنِ", jar: "اِثْنَتَيْنِ" }
-    }
-  },
-  {
-    num: 3,
-    ar: {
-      m: { raf: "ثَلَاثَةُ", nasb: "ثَلَاثَةَ", jar: "ثَلَاثَةِ" },
-      f: { raf: "ثَلَاثُ", nasb: "ثَلَاثَ", jar: "ثَلَاثِ" }
-    }
-  },
-  {
-    num: 4,
-    ar: {
-      m: { raf: "أَرْبَعَةُ", nasb: "أَرْبَعَةَ", jar: "أَرْبَعَةِ" },
-      f: { raf: "أَرْبَعُ", nasb: "أَرْبَعَ", jar: "أَرْبَعِ" }
-    }
-  },
-  {
-    num: 5,
-    ar: {
-      m: { raf: "خَمْسَةُ", nasb: "خَمْسَةَ", jar: "خَمْسَةِ" },
-      f: { raf: "خَمْسُ", nasb: "خَمْسَ", jar: "خَمْسِ" }
-    }
-  },
-  {
-    num: 6,
-    ar: {
-      m: { raf: "سِتَّةُ", nasb: "سِتَّةَ", jar: "سِتَّةِ" },
-      f: { raf: "سِتُّ", nasb: "سِتَّ", jar: "سِتِّ" }
-    }
-  },
-  {
-    num: 7,
-    ar: {
-      m: { raf: "سَبْعَةُ", nasb: "سَبْعَةَ", jar: "سَبْعَةِ" },
-      f: { raf: "سَبْعُ", nasb: "سَبْعَ", jar: "سَبْعِ" }
-    }
-  },
-  {
-    num: 8,
-    ar: {
-      m: { raf: "ثَمَانِيَةُ", nasb: "ثَمَانِيَةَ", jar: "ثَمَانِيَةِ" },
-      f: { raf: "ثَمَانٍ", nasb: "ثَمَانِيَ", jar: "ثَمَانِيَ" }
-    }
-  },
-  {
-    num: 9,
-    ar: {
-      m: { raf: "تِسْعَةُ", nasb: "تِسْعَةَ", jar: "تِسْعَةِ" },
-      f: { raf: "تِسْعُ", nasb: "تِسْعَ", jar: "تِسْعِ" }
-    }
-  },
-  {
-    num: 10,
-    ar: {
-      m: { raf: "عَشَرَةُ", nasb: "عَشَرَةَ", jar: "عَشَرَةِ" },
-      f: { raf: "عَشْرُ", nasb: "عَشْرَ", jar: "عَشْرِ" }
-    }
-  }
 ];
 
 // ======================
@@ -2261,123 +1707,9 @@ let currentQuestion = "";
 let currentLabel = "";
 
 // ======================
-// NAHWU ENGINE
-// ======================
-
-// 1. Number → jadi jar (kasrah)
-function toJarNumber(word) {
-  return word
-    .replace("ُ", "ِ")   // dhammah → kasrah
-    .replace("ٌ", "ٍ");  // tanwin dhammah → tanwin kasrah
-}
-
-// 2. Dual → jadi jar/nasab (ـَيْنِ)
-function toJarDual(word) {
-  return word
-    .replace("َان", "َيْن")
-    .replace("َتَان", "َتَيْن");
-}
-
-// 3. Jamak mudzakkar salim → kontrol ون / ين
-function fixMudzakkarPlural(word, isJar = false) {
-  if (word.endsWith("ون")) {
-    return isJar ? word.replace("ون", "ين") : word;
-  }
-  if (word.endsWith("ين")) {
-    return isJar ? word : word.replace("ين", "ون");
-  }
-  return word; // bukan jamak salim
-}
-
-// 4. Apply jar ke noun plural (upgrade)
-function applyJarPlural(word) {
-  return fixMudzakkarPlural(word, true);
-}
-
-// ======================
 // GENERATE
 // ======================
 function generateSentence() {
-  
-  // ======================
-  // MODE ADAD
-  // ======================
-  if (mode === "adad") {
-    const noun = pick(nouns);
-    const num = Math.floor(Math.random() * 10) + 1;
-  
-    let sentenceAr = "";
-    let sentenceId = "";
-    let labelType = "";
-  
-    // Ambil bentuk noun yang benar
-    let nounRaf, nounJar;
-  
-    if (num === 1) {
-      nounRaf = noun.ar.singular.raf;
-      nounJar = noun.ar.singular.jar;
-      labelType = "mufrad";
-    } else if (num === 2) {
-      nounRaf = noun.ar.dual.raf;
-      nounJar = noun.ar.dual.jar;
-      labelType = "mutsanna";
-    } else {
-      nounRaf = noun.ar.plural.raf;
-      nounJar = noun.ar.plural.jar;
-      labelType = "jamak";
-    }
-  
-    const useJar = Math.random() > 0.5;
-    const harf = pick(harfJar);
-  
-    if (num === 1) {
-      if (useJar) {
-        sentenceAr = harf.ar + " " + nounJar;
-        sentenceId = harf.id + " satu " + noun.id;
-      } else {
-        sentenceAr = nounRaf;
-        sentenceId = "satu " + noun.id;
-      }
-  
-    } else if (num === 2) {
-      if (useJar) {
-        sentenceAr = harf.ar + " " + nounJar;
-        sentenceId = harf.id + " dua " + noun.id;
-      } else {
-        sentenceAr = nounRaf;
-        sentenceId = "dua " + noun.id;
-      }
-  
-    } else {
-      // 3–10: number + jamak majrur (noun selalu jar setelah angka)
-      const numWordRaf = getNumberWord(num, noun.gender);
-      const numWordJar = applyJarToNumber(
-        getNumberWord(num, noun.gender)
-      )
-  
-      if (useJar) {
-        const nounWord = selectNounForm(num, noun);
-        sentenceAr = harf.ar + " " + numWordJar + " " + nounWord;
-        sentenceId = harf.id + " " + num + " " + noun.id;
-      } else {
-        const nounWord = selectNounForm(num, noun);
-        sentenceAr = numWordRaf + " " + nounWord;
-        sentenceId = num + " " + noun.id;
-      }
-    }
-  
-    current = sentenceAr;
-    currentQuestion = sentenceId;
-    currentLabel = labelType + (useJar ? " + jar" : "");
-  
-    document.getElementById("question").innerText = sentenceId;
-    document.getElementById("label").innerText = currentLabel;
-    document.getElementById("answer").innerText = "";
-    document.getElementById("answerWrap").style.display = "none";
-  
-    setTimeout(() => playQuestion(), 100);
-    return;
-  }
 
   // ======================
   // MODE ISIM
@@ -2393,7 +1725,7 @@ function generateSentence() {
     const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
 
     const sentenceId = isyarah.id + " " + noun.id;
-    const sentenceAr = isyarah.ar + " " + noun.ar.singular.raf;
+    const sentenceAr = isyarah.ar + " " + noun.ar.singular;
 
     current = sentenceAr;
     currentQuestion = sentenceId;
@@ -2531,7 +1863,11 @@ function buildNounPool() {
         nounPool.push({
           noun: {
             id: noun.id + " wanita",
-            ar: toFeminine(noun.ar),
+            ar: {
+              singular: toFeminine(noun.ar.singular),
+              dual: toFeminine(noun.ar.dual),
+              plural: toFeminine(noun.ar.plural)
+            },
             gender: "f"
           },
           type
@@ -2586,9 +1922,6 @@ function toggleMode() {
   } else if (mode === "nahyi") {
     btn.innerText = "Fi'il Nahyi";
 
-  } else if (mode === "adad") {
-    btn.innerText = "'Adad";
-
   } else if (mode === "noun") {
     btn.innerText = "Isim";
   }
@@ -2598,9 +1931,6 @@ function toggleMode() {
   // ======================
   if (mode === "noun") {
     buildNounPool();
-
-  } else if (mode === "adad") {
-    index = 0;
 
   } else {
     buildPool();
@@ -2712,105 +2042,6 @@ function activatePage(pageId) {
   if (!page) return;
 
   page.classList.add("loaded");
-}
-
-// GANTI JADI:
-function getNumberWord(num, gender) {
-  const n = numbers.find(n => n.num === num);
-  if (!n) return "";
-
-  // Angka 3-10: polarity terbalik (noun m → pakai bentuk f, dan sebaliknya)
-  if (num >= 3 && num <= 10) {
-    return gender === "m" ? n.ar.f.raf : n.ar.m.raf;
-  }
-
-  // Angka 1-2: gender sesuai noun
-  return gender === "m" ? n.ar.m.raf : n.ar.f.raf;
-}
-
-function applyJar(word) {
-  return word
-    .replace("ٌ", "ٍ")
-    .replace("ُ", "ِ");
-}
-
-// ======================
-// ADAD CORE ENGINE
-// ======================
-
-// tentukan bentuk noun berdasarkan angka
-function getNounForm(num, word) {
-  if (num === 1) {
-    return word.singular;
-  } else if (num === 2) {
-    return word.dual;
-  } else {
-    return word.plural;
-  }
-}
-
-// apply i'rab lengkap
-function applyIrab(word, state) {
-  if (state === "jar") {
-    return word
-      .replace("ٌ", "ٍ")
-      .replace("ُ", "ِ")
-      .replace("ان", "ين"); // dual
-  }
-
-  if (state === "nasab") {
-    return word
-      .replace("ٌ", "ً")
-      .replace("ُ", "َ")
-      .replace("ان", "ين");
-  }
-
-  return word; // rafa'
-}
-
-function applySimpleIrab(word, type, caseType) {
-  if (caseType !== "jar") return word;
-
-  if (type === "mufrad") {
-    return word.replace("ٌ", "ٍ").replace("ُ", "ِ");
-  }
-
-  if (type === "dual") {
-    return toJarDual(word);
-  }
-
-  if (type === "jamak_mudzakkar") {
-    return fixMudzakkarPlural(word, true);
-  }
-
-  return word;
-}
-  
-function detectNounType(noun, num) {
-  if (num === 1) return "mufrad";
-  if (num === 2) return "dual";
-
-  if (noun.ar_plural.endsWith("ين") || noun.ar_plural.endsWith("ون")) {
-    return "jamak_mudzakkar";
-  }
-
-  if (noun.ar_plural.endsWith("ات")) {
-    return "jamak_muannats";
-  }
-
-  return "broken";
-}
-
-function selectNounForm(num, noun) {
-  if (num === 1) return noun.ar.singular.raf;
-  if (num === 2) return noun.ar.dual.raf;
-
-  // 3–10
-  return noun.ar.plural.jar;
-}
-
-function applyJarToNumber(word) {
-  return word.replace("ُ", "ِ").replace("ٌ", "ٍ");
 }
   
 buildPool();
