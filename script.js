@@ -1912,42 +1912,10 @@ function buildNounPool() {
 
   nouns.forEach(noun => {
     ["near", "far"].forEach(type => {
-
-      if (noun.type === "profession") {
-        // pria
-        nounPool.push({
-          noun: {
-            id: noun.id,
-            ar: noun.ar,
-            gender: noun.gender,
-            pluralType: noun.pluralType
-          },
-          type
-        });
-
-        // wanita
-        nounPool.push({
-          noun: {
-            id: noun.id + " wanita",
-            ar: {
-              singular: toFeminine(noun.ar.singular),
-              dual: toFeminine(noun.ar.dual),
-              plural: toFeminine(noun.ar.plural)
-            },
-            gender: "f",
-            pluralType: noun.pluralType
-          },
-          type
-        });
-
-      } else {
-        // benda biasa
-        nounPool.push({
-          noun,
-          type
-        });
-      }
-
+      nounPool.push({
+        noun: noun,
+        type
+      });
     });
   });
 
