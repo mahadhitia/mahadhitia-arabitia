@@ -1,14 +1,10 @@
 const modes = ["madhi", "mudhari", "amr", "nahyi", "noun"];
-let modeIndex = 0;
-let mode = modes[modeIndex];
+let mode = "madhi";
 let current = "";
 let pool = [];
 let index = 0;
 let nounPool = [];
 let nounIndex = 0;
-
-import { nouns } from "./data/isim.js";
-import { verbs } from "./data/fiil.js";
 
 // ======================
 // SUBJECT
@@ -124,7 +120,10 @@ function generateSentence() {
     index = 0;
   }
 
-  if (pool.length === 0) return;
+  if (pool.length === 0) {
+    buildPool();
+    return;
+  }
   const { subject, verb } = pool[index++];
 
   let verbAr = "";
