@@ -398,3 +398,7 @@ window.playQuestion = playQuestion;
 window.playAnswer = playAnswer;
 window.buildPool = buildPool;
 window.buildNounPool = buildNounPool;
+window.setMode = function(newMode) {
+  mode = newMode;
+  buildPool();
+};
