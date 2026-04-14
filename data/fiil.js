@@ -1,7 +1,7 @@
 // ======================
 // KATA KERJA
 // ======================
-export const verbs = [
+window.verbs = [
   {
     key: "jalasa",
     id_present: "duduk",
