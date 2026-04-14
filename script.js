@@ -122,8 +122,8 @@ function generateSentence() {
 
   if (pool.length === 0) {
     buildPool();
-    return;
   }
+  
   const { subject, verb } = pool[index++];
 
   let verbAr = "";
