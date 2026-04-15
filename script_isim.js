@@ -30,9 +30,7 @@ function buildNounPool() {
 
 function getIsimIsyarah(gender, distance, form) {
 
-  // ======================
-  // MUFRAD (SUDAH ADA)
-  // ======================
+  // MUFRAD
   if (form === "singular") {
     if (gender === "m") {
       return distance === "near"
@@ -45,32 +43,24 @@ function getIsimIsyarah(gender, distance, form) {
     }
   }
 
-  // ======================
-  // MUTSANNA (RAFA')
-  // ======================
+  // MUTSANNA
   if (form === "dual") {
     if (gender === "m") {
       return distance === "near"
-        ? { id: "Ini (2)", ar: "هَذَانِ" }
-        : { id: "Itu (2)", ar: "ذَانِكَ" };
+        ? { id: "Ini", ar: "هَذَانِ" }
+        : { id: "Itu", ar: "ذَانِكَ" };
     } else {
       return distance === "near"
-        ? { id: "Ini (2)", ar: "هَاتَانِ" }
-        : { id: "Itu (2)", ar: "تَانِكَ" };
+        ? { id: "Ini", ar: "هَاتَانِ" }
+        : { id: "Itu", ar: "تَانِكَ" };
     }
   }
 
-  // ======================
-  // JAMAK (RAFA')
-  // ======================
+  // JAMAK
   if (form === "plural") {
-    // NOTE: dalam kaidah:
-    // jamak غير عاقل → pakai هَذِهِ / تِلْكَ (feminin)
-    // tapi untuk latihan kamu kita bikin sederhana dulu
-
     return distance === "near"
-      ? { id: "Ini (banyak)", ar: "هَؤُلَاءِ" }
-      : { id: "Itu (banyak)", ar: "أُولَٰئِكَ" };
+      ? { id: "Ini", ar: "هَؤُلَاءِ" }
+      : { id: "Itu", ar: "أُولَٰئِكَ" };
   }
 }
 
@@ -100,15 +90,15 @@ function generateSentence() {
     nounAr = noun.ar.singular;
     sentenceId = `${isyarah.id} ${noun.id}`;
     label = "mufrad";
-
+  
   } else if (form === "dual") {
     nounAr = noun.ar.dual;
-    sentenceId = `${isyarah.id} dua ${noun.id}`;
+    sentenceId = `${isyarah.id} ${noun.id}`;
     label = "mutsanna";
-
+  
   } else {
     nounAr = noun.ar.plural;
-    sentenceId = `${isyarah.id} banyak ${noun.id}`;
+    sentenceId = `${isyarah.id} ${noun.id}`;
     label = noun.pluralType === "taksir" ? "jamak taksir" : "jamak";
   }
 
