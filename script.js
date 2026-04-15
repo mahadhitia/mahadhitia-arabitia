@@ -43,10 +43,6 @@ let currentLabel = "";
 // ======================
 function generateSentence() {
 
-  if (window.__MODE_LOCK) {
-    mode = window.__MODE_LOCK;
-  }
-
   // ======================
   // MODE ISIM
   // ======================
