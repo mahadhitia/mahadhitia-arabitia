@@ -1,5 +1,5 @@
 const modes = ["madhi", "mudhari", "amr", "nahyi", "isim"];
-let mode = "madhi";
+let mode = null;
 let current = "";
 let pool = [];
 let index = 0;
@@ -397,15 +397,15 @@ function getRandomForm() {
 function initPage() {
   const path = window.location.pathname;
 
-  if (path.includes("isim")) {
+  if (path.endsWith("isim.html")) {
     setMode("isim");
-  } else if (path.includes("madhi")) {
+  } else if (path.endsWith("madhi.html")) {
     setMode("madhi");
-  } else if (path.includes("mudhari")) {
+  } else if (path.endsWith("mudhari.html")) {
     setMode("mudhari");
-  } else if (path.includes("amr")) {
+  } else if (path.endsWith("amr.html")) {
     setMode("amr");
-  } else if (path.includes("nahyi")) {
+  } else if (path.endsWith("nahyi.html")) {
     setMode("nahyi");
   }
 }
@@ -419,6 +419,8 @@ window.playAnswer = playAnswer;
 window.buildPool = buildPool;
 window.buildNounPool = buildNounPool;
 window.setMode = function(newMode) {
+  console.log("SET MODE:", newMode); // debug
+
   mode = newMode;
 
   if (mode === "isim") {
