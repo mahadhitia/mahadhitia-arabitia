@@ -1,3 +1,6 @@
+let current = "";
+let currentQuestion = "";
+let currentLabel = "";
 let nounPool = [];
 let nounIndex = 0;
 
@@ -104,13 +107,55 @@ function generateSentence() {
 
   const sentenceAr = isyarah.ar + " " + nounAr;
 
+  current = sentenceAr;
+  currentQuestion = sentenceId;
+  currentLabel = label;
+
   document.getElementById("question").innerText = sentenceId;
   document.getElementById("answer").innerText = sentenceAr;
   document.getElementById("label").innerText = label;
 
   document.getElementById("answerWrap").style.display = "none";
+  setTimeout(() => playQuestion(), 100);
 }
 
 function showAnswer() {
   document.getElementById("answerWrap").style.display = "block";
+}
+
+function speakQuestion(text, label) {
+  const utter = new SpeechSynthesisUtterance(
+    text + ". " + label
+  );
+  utter.lang = "id-ID";
+
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utter);
+}
+
+function speakArabic(text) {
+  const utter = new SpeechSynthesisUtterance(text);
+
+  const voices = speechSynthesis.getVoices();
+  const arabVoice = voices.find(v => v.lang.includes("ar"));
+
+  if (arabVoice) {
+    utter.voice = arabVoice;
+  }
+
+  utter.lang = "ar-SA";
+  utter.rate = 0.9;
+
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utter);
+}
+
+function playQuestion() {
+  if (!currentQuestion) return;
+  speakQuestion(currentQuestion, currentLabel);
+}
+
+function playAnswer() {
+  if (!current) return;
+  speakArabic(current);
 }
