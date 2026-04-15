@@ -1,4 +1,4 @@
-let selectedTopic = "all";
+let selectedTopics = ["all"];
 const modes = ["madhi", "mudhari", "amr", "nahyi"];
 let mode = null;
 let current = "";
@@ -129,9 +129,9 @@ function buildPool() {
     verbs.forEach(verb => {
 
       if (
-        selectedTopic !== "all" &&
+        !selectedTopics.includes("all") &&
         verb.topic &&
-        verb.topic !== selectedTopic
+        !selectedTopics.includes(verb.topic)
       ) {
         return;
       }
@@ -155,8 +155,28 @@ function buildPool() {
   index = 0;
 }
 
-function changeTopic(topic) {
-  selectedTopic = topic;
+function toggleTopic(topic) {
+
+  if (topic === "all") {
+    selectedTopics = ["all"];
+  } else {
+
+    // hapus "all" kalau ada
+    selectedTopics = selectedTopics.filter(t => t !== "all");
+
+    if (selectedTopics.includes(topic)) {
+      // kalau sudah ada → hapus
+      selectedTopics = selectedTopics.filter(t => t !== topic);
+    } else {
+      // kalau belum → tambah
+      selectedTopics.push(topic);
+    }
+
+    // kalau kosong → balik ke all
+    if (selectedTopics.length === 0) {
+      selectedTopics = ["all"];
+    }
+  }
 
   pool = [];
   index = 0;
