@@ -47,6 +47,11 @@ function generateSentence() {
   // MODE ISIM
   // ======================
   if (mode === "isim") {
+    
+    if (nounPool.length === 0) {
+      buildNounPool();
+    }
+    
     if (nounIndex >= nounPool.length) {
       shuffle(nounPool);
       nounIndex = 0;
