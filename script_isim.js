@@ -16,23 +16,26 @@ function shuffle(array) {
   }
 }
 
-nouns.forEach(noun => {
+function buildNounPool() {
+  nounPool = [];
+
+  nouns.forEach(noun => {
 
     if (
       selectedTopic !== "all" &&
-      noun.topic && 
+      noun.topic &&
       noun.topic !== selectedTopic
     ) {
       return;
     }
-  
+
     ["near", "far"].forEach(distance => {
       nounPool.push({
         noun,
         distance
       });
     });
-  
+
   });
 
   shuffle(nounPool);
