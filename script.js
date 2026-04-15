@@ -397,11 +397,17 @@ function getRandomForm() {
 function initPage() {
   const path = window.location.pathname;
 
-  if (path.includes("madhi")) setMode("madhi");
-  else if (path.includes("mudhari")) setMode("mudhari");
-  else if (path.includes("amr")) setMode("amr");
-  else if (path.includes("nahyi")) setMode("nahyi");
-  else if (path.includes("isim")) setMode("isim");
+  if (path.includes("isim")) {
+    setMode("isim");
+  } else if (path.includes("madhi")) {
+    setMode("madhi");
+  } else if (path.includes("mudhari")) {
+    setMode("mudhari");
+  } else if (path.includes("amr")) {
+    setMode("amr");
+  } else if (path.includes("nahyi")) {
+    setMode("nahyi");
+  }
 }
 
 initPage();
