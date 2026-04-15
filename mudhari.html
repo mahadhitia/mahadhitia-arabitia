@@ -173,6 +173,7 @@
     }
     
     .generate:active {
+      transform: translateY(2px);
       box-shadow: 0 2px 0 #d4a91f;
     }
     
@@ -183,6 +184,7 @@
     }
     
     .answer-btn:active {
+      transform: translateY(2px);
       box-shadow: 0 2px 0 #2E1B2F;
     }
   
@@ -207,14 +209,10 @@
       opacity: 0;
       pointer-events: none;
     }
-  
-    button:hover {
-      transform: translateY(-1px);
-    }
     
     .generate:hover,
     .answer-btn:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
   
     #questionWrap, #answerWrap {
@@ -313,11 +311,11 @@
 
       <!-- Tombol -->
       <div class="buttons">
-        <button class="generate" onclick="generateSentence()">
+        <button class="btn-main generate" onclick="generateSentence()">
           Buat Kalimat
         </button>
         
-        <button class="answer-btn" onclick="showAnswer()">
+        <button class="btn-main answer-btn" onclick="showAnswer()">
           Lihat Jawaban
         </button>
       </div>
