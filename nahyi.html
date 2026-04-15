@@ -36,8 +36,7 @@
     body.loaded {
       opacity: 1;
     }
-    
-    /* saat keluar halaman */
+
     body.fade-out {
       opacity: 0;
     }
@@ -164,7 +163,7 @@
     }
   
     .generate {
-      background: #F6C32E; /* 🔥 tombol utama */
+      background: #F6C32E;
       color: #2E1B2F;
       box-shadow: 0 4px 0 #d4a91f;
     }
@@ -174,18 +173,19 @@
     }
     
     .generate:active {
-      box-shadow: 0 1px 0 #d4a91f;
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
     }
     
     .answer-btn {
       background: #4B2E4C;
       color: #F8F9FA;
-      border: none;
-      box-shadow: 0 4px 0 #2E1B2F; /* 🔥 tambahin ini */
+      box-shadow: 0 4px 0 #2E1B2F;
     }
-
+    
     .answer-btn:active {
-      box-shadow: 0 1px 0 #2E1B2F;
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #2E1B2F;
     }
   
     .footer {
@@ -210,27 +210,9 @@
       pointer-events: none;
     }
     
-    button:active {
-      transform: translateY(2px) scale(0.98);
-    }
-  
-    button:hover {
-      transform: translateY(-1px);
-    }
-
-    button.clicked {
-      animation: clickBounce 0.2s ease;
-    }
-    
-    @keyframes clickBounce {
-      0% { transform: scale(1); }
-      50% { transform: scale(0.94); }
-      100% { transform: scale(1); }
-    }
-    
     .generate:hover,
     .answer-btn:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
   
     #questionWrap, #answerWrap {
@@ -252,6 +234,25 @@
       transform: scale(1.2);
     }
 
+    .btn-main {
+      padding: 14px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    
+      transition: all 0.15s ease;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-main:active {
+      transform: translateY(2px);
+    }
+
     .btn-back {
       width: 60px;
       height: 60px;
@@ -260,7 +261,7 @@
       border: none;
       cursor: pointer;
     
-      background: #2E1B2F; /* ungu gelap */
+      background: #2E1B2F;
       color: #F8F9FA;
     
       font-size: 24px;
@@ -283,7 +284,6 @@
     .btn-back:active {
       transform: translateY(2px);
     }
-    
   </style>
 </head>
 
@@ -311,17 +311,16 @@
 
       <!-- Tombol -->
       <div class="buttons">
-        <button class="generate" onclick="generateSentence()">
+        <button class="btn-main generate" onclick="generateSentence()">
           Buat Kalimat
         </button>
         
-        <button class="answer-btn" onclick="showAnswer()">
+        <button class="btn-main answer-btn" onclick="showAnswer()">
           Lihat Jawaban
         </button>
-
       </div>
+
     </div>
-    
     <button class="btn-back" onclick="go('menu.html')">
       ⬅️
     </button>
@@ -347,7 +346,7 @@
   function go(url) {
     const el = document.querySelector(".app");
   
-    // 🔥 buat audio fresh (INI KUNCI NYA)
+    // 🔥 audio fresh (fix utama)
     const audio = new Audio("sound/click.mp3");
   
     audio.play()
@@ -359,7 +358,6 @@
         }, 500);
       })
       .catch(() => {
-        // fallback kalau masih diblock
         if (el) el.classList.add("fade-out");
   
         setTimeout(() => {
