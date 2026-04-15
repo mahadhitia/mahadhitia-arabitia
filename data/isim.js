@@ -526,4 +526,643 @@ const nouns = [
       plural: "أَلْبِسَةٌ"
     }
   },
+
+  {
+    id: "pintu",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "بَابٌ",
+      dual: "بَابَانِ",
+      plural: "أَبْوَابٌ"
+    }
+  },
+  
+  {
+    id: "jendela",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "نَافِذَةٌ",
+      dual: "نَافِذَتَانِ",
+      plural: "نَوَافِذُ"
+    }
+  },
+  
+  {
+    id: "lantai",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "بِلَاطَةٌ",
+      dual: "بِلَاطَتَانِ",
+      plural: "بِلَاطٌ"
+    }
+  },
+  
+  {
+    id: "lampu",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِصْبَاحٌ",
+      dual: "مِصْبَاحَانِ",
+      plural: "مَصَابِيحُ"
+    }
+  },
+  
+  {
+    id: "kunci",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِفْتَاحٌ",
+      dual: "مِفْتَاحَانِ",
+      plural: "مَفَاتِيحُ"
+    }
+  },
+  
+  {
+    id: "cermin",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِرْآةٌ",
+      dual: "مِرْآتَانِ",
+      plural: "مَرَاءٍ"
+    }
+  },
+  
+  {
+    id: "kaca",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "زُجَاجَةٌ",
+      dual: "زُجَاجَتَانِ",
+      plural: "زُجَاجٌ"
+    }
+  },
+  
+  {
+    id: "korden",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "سِتَارٌ",
+      dual: "سِتَارَانِ",
+      plural: "سُتُرٌ"
+    }
+  },
+
+  {
+    id: "lemari",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "خِزَانَةٌ",
+      dual: "خِزَانَتَانِ",
+      plural: "خَزَائِنُ"
+    }
+  },
+  
+  {
+    id: "kasur",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "فِرَاشٌ",
+      dual: "فِرَاشَانِ",
+      plural: "فُرُشٌ"
+    }
+  },
+  
+  {
+    id: "ranjang",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "سَرِيرٌ",
+      dual: "سَرِيرَانِ",
+      plural: "سُرُرٌ"
+    }
+  },
+  
+  {
+    id: "ventilasi",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "شُبَّاكٌ",
+      dual: "شُبَّاكَانِ",
+      plural: "شَبَابِيكُ"
+    }
+  },
+  
+  {
+    id: "sapu",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِكْنَسَةٌ",
+      dual: "مِكْنَسَتَانِ",
+      plural: "مَكَانِسُ"
+    }
+  },
+  
+  {
+    id: "alat pel",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "مِمْسَحَةُ الْبِلَاطِ"
+    }
+  },
+  
+  {
+    id: "bantal",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "وِسَادَةٌ",
+      dual: "وِسَادَتَانِ",
+      plural: "وَسَائِدُ"
+    }
+  },
+  
+  {
+    id: "guling",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "وِسَادَةٌ مُسْتَطِيلَةٌ"
+    }
+  },
+  
+  {
+    id: "keset",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "وَطَّايَةٌ",
+      dual: "وَطَّايَتَانِ",
+      plural: "وَطَّايَاتٌ"
+    }
+  },
+
+  {
+    id: "sisir",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِشْطٌ",
+      dual: "مِشْطَانِ",
+      plural: "أَمْشَاطٌ"
+    }
+  },
+  
+  {
+    id: "sampah",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "زُبَالَةٌ",
+      dual: "زُبَالَتَانِ",
+      plural: "زَبَائِلُ"
+    }
+  },
+  
+  {
+    id: "tempat sampah",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مَزْبَلَةٌ",
+      dual: "مَزْبَلَتَانِ",
+      plural: "مَزَابِلُ"
+    }
+  },
+  
+  {
+    id: "selimut",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "لِحَافٌ",
+      dual: "لِحَافَانِ",
+      plural: "لُحُفٌ"
+    }
+  },
+  
+  {
+    id: "seprai",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "غِطَاءُ السَّرِيرِ"
+    }
+  },
+  
+  {
+    id: "jam beker",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مُنَبِّهٌ",
+      dual: "مُنَبِّهانِ",
+      plural: "مُنَبِّهَاتٌ"
+    }
+  },
+  
+  {
+    id: "koper",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "شَنْطَةٌ"
+    }
+  },
+  
+  {
+    id: "rak",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "رَفٌّ",
+      dual: "رَفَّانِ",
+      plural: "رُفُوفٌ"
+    }
+  },
+  
+  {
+    id: "sandal",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "نَعْلٌ",
+      dual: "نَعْلَانِ",
+      plural: "نِعَالٌ"
+    }
+  },
+  
+  {
+    id: "hanger",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِعْلَاقٌ",
+      dual: "مِعْلَاقَانِ",
+      plural: "مَعَالِيقُ"
+    }
+  },
+
+  {
+    id: "gunting kuku",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِقْلَامٌ",
+      dual: "مِقْلَامَانِ",
+      plural: "مَقَالِيمُ"
+    }
+  },
+  
+  {
+    id: "serokan",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِجْرَفَةٌ",
+      dual: "مِجْرَفَتَانِ",
+      plural: "مَجَارِفُ"
+    }
+  },
+  
+  {
+    id: "jadwal piket",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "جَدْوَلُ التَّنَاوُبِ"
+    }
+  },
+  
+  {
+    id: "tingkat/lantai",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "دَوْرٌ",
+      dual: "دَوْرَانِ",
+      plural: "أَدْوَارٌ"
+    }
+  },
+  
+  {
+    id: "gantungan kunci",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِيدَالِيَّةٌ",
+      dual: "مِيدَالِيَّتَانِ",
+      plural: "مَيَادِلُ"
+    }
+  },
+  
+  {
+    id: "kardus",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "كَرْتُونٌ",
+      dual: "كَرْتُونَانِ",
+      plural: "كَرَاتِينُ"
+    }
+  },
+  
+  {
+    id: "kalender",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "تَقْوِيمٌ"
+    }
+  },
+  
+  {
+    id: "tangga",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "سُلَّمٌ",
+      dual: "سُلَّمَانِ",
+      plural: "سَلَالِمُ"
+    }
+  },
+  
+  {
+    id: "lingkungan",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "بِيئَةٌ"
+    }
+  },
+  
+  {
+    id: "gembok",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "قُفْلٌ",
+      dual: "قُفْلَانِ",
+      plural: "أَقْفَالٌ"
+    }
+  },
+
+  {
+    id: "tamu",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "ضَيْفٌ",
+      dual: "ضَيْفَانِ",
+      plural: "ضُيُوفٌ"
+    }
+  },
+  
+  {
+    id: "tisu",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِنْدِيلٌ",
+      dual: "مِنْدِيلَانِ",
+      plural: "مَنَادِيلُ"
+    }
+  },
+  
+  {
+    id: "korek kuping",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "مُنَظِّفُ الْأُذُنِ"
+    }
+  },
+  
+  {
+    id: "uang",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "نَقْدٌ",
+      dual: "نَقْدَانِ",
+      plural: "نُقُودٌ"
+    }
+  },
+  
+  {
+    id: "dompet",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "مِحْفَظَةُ الْفُلُوسِ"
+    }
+  },
+  
+  {
+    id: "jadwal",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "جَدْوَلٌ",
+      dual: "جَدْوَلَانِ",
+      plural: "جَدَاوِلُ"
+    }
+  },
+  
+  {
+    id: "peniti",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِشْبَكٌ",
+      dual: "مِشْبَكَانِ",
+      plural: "مَشَابِكُ"
+    }
+  },
+  
+  {
+    id: "pewangi ruangan",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "مُعَطِّرُ الْغُرْفَةِ"
+    }
+  },
+  
+  {
+    id: "ulas bantal",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "غِطَاءُ الْوِسَادَةِ"
+    }
+  },
+  
+  {
+    id: "perpisahan",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "فِرَاقٌ"
+    }
+  },
+
+  {
+    id: "cucian",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "غَسَلٌ",
+      dual: "غَسَلَانِ",
+      plural: "غَسِيلٌ"
+    }
+  },
+  
+  {
+    id: "jam dinding",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "السَّاعَةُ الْحَائِطِيَّةُ"
+    }
+  },
+  
+  {
+    id: "oleh-oleh",
+    gender: "f",
+    type: "object",
+    ar: {
+      singular: "هَدِيَّةُ السَّفَرِ"
+    }
+  },
+  
+  {
+    id: "blok",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "شُقَّةٌ",
+      dual: "شُقَّتَانِ",
+      plural: "شُقَقٌ"
+    }
+  },
+  
+  {
+    id: "hadiah",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "هَدِيَّةٌ",
+      dual: "هَدِيَّتَانِ",
+      plural: "هَدَايَا"
+    }
+  },
+  
+  {
+    id: "hukuman",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "عُقُوبَةٌ",
+      dual: "عُقُوبَتَانِ",
+      plural: "عُقُوبَاتٌ"
+    }
+  },
+  
+  {
+    id: "kotak",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "صُنْدُوقٌ",
+      dual: "صُنْدُوقَانِ",
+      plural: "صَنَادِيقُ"
+    }
+  },
+  
+  {
+    id: "solasi",
+    gender: "f",
+    type: "object",
+    pluralType: "salim",
+    ar: {
+      singular: "لَاصِقَةٌ",
+      dual: "لَاصِقَتَانِ",
+      plural: "لَاصِقَاتٌ"
+    }
+  },
+  
+  {
+    id: "lem",
+    gender: "m",
+    type: "object",
+    ar: {
+      singular: "غِرَاءٌ"
+    }
+  },
+  
+  {
+    id: "gunting",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "مِقَصٌّ",
+      dual: "مِقَصَّانِ",
+      plural: "مَقَاصٌّ"
+    }
+  }
 ];
