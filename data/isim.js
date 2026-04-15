@@ -1,7 +1,7 @@
 // ======================
 // KATA BENDA
 // ======================
-window.nouns = [
+const nouns = [
   {
     id: "buku",
     gender: "m",
