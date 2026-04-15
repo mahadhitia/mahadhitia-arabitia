@@ -284,6 +284,21 @@
     .btn-back:active {
       transform: translateY(2px);
     }
+
+    #topicList button {
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 10px;
+      background: #4B2E4C;
+      color: #F8F9FA;
+      font-size: 14px;
+    }
+    
+    #topicList button:hover {
+      background: #6a3f6d;
+    }
+    
   </style>
 </head>
 
@@ -295,8 +310,10 @@
     <div class="card">
 
       <!-- TOPIC FILTER -->
-      <div id="topicContainer" style="margin-bottom:15px;"></div>
-
+      <button onclick="openTopicModal()" class="btn-main">
+        Pilih Topik
+      </button>
+      
       <!-- Soal -->
       <div id="questionWrap">
         <span class="audio-icon" onclick="playQuestion()">🔊</span>
@@ -311,6 +328,9 @@
 
       <!-- Label (tunggal, jamak, dll) -->
       <div id="label" class="label"></div>
+      <div id="activeTopic" style="margin-bottom:10px; font-size:12px;">
+        Topik: Semua
+      </div>
 
       <!-- Tombol -->
       <div class="buttons">
@@ -328,6 +348,41 @@
       ⬅️
     </button>
     
+  </div>
+
+  <!-- MODAL TOPIC -->
+  <div id="topicModal" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:999;
+    justify-content:center;
+    align-items:center;
+  ">
+  
+    <div style="
+      background:#2E1B2F;
+      padding:20px;
+      border-radius:16px;
+      width:90%;
+      max-width:400px;
+      max-height:70vh;
+      overflow-y:auto;
+    ">
+  
+      <h3 style="margin-top:0;">Pilih Topik</h3>
+  
+      <div id="topicList"></div>
+  
+      <button onclick="closeTopicModal()" style="margin-top:15px;">
+        Tutup
+      </button>
+  
+    </div>
   </div>
 
   <div class="footer">
@@ -379,7 +434,7 @@
   }
 
   function renderTopics() {
-    const container = document.getElementById("topicContainer");
+    const container = document.getElementById("topicList");
   
     let html = "";
   
@@ -394,6 +449,14 @@
     }
   
     container.innerHTML = html;
+  }
+
+  function openTopicModal() {
+    document.getElementById("topicModal").style.display = "flex";
+  }
+  
+  function closeTopicModal() {
+    document.getElementById("topicModal").style.display = "none";
   }
   
   // 🔥 jalankan saat halaman load
