@@ -1,4 +1,4 @@
-const modes = ["madhi", "mudhari", "amr", "nahyi", "noun"];
+const modes = ["madhi", "mudhari", "amr", "nahyi", "isim"];
 let mode = "madhi";
 let current = "";
 let pool = [];
@@ -46,7 +46,7 @@ function generateSentence() {
   // ======================
   // MODE ISIM
   // ======================
-  if (mode === "noun") {
+  if (mode === "isim") {
     if (nounIndex >= nounPool.length) {
       shuffle(nounPool);
       nounIndex = 0;
@@ -267,14 +267,14 @@ function toggleMode() {
   } else if (mode === "nahyi") {
     btn.innerText = "Fi'il Nahyi";
 
-  } else if (mode === "noun") {
+  } else if (mode === "isim") {
     btn.innerText = "Isim";
   }
 
   // ======================
   // BUILD DATA
   // ======================
-  if (mode === "noun") {
+  if (mode === "isim") {
     buildNounPool();
 
   } else {
@@ -396,7 +396,7 @@ function initPage() {
   else if (path.includes("mudhari")) setMode("mudhari");
   else if (path.includes("amr")) setMode("amr");
   else if (path.includes("nahyi")) setMode("nahyi");
-  else if (path.includes("isim")) setMode("noun");
+  else if (path.includes("isim")) setMode("isim");
 }
 
 initPage();
@@ -410,7 +410,7 @@ window.buildNounPool = buildNounPool;
 window.setMode = function(newMode) {
   mode = newMode;
 
-  if (mode === "noun") {
+  if (mode === "isim") {
     buildNounPool();
   } else {
     buildPool();
