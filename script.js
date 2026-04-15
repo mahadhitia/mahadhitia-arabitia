@@ -413,9 +413,15 @@ window.playAnswer = playAnswer;
 window.buildPool = buildPool;
 window.buildNounPool = buildNounPool;
 window.setMode = function(newMode) {
-  console.log("SET MODE:", newMode); // debug
+  console.log("SET MODE:", newMode);
 
   mode = newMode;
+
+  // 🔥 RESET SEMUA
+  pool = [];
+  nounPool = [];
+  index = 0;
+  nounIndex = 0;
 
   if (mode === "isim") {
     buildNounPool();
