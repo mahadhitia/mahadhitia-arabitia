@@ -191,8 +191,8 @@ function toggleTopic(topic) {
 
   buildPool();
   generateSentence();
-
   updateActiveTopic();
+  updateTopicUI();
 }
                 
 // ======================
