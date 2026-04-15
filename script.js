@@ -56,59 +56,57 @@ function generateSentence() {
       shuffle(nounPool);
       nounIndex = 0;
     }
-
+  
     const item = nounPool[nounIndex++];
     const noun = item.noun;
     const isyarah = getIsimIsyarahFixed(noun.gender, item.distance);
     const form = getRandomForm();
-
+  
     let nounAr = "";
     let sentenceId = "";
     let labelJumlah = "";
-    
+  
     // ======================
     // PILIH BENTUK
     // ======================
     if (form === "singular") {
       nounAr = noun.ar.singular;
       sentenceId = `${isyarah.id} ${noun.id}`;
-    
+      labelJumlah = "mufrad";
+  
     } else if (form === "dual") {
       nounAr = noun.ar.dual;
       sentenceId = `${isyarah.id} dua ${noun.id}`;
-    
+      labelJumlah = "mutsanna";
+  
     } else {
       nounAr = noun.ar.plural;
       sentenceId = `${isyarah.id} banyak ${noun.id}`;
-    }
-    
+  
       if (noun.pluralType === "taksir") {
         labelJumlah = "jamak taksir";
       } else {
         labelJumlah = "jamak";
       }
     }
-    
+  
     // ======================
     // FINAL
     // ======================
     const sentenceAr = isyarah.ar + " " + nounAr;
-    
+  
     current = sentenceAr;
     currentQuestion = sentenceId;
-    if (labelJumlah === "jamak taksir") {
-      currentLabel = "jamak taksir";
-    } else {
-      const genderLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
-      currentLabel = labelJumlah + " " + genderLabel;
-    }
-
+  
+    const genderLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
+    currentLabel = labelJumlah + " " + genderLabel;
+  
     document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
-
+  
     document.getElementById("answer").innerText = "";
     document.getElementById("answerWrap").style.display = "none";
-
+  
     setTimeout(() => playQuestion(), 100);
     return;
   }
