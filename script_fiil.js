@@ -326,7 +326,18 @@ function initPage() {
   }
 }
 
+function updateActiveTopic() {
+  const el = document.getElementById("activeTopic");
+
+  if (selectedTopics.includes("all")) {
+    el.innerText = "Topik: Semua";
+  } else {
+    el.innerText = "Topik: " + selectedTopics.join(", ");
+  }
+}
+
 initPage();
+updateActiveTopic();
 
 window.generateSentence = generateSentence;
 window.showAnswer = showAnswer;
