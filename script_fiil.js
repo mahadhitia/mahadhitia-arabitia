@@ -55,6 +55,14 @@ function generateSentence() {
   }
   
   const { subject, verb } = pool[index++];
+  if (pool.length === 0) {
+    buildPool();
+  }
+  
+  if (pool.length === 0) {
+    alert("Belum ada data untuk topik ini");
+    return;
+  }
 
   let verbAr = "";
   let verbId = "";
