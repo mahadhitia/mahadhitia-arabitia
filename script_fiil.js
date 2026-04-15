@@ -1,3 +1,4 @@
+let selectedTopic = "all";
 const modes = ["madhi", "mudhari", "amr", "nahyi"];
 let mode = null;
 let current = "";
@@ -126,6 +127,14 @@ function buildPool() {
     }
   
     verbs.forEach(verb => {
+
+      if (
+        selectedTopic !== "all" &&
+        verb.topic &&
+        verb.topic !== selectedTopic
+      ) {
+        return;
+      }
     
       if (mode === "amr") {
         if (!verb.amr || !verb.amr[subject.key]) return;
@@ -139,13 +148,23 @@ function buildPool() {
         subject,
         verb
       });
+    
     });
-  });
 
   shuffle(pool);
   index = 0;
 }
 
+function changeTopic(topic) {
+  selectedTopic = topic;
+
+  pool = [];
+  index = 0;
+
+  buildPool();
+  generateSentence();
+}
+                
 // ======================
 // SHOW ANSWER
 // ======================
