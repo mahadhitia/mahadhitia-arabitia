@@ -46,20 +46,24 @@ function generateSentence() {
   // MODE FI'IL
   // ======================
 
+  // 🔥 WAJIB: isi pool dulu
   if (pool.length === 0) {
     buildPool();
   }
 
+  // 🔥 kalau masih kosong → stop
   if (pool.length === 0) {
     alert("Belum ada data untuk topik ini");
     return;
   }
 
+  // 🔥 reset index kalau habis
   if (index >= pool.length) {
     shuffle(pool);
     index = 0;
   }
 
+  // 🔥 BARU ambil data
   const { subject, verb } = pool[index++];
 
   let verbAr = "";
