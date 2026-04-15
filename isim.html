@@ -335,8 +335,10 @@
   <script src="data/fiil.js"></script>
   <script src="script.js"></script>
   <script>
-    setMode("isim");
-    generateSentence();
+    window.addEventListener("load", () => {
+      setMode("isim");
+      generateSentence();
+    });
   </script>
 
   <script>
