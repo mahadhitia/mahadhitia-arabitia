@@ -59,7 +59,7 @@ function generateSentence() {
 
     const item = nounPool[nounIndex++];
     const noun = item.noun;
-    const isyarah = getIsimIsyarahFixed(noun.gender, item.type);
+    const isyarah = getIsimIsyarahFixed(noun.gender, item.distance);
     const form = getRandomForm();
 
     let nounAr = "";
@@ -71,17 +71,16 @@ function generateSentence() {
     // ======================
     if (form === "singular") {
       nounAr = noun.ar.singular;
-      sentenceId = isyarah.id + " " + noun.id;
-      labelJumlah = "mufrad";
+      sentenceId = `${isyarah.id} ${noun.id}`;
     
     } else if (form === "dual") {
       nounAr = noun.ar.dual;
-      sentenceId = isyarah.id + " dua " + noun.id;
-      labelJumlah = "mutsanna";
+      sentenceId = `${isyarah.id} dua ${noun.id}`;
     
     } else {
       nounAr = noun.ar.plural;
-      sentenceId = isyarah.id + " banyak " + noun.id;
+      sentenceId = `${isyarah.id} banyak ${noun.id}`;
+    }
     
       if (noun.pluralType === "taksir") {
         labelJumlah = "jamak taksir";
@@ -103,9 +102,6 @@ function generateSentence() {
       const genderLabel = noun.gender === "m" ? "mudzakkar" : "muannats";
       currentLabel = labelJumlah + " " + genderLabel;
     }
-
-    current = sentenceAr;
-    currentQuestion = sentenceId;
 
     document.getElementById("question").innerText = sentenceId;
     document.getElementById("label").innerText = currentLabel;
@@ -226,10 +222,10 @@ function buildNounPool() {
   nounPool = [];
 
   nouns.forEach(noun => {
-    ["near", "far"].forEach(type => {
+    ["near", "far"].forEach(distance => {
       nounPool.push({
         noun: noun,
-        type
+        distance
       });
     });
   });
