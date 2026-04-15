@@ -310,12 +310,18 @@
     <div class="card">
 
       <!-- TOPIC FILTER -->
-      <button onclick="openTopicModal()" class="btn-main">
-        Pilih Topik
-      </button>
-
-      <div id="activeTopic" style="margin-bottom:10px; font-size:12px;">
-        Topik: Semua
+      <div style="margin-bottom:15px;">
+        <button onclick="openTopicModal()" class="btn-main" style="width:100%;">
+          Pilih Topik
+        </button>
+      
+        <div id="activeTopic" style="
+          margin-top:8px;
+          font-size:12px;
+          opacity:0.7;
+        ">
+          Topik: Semua
+        </div>
       </div>
       
       <!-- Soal -->
@@ -435,17 +441,41 @@
   
     let html = "";
   
-    html += `<button onclick="toggleTopic('all')">Semua</button>`;
+    html += `<button onclick="toggleTopic('all')" class="topic-btn">Semua</button>`;
   
     for (let key in topics) {
       html += `
-        <button onclick="toggleTopic('${key}')">
+        <button onclick="toggleTopic('${key}')" class="topic-btn">
           ${topics[key]}
         </button>
       `;
     }
   
     container.innerHTML = html;
+  
+    updateTopicUI(); // 🔥 TAMBAH INI
+  }
+
+  function updateTopicUI() {
+    const buttons = document.querySelectorAll(".topic-btn");
+  
+    buttons.forEach(btn => {
+      const text = btn.innerText;
+  
+      // reset
+      btn.style.background = "#4B2E4C";
+  
+      // aktif
+      if (
+        (text === "Semua" && selectedTopics.includes("all")) ||
+        Object.keys(topics).some(key =>
+          topics[key] === text && selectedTopics.includes(key)
+        )
+      ) {
+        btn.style.background = "#F6C32E";
+        btn.style.color = "#2E1B2F";
+      }
+    });
   }
 
   function openTopicModal() {
