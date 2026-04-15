@@ -445,4 +445,88 @@ const nouns = [
       plural: "أَوْلَادٌ"
     }
   },
+
+  {
+    id: "jam",
+    gender: "f",
+    type: "object",
+    pluralType: "salim",
+    ar: {
+      singular: "سَاعَةٌ",
+      dual: "سَاعَتَانِ",
+      plural: "سَاعَاتٌ"
+    }
+  },
+
+  {
+    id: "tangan",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "يَدٌ",
+      dual: "يَدَانِ",
+      plural: "أَيْدٍ"
+    }
+  },
+
+  {
+    id: "atap",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "سَقْفٌ",
+      dual: "سَقْفَانِ",
+      plural: "سُقُفٌ"
+    }
+  },
+
+  {
+    id: "kelas",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "فَصْلٌ",
+      dual: "فَصْلَانِ",
+      plural: "فُصُولٌ"
+    }
+  },
+
+  {
+    id: "tas",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "حَقِيبَةٌ",
+      dual: "حَقِيبَتَانِ",
+      plural: "حَقَائِبُ"
+    }
+  },
+
+  {
+    id: "jaket",
+    gender: "f",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "جَاكِيتَةٌ",
+      dual: "جَاكِيتَتَانِ",
+      plural: "جَاكِيتَاتٌ"
+    }
+  },
+
+  {
+    id: "pakaian",
+    gender: "m",
+    type: "object",
+    pluralType: "taksir",
+    ar: {
+      singular: "لِبَاسٌ",
+      dual: "لِبَاسَانِ",
+      plural: "أَلْبِسَةٌ"
+    }
+  },
 ];
