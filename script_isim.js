@@ -1,3 +1,4 @@
+let selectedTopic = "all";
 let current = "";
 let currentQuestion = "";
 let currentLabel = "";
@@ -15,16 +16,23 @@ function shuffle(array) {
   }
 }
 
-function buildNounPool() {
-  nounPool = [];
+nouns.forEach(noun => {
 
-  nouns.forEach(noun => {
+    if (
+      selectedTopic !== "all" &&
+      noun.topic && 
+      noun.topic !== selectedTopic
+    ) {
+      return;
+    }
+  
     ["near", "far"].forEach(distance => {
       nounPool.push({
         noun,
         distance
       });
     });
+  
   });
 
   shuffle(nounPool);
@@ -158,4 +166,15 @@ function playQuestion() {
 function playAnswer() {
   if (!current) return;
   speakArabic(current);
+}
+
+function changeTopic(topic) {
+  selectedTopic = topic;
+
+  // reset pool
+  nounPool = [];
+  nounIndex = 0;
+
+  // optional: langsung generate ulang
+  generateSentence();
 }
