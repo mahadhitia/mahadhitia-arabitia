@@ -71,7 +71,7 @@ function generateSentence() {
 
   } else if (mode === "amr") {
     verbAr = verb.amr[subject.key];
-    verbId = verb.id_command + "lah!";
+    verbId = verb.id_command + "!";
 
   } else if (mode === "nahyi") {
     verbAr = verb.nahyi[subject.key];
