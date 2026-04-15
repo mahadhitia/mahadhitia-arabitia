@@ -106,7 +106,7 @@ const nouns = [
     ar: {
       singular: "أُسْتَاذٌ",
       dual: "أُسْتَاذَانِ",
-      plural: "أَسَاتِذَةٌ"
+      plural: "أَسَاتِيذُ"
     }
   },
   
@@ -114,11 +114,8 @@ const nouns = [
     id: "matahari",
     gender: "f",
     type: "object",
-    pluralType: "taksir",
     ar: {
-      singular: "شَمْسٌ",
-      dual: "شَمْسَانِ",
-      plural: "شُمُوسٌ"
+      singular: "شَمْسٌ"
     }
   },
   
@@ -478,7 +475,7 @@ const nouns = [
     ar: {
       singular: "سَقْفٌ",
       dual: "سَقْفَانِ",
-      plural: "سُقُفٌ"
+      plural: "سُقُوْفٌ"
     }
   },
 
