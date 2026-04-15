@@ -43,6 +43,10 @@ let currentLabel = "";
 // ======================
 function generateSentence() {
 
+  if (window.__MODE_LOCK) {
+    mode = window.__MODE_LOCK;
+  }
+
   // ======================
   // MODE ISIM
   // ======================
@@ -417,7 +421,9 @@ window.setMode = function(newMode) {
 
   mode = newMode;
 
-  // 🔥 RESET SEMUA
+  // 🔥 LOCK MODE (penting)
+  window.__MODE_LOCK = newMode;
+
   pool = [];
   nounPool = [];
   index = 0;
