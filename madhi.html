@@ -294,6 +294,9 @@
 
     <div class="card">
 
+      <!-- TOPIC FILTER -->
+      <div id="topicContainer" style="margin-bottom:15px;"></div>
+
       <!-- Soal -->
       <div id="questionWrap">
         <span class="audio-icon" onclick="playQuestion()">🔊</span>
@@ -373,6 +376,27 @@
       document.body.classList.add("loaded");
     });
   }
+
+  function renderTopics() {
+    const container = document.getElementById("topicContainer");
+  
+    let html = "";
+  
+    html += `<button onclick="toggleTopic('all')">Semua</button>`;
+  
+    for (let key in topics) {
+      html += `
+        <button onclick="toggleTopic('${key}')">
+          ${topics[key]}
+        </button>
+      `;
+    }
+  
+    container.innerHTML = html;
+  }
+  
+  // 🔥 jalankan saat halaman load
+  renderTopics();
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
