@@ -96,12 +96,12 @@ function generateSentence() {
   
   } else if (form === "dual") {
     nounAr = noun.ar.dual;
-    sentenceId = `${isyarah.id} ${noun.id}`;
+    sentenceId = `${isyarah.id} dua ${noun.id}`;
     label = "mutsanna";
   
   } else {
     nounAr = noun.ar.plural;
-    sentenceId = `${isyarah.id} ${noun.id}`;
+    sentenceId = `${isyarah.id} banyak ${noun.id}`;
     label = noun.pluralType === "taksir" ? "jamak taksir" : "jamak";
   }
 
