@@ -45,24 +45,22 @@ function generateSentence() {
   // ======================
   // MODE FI'IL
   // ======================
+
   if (pool.length === 0) {
     buildPool();
   }
-  
-  if (index >= pool.length) {
-    shuffle(pool);
-    index = 0;
-  }
-  
-  const { subject, verb } = pool[index++];
-  if (pool.length === 0) {
-    buildPool();
-  }
-  
+
   if (pool.length === 0) {
     alert("Belum ada data untuk topik ini");
     return;
   }
+
+  if (index >= pool.length) {
+    shuffle(pool);
+    index = 0;
+  }
+
+  const { subject, verb } = pool[index++];
 
   let verbAr = "";
   let verbId = "";
@@ -193,6 +191,7 @@ function toggleTopic(topic) {
   generateSentence();
   updateActiveTopic();
   updateTopicUI();
+  closeTopicModal();
 }
                 
 // ======================
