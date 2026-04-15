@@ -45,13 +45,13 @@ function generateSentence() {
   // ======================
   // MODE FI'IL
   // ======================
+  if (pool.length === 0) {
+    buildPool();
+  }
+  
   if (index >= pool.length) {
     shuffle(pool);
     index = 0;
-  }
-
-  if (pool.length === 0) {
-    buildPool();
   }
   
   const { subject, verb } = pool[index++];
@@ -183,6 +183,8 @@ function toggleTopic(topic) {
 
   buildPool();
   generateSentence();
+
+  updateActiveTopic();
 }
                 
 // ======================
