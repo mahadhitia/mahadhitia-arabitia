@@ -417,9 +417,6 @@ window.setMode = function(newMode) {
 
   mode = newMode;
 
-  // 🔥 LOCK MODE (penting)
-  window.__MODE_LOCK = newMode;
-
   pool = [];
   nounPool = [];
   index = 0;
