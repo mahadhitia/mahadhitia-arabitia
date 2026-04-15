@@ -135,7 +135,7 @@ function buildPool() {
     if ((mode === "amr" || mode === "nahyi") && !subject.key.includes("ant")) {
       return;
     }
-  
+
     verbs.forEach(verb => {
 
       if (
@@ -145,21 +145,23 @@ function buildPool() {
       ) {
         return;
       }
-    
+
       if (mode === "amr") {
         if (!verb.amr || !verb.amr[subject.key]) return;
       }
-      
+
       if (mode === "nahyi") {
         if (!verb.nahyi || !verb.nahyi[subject.key]) return;
       }
-    
+
       pool.push({
         subject,
         verb
       });
-    
+
     });
+
+  }); // 🔥 INI YANG TADI HILANG
 
   shuffle(pool);
   index = 0;
