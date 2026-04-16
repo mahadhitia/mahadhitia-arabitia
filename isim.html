@@ -552,7 +552,7 @@
   
     html += `<button onclick="handleTopicClick('all')" class="topic-btn">Semua</button>`;
   
-    for (let key in topics) {
+    for (let key in isimTopics) {
       html += `
         <button onclick="handleTopicClick('${key}')" class="topic-btn">
           ${topics[key]}
@@ -577,7 +577,7 @@
         isActive = true;
       }
   
-      for (let key in topics) {
+      for (let key in isimTopics) {
         if (topics[key] === text && selectedTopics.includes(key)) {
           isActive = true;
         }
