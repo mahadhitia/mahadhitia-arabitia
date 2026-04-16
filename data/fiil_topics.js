@@ -1,7 +1,8 @@
 const fiilTopics = {
-  rumah: "Aktivitas di rumah",
-  sekolah: "Aktivitas di sekolah",
-  ibadah: "Aktivitas ibadah",
-  sosial: "Aktivitas sosial",
+  harian: "Aktivitas sehari-hari",
+  gerak: "Pergerakan & posisi",
+  interaksi: "Interaksi sosial",
+  perasaan: "Perasaan & mental",
+  umum: "Aktivitas umum",
   unclassified: "Belum tersedia"
 };
