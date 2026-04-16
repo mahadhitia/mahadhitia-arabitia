@@ -21,12 +21,12 @@ function buildNounPool() {
 
   nouns.forEach(noun => {
 
+    // 🔥 fallback kalau belum ada topic
     let topic = noun.topic || "unclassified";
 
+    // 🔥 FILTER
     if (!selectedTopics.includes("all")) {
-      if (!selectedTopics.includes(topic)) {
-        return;
-      }
+      if (!selectedTopics.includes(topic)) return;
     }
 
     ["near", "far"].forEach(distance => {
