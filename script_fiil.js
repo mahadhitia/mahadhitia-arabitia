@@ -138,14 +138,6 @@ function buildPool() {
 
     verbs.forEach(verb => {
 
-      if (
-        !selectedTopics.includes("all") &&
-        verb.topic &&
-        !selectedTopics.includes(verb.topic)
-      ) {
-        return;
-      }
-
       if (mode === "amr") {
         if (!verb.amr || !verb.amr[subject.key]) return;
       }
@@ -194,10 +186,8 @@ function toggleTopic(topic) {
   index = 0;
 
   buildPool();
-  generateSentence();
   updateActiveTopic();
   updateTopicUI();
-  closeTopicModal();
 }
                 
 // ======================
