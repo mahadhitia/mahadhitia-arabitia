@@ -74,21 +74,26 @@ function generateSentence() {
   // ======================
   if (mode === "madhi") {
     if (!verb.past || !verb.past[subject.key]) return generateSentence();
-  
     verbAr = verb.past[subject.key];
     verbId = verb.id_past;
   }
 
   if (mode === "mudhari") {
     if (!verb.present || !verb.present[subject.key]) return generateSentence();
+    verbAr = verb.present[subject.key];
+    verbId = verb.id_present;
   }
   
   if (mode === "amr") {
     if (!verb.amr || !verb.amr[subject.key]) return generateSentence();
+    verbAr = verb.amr[subject.key];
+    verbId = verb.id_command + "!";
   }
   
   if (mode === "nahyi") {
     if (!verb.nahyi || !verb.nahyi[subject.key]) return generateSentence();
+    verbAr = verb.nahyi[subject.key];
+    verbId = "jangan " + verb.id_command + "!";
   }
 
   // ======================
