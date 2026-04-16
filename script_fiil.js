@@ -106,8 +106,10 @@ function generateSentence() {
     if (index < pool.length) {
       return generateSentence();
     } else {
-      alert("Data tidak lengkap semua");
-      return;
+      console.warn("Data habis, regenerating...");
+      index = 0;
+      shuffle(pool);
+      return generateSentence();
     }
   }
 
