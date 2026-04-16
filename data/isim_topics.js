@@ -1,7 +1,4 @@
 const isimTopics = {
-  kamar: "Kosakata sekitar kamar",
-  hewan: "Nama-nama hewan",
-  tubuh: "Anggota badan",
-  alat: "Peralatan",
+  kamar: "Lingkungan kamar dan asrama",
   unclassified: "Belum tersedia"
 };
