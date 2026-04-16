@@ -317,101 +317,94 @@
     }
 
     .btn-topic {
-    width: 40%;
-    max-width: 200px;
-    margin: 10px auto 15px;
-    padding: 14px;
+      width: 60px;
+      height: 60px;
+    
+      margin: 0 auto 15px;
+    
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+    
+      font-size: 26px;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: all 0.15s ease;
+    }
   
-    border-radius: 14px;
-    border: none;
-    cursor: pointer;
+    .btn-topic:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-topic:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
   
-    background: #F6C32E;
-    color: #2E1B2F;
+    #topicModal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    
+    #topicModal.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    #topicModal > div {
+      transform: scale(0.9);
+      transition: all 0.25s ease;
+    }
+    
+    #topicModal.show > div {
+      transform: scale(1);
+    }
   
-    font-weight: 600;
-    font-size: 15px;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  
-    box-shadow: 0 4px 0 #d4a91f;
-    transition: all 0.15s ease;
-  }
-  
-  .btn-topic .icon {
-    font-size: 20px;
-    transition: transform 0.2s ease;
-  }
-  
-  .btn-topic:hover {
-    transform: translateY(-2px);
-  }
-  
-  .btn-topic:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #d4a91f;
-  }
-
-  #topicModal {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-  }
-  
-  #topicModal.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  #topicModal > div {
-    transform: scale(0.9);
-    transition: all 0.25s ease;
-  }
-  
-  #topicModal.show > div {
-    transform: scale(1);
-  }
-
-  .modal-title {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-  
-  .btn-close {
-    width: 40%;
-    max-width: 180px;
-    margin: 20px auto 0;
-  
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-  
-    background: #F6C32E;
-    color: #2E1B2F;
-    font-weight: 600;
-  
-    display: block;
-  
-    box-shadow: 0 4px 0 #d4a91f;
-    transition: all 0.15s ease;
-  }
-  
-  .btn-close:hover {
-    transform: translateY(-2px);
-  }
-  
-  .btn-close:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #d4a91f;
-  }
+    .modal-title {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    
+    .btn-close {
+      width: 40%;
+      max-width: 180px;
+      margin: 20px auto 0;
+    
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+      font-weight: 600;
+    
+      display: block;
+    
+      box-shadow: 0 4px 0 #d4a91f;
+      transition: all 0.15s ease;
+    }
+    
+    .btn-close:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-close:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
     
   </style>
 </head>
@@ -421,15 +414,14 @@
   <div class="app">
     <h1 class="title">Fi'il Madhi</h1>
 
-    <!-- TOPIC FILTER -->
-    <div style="margin-bottom:15px;">
-      <button onclick="openTopicModal()" class="btn-topic">
-        <span class="icon">📚</span>
-        <span>Pilih Topik</span>
-      </button>
-    </div>
-
     <div class="card">
+
+      <!-- TOPIC FILTER -->
+      <div style="margin-bottom:15px;">
+        <button onclick="openTopicModal()" class="btn-topic">
+          📚
+        </button>
+      </div>
       
       <!-- Soal -->
       <div id="questionWrap">
