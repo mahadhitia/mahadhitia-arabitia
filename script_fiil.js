@@ -1,6 +1,6 @@
 let selectedTopics = ["all"];
 const modes = ["madhi", "mudhari", "amr", "nahyi"];
-let mode = null;
+let mode = "madhi";
 let current = "";
 let pool = [];
 let index = 0;
@@ -41,6 +41,11 @@ let currentLabel = "";
 // GENERATE
 // ======================
 function generateSentence() {
+
+  // 🔥 pastikan mode selalu ada
+  if (!mode) {
+    mode = "madhi";
+  }
 
   // ======================
   // MODE FI'IL
@@ -85,7 +90,12 @@ function generateSentence() {
   
   if (mode === "mudhari") {
     verbAr = verb.present?.[subject.key];
-    verbId = verb.id_present;
+  
+    if (!verbAr && verb.present) {
+      verbAr = Object.values(verb.present)[0];
+    }
+  
+    verbId = verb.id_present || "melakukan";
   }
   
   if (mode === "amr") {
@@ -99,18 +109,9 @@ function generateSentence() {
   }
 
   // 🔥 ANTI KOSONG (AMAN)
-  if (!verbAr || !verbId) {
+  if (!verbAr) {
     console.warn("SKIP DATA:", subject, verb);
-  
-    // ambil data berikutnya TANPA recursion
-    if (index < pool.length) {
-      return generateSentence();
-    } else {
-      console.warn("Data habis, regenerating...");
-      index = 0;
-      shuffle(pool);
-      return generateSentence();
-    }
+    return;
   }
 
   // ======================
