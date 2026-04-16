@@ -172,6 +172,14 @@ function buildPool() {
 
     verbs.forEach(verb => {
 
+      let topic = verb.topic || "unclassified";
+
+      if (!selectedTopics.includes("all")) {
+        if (!selectedTopics.includes(topic)) {
+          return;
+        }
+      }
+
       if (mode === "madhi") {
         if (!verb.past) return;
       }
