@@ -552,17 +552,17 @@
   
     html += `<button onclick="handleTopicClick('all')" class="topic-btn">Semua</button>`;
   
-    for (let key in topics) {
+    for (let key in fiilTopics) {
       html += `
         <button onclick="handleTopicClick('${key}')" class="topic-btn">
-          ${topics[key]}
+          ${fiilTopics[key]}
         </button>
       `;
     }
   
     container.innerHTML = html;
   
-    updateTopicUI(); // 🔥 TAMBAH INI
+    updateTopicUI();
   }
 
   function updateTopicUI() {
@@ -577,8 +577,8 @@
         isActive = true;
       }
   
-      for (let key in topics) {
-        if (topics[key] === text && selectedTopics.includes(key)) {
+      for (let key in fiilTopics) {
+        if (fiilTopics[key] === text && selectedTopics.includes(key)) {
           isActive = true;
         }
       }
@@ -587,7 +587,6 @@
         btn.style.background = "#F6C32E";
         btn.style.color = "#2E1B2F";
       } else {
-        // 🔥 FIX: balikin ke putih normal
         btn.style.background = "#4B2E4C";
         btn.style.color = "#F8F9FA";
       }
