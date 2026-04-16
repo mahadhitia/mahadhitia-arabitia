@@ -1184,7 +1184,7 @@ window.verbs = [
   
   {
     key: "jalasa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "duduk",
     id_past: "telah duduk",
     id_command: "duduk",
@@ -1244,7 +1244,7 @@ window.verbs = [
   
   {
     key: "fataha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membuka",
     id_past: "telah membuka",
     id_command: "buka",
@@ -1304,7 +1304,7 @@ window.verbs = [
   
   {
     key: "dzahaba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "pergi",
     id_past: "telah pergi",
     id_command: "pergi",
@@ -1364,7 +1364,7 @@ window.verbs = [
   
   {
     key: "masaka",
-    topic: "kamar",
+    topic: "harian",
     id_present: "memegang",
     id_past: "telah memegang",
     id_command: "pegang",
@@ -1424,7 +1424,7 @@ window.verbs = [
 
   {
     key: "jaa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "datang",
     id_past: "telah datang",
     id_command: "datang",
@@ -1484,7 +1484,7 @@ window.verbs = [
 
   {
     key: "qaama",
-    topic: "kamar",
+    topic: "harian",
     id_present: "berdiri",
     id_past: "telah berdiri",
     id_command: "berdiri",
@@ -1544,7 +1544,7 @@ window.verbs = [
 
   {
     key: "aghlaqa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menutup",
     id_past: "telah menutup",
     id_command: "tutuplah",
@@ -1604,7 +1604,7 @@ window.verbs = [
 
   {
     key: "naama",
-    topic: "kamar",
+    topic: "harian",
     id_present: "tidur",
     id_past: "telah tidur",
     id_command: "tidurlah",
@@ -1664,7 +1664,7 @@ window.verbs = [
 
   {
     key: "kanasa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menyapu",
     id_past: "telah menyapu",
     id_command: "sapu",
@@ -1724,7 +1724,7 @@ window.verbs = [
 
   {
     key: "masaha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengepel",
     id_past: "telah mengepel",
     id_command: "pel",
@@ -1784,7 +1784,7 @@ window.verbs = [
 
   {
     key: "wadha'a",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menaruh",
     id_past: "telah menaruh",
     id_command: "taruh",
@@ -1844,7 +1844,7 @@ window.verbs = [
 
   {
     key: "akhadza",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengambil",
     id_past: "telah mengambil",
     id_command: "ambil",
@@ -1904,7 +1904,7 @@ window.verbs = [
 
   {
     key: "asy'ala",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menyalakan lampu",
     id_past: "telah menyalakan lampu",
     id_command: "nyalakan lampu",
@@ -1964,7 +1964,7 @@ window.verbs = [
 
   {
     key: "athfa'a",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mematikan lampu",
     id_past: "telah mematikan lampu",
     id_command: "matikan lampu",
@@ -2024,7 +2024,7 @@ window.verbs = [
 
   {
     key: "istayqazha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "bangun",
     id_past: "telah bangun",
     id_command: "bangun",
@@ -2084,7 +2084,7 @@ window.verbs = [
 
   {
     key: "ayqazha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membangunkan",
     id_past: "telah membangunkan",
     id_command: "bangunkan",
@@ -2144,7 +2144,7 @@ window.verbs = [
 
   {
     key: "na'isa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengantuk",
     id_past: "telah mengantuk",
     id_command: "ngantuk",
@@ -2204,7 +2204,7 @@ window.verbs = [
 
   {
     key: "ramā",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membuang",
     id_past: "telah membuang",
     id_command: "buang",
@@ -2264,7 +2264,7 @@ window.verbs = [
 
   {
     key: "nazhafa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membersihkan",
     id_past: "telah membersihkan",
     id_command: "bersihkan",
@@ -2324,7 +2324,7 @@ window.verbs = [
 
   {
     key: "rattaba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "merapikan",
     id_past: "telah merapikan",
     id_command: "rapikan",
@@ -2384,7 +2384,7 @@ window.verbs = [
 
   {
     key: "ra'a",
-    topic: "kamar",
+    topic: "harian",
     id_present: "melihat",
     id_past: "telah melihat",
     id_command: "lihat",
@@ -2444,7 +2444,7 @@ window.verbs = [
 
   {
     key: "nawwaba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "piket",
     id_past: "telah piket",
     id_command: "piket",
@@ -2504,7 +2504,7 @@ window.verbs = [
 
   {
     key: "dakhala",
-    topic: "kamar",
+    topic: "harian",
     id_present: "masuk",
     id_past: "telah masuk",
     id_command: "masuk",
@@ -2564,7 +2564,7 @@ window.verbs = [
 
   {
     key: "kharaja",
-    topic: "kamar",
+    topic: "harian",
     id_present: "keluar",
     id_past: "telah keluar",
     id_command: "keluar",
@@ -2624,7 +2624,7 @@ window.verbs = [
 
   {
     key: "taraqa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengetuk",
     id_past: "telah mengetuk",
     id_command: "ketuk",
@@ -2684,7 +2684,7 @@ window.verbs = [
 
   {
     key: "sallama",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengucapkan salam",
     id_past: "telah mengucapkan salam",
     id_command: "ucapkan salam",
@@ -2744,7 +2744,7 @@ window.verbs = [
 
   {
     key: "labisa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "memakai pakaian",
     id_past: "telah memakai pakaian",
     id_command: "pakai pakaian",
@@ -2804,7 +2804,7 @@ window.verbs = [
 
   {
     key: "saqatha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "jatuh",
     id_past: "telah jatuh",
     id_command: "jatuh",
@@ -2864,7 +2864,7 @@ window.verbs = [
 
   {
     key: "ta'iba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "capek",
     id_past: "telah capek",
     id_command: "capek",
@@ -2924,7 +2924,7 @@ window.verbs = [
 
   {
     key: "sa'ada",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membantu",
     id_past: "telah membantu",
     id_command: "bantu",
@@ -2984,7 +2984,7 @@ window.verbs = [
 
   {
     key: "thalaba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "meminta",
     id_past: "telah meminta",
     id_command: "minta",
@@ -3044,7 +3044,7 @@ window.verbs = [
 
   {
     key: "a'thaa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "memberi",
     id_past: "telah memberi",
     id_command: "beri",
@@ -3104,7 +3104,7 @@ window.verbs = [
 
   {
     key: "anhaa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menghabiskan",
     id_past: "telah menghabiskan",
     id_command: "habiskan",
@@ -3164,7 +3164,7 @@ window.verbs = [
 
   {
     key: "laqiya",
-    topic: "kamar",
+    topic: "harian",
     id_present: "bertemu",
     id_past: "telah bertemu",
     id_command: "temui",
@@ -3224,7 +3224,7 @@ window.verbs = [
 
   {
     key: "ahabba",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menyukai",
     id_past: "telah menyukai",
     id_command: "sukai",
@@ -3284,7 +3284,7 @@ window.verbs = [
 
   {
     key: "kariha",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membenci",
     id_past: "telah membenci",
     id_command: "benci",
@@ -3344,7 +3344,7 @@ window.verbs = [
 
   {
     key: "ista'ara",
-    topic: "kamar",
+    topic: "harian",
     id_present: "meminjam",
     id_past: "telah meminjam",
     id_command: "pinjam",
@@ -3404,7 +3404,7 @@ window.verbs = [
 
   {
     key: "a'ara",
-    topic: "kamar",
+    topic: "harian",
     id_present: "meminjamkan",
     id_past: "telah meminjamkan",
     id_command: "pinjamkan",
@@ -3464,7 +3464,7 @@ window.verbs = [
 
   {
     key: "intazhara",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menunggu",
     id_past: "telah menunggu",
     id_command: "tunggu",
@@ -3524,7 +3524,7 @@ window.verbs = [
 
   {
     key: "abqaa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menyisakan",
     id_past: "telah menyisakan",
     id_command: "sisakan",
@@ -3584,7 +3584,7 @@ window.verbs = [
 
   {
     key: "ista'adda",
-    topic: "kamar",
+    topic: "harian",
     id_present: "bersiap siap",
     id_past: "telah bersiap siap",
     id_command: "bersiap",
@@ -3644,7 +3644,7 @@ window.verbs = [
 
   {
     key: "a'adda",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menyiapkan",
     id_past: "telah menyiapkan",
     id_command: "siapkan",
@@ -3704,7 +3704,7 @@ window.verbs = [
 
   {
     key: "araada",
-    topic: "kamar",
+    topic: "harian",
     id_present: "ingin",
     id_past: "telah ingin",
     id_command: "ingin",
@@ -3764,7 +3764,7 @@ window.verbs = [
 
   {
     key: "hamala",
-    topic: "kamar",
+    topic: "harian",
     id_present: "membawa",
     id_past: "telah membawa",
     id_command: "bawa",
@@ -3824,7 +3824,7 @@ window.verbs = [
 
   {
     key: "istahza'a",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengejek",
     id_past: "telah mengejek",
     id_command: "ejek",
@@ -3884,7 +3884,7 @@ window.verbs = [
 
   {
     key: "da'aa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengajak",
     id_past: "telah mengajak",
     id_command: "ajak",
@@ -3944,7 +3944,7 @@ window.verbs = [
 
   {
     key: "dahika",
-    topic: "kamar",
+    topic: "harian",
     id_present: "tertawa",
     id_past: "telah tertawa",
     id_command: "tertawa",
@@ -4004,7 +4004,7 @@ window.verbs = [
 
   {
     key: "khaafa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "takut",
     id_past: "telah takut",
     id_command: "takut",
@@ -4064,7 +4064,7 @@ window.verbs = [
 
   {
     key: "tabassama",
-    topic: "kamar",
+    topic: "harian",
     id_present: "tersenyum",
     id_past: "telah tersenyum",
     id_command: "tersenyum",
@@ -4124,7 +4124,7 @@ window.verbs = [
 
   {
     key: "allaqa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menggantungkan",
     id_past: "telah menggantungkan",
     id_command: "gantungkan",
@@ -4184,7 +4184,7 @@ window.verbs = [
 
   {
     key: "baddala",
-    topic: "kamar",
+    topic: "harian",
     id_present: "mengganti",
     id_past: "telah mengganti",
     id_command: "ganti",
@@ -4244,7 +4244,7 @@ window.verbs = [
 
   {
     key: "masya",
-    topic: "kamar",
+    topic: "harian",
     id_present: "berjalan",
     id_past: "telah berjalan",
     id_command: "berjalan",
@@ -4304,7 +4304,7 @@ window.verbs = [
 
   {
     key: "syahada",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menonton",
     id_past: "telah menonton",
     id_command: "tonton",
@@ -4364,7 +4364,7 @@ window.verbs = [
 
   {
     key: "wajada",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menemukan",
     id_past: "telah menemukan",
     id_command: "temukan",
@@ -4424,7 +4424,7 @@ window.verbs = [
 
   {
     key: "jaffafa",
-    topic: "kamar",
+    topic: "harian",
     id_present: "menjemur",
     id_past: "telah menjemur",
     id_command: "jemur",
@@ -4484,7 +4484,7 @@ window.verbs = [
 
   {
     key: "malaka",
-    topic: "kamar",
+    topic: "harian",
     id_present: "memiliki",
     id_past: "telah memiliki",
     id_command: "miliki",
