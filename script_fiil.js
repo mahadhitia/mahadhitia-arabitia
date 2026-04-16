@@ -132,7 +132,7 @@ function generateSentence() {
   
     // 🔥 INDONESIA (dibedakan di sini)
     if (mode === "madhi") {
-      sentenceId = subject.id + " " + verbId.replace(/^telah\s+/i, "");
+      sentenceId = subject.id + " telah " + verbId.replace(/^telah\s+/i, "");
     } else if (mode === "mudhari") {
       sentenceId = subject.id + " " + verbId;
     }
@@ -358,21 +358,30 @@ function activatePage(pageId) {
 function initPage() {
   const path = window.location.pathname;
 
-  if (path.endsWith("madhi.html")) {
-    setMode("madhi");
+  if (path.includes("madhi")) {
+    mode = "madhi";
 
-  } else if (path.endsWith("mudhari.html")) {
-    setMode("mudhari");
+  } else if (path.includes("mudhari")) {
+    mode = "mudhari";
 
-  } else if (path.endsWith("amr.html")) {
-    setMode("amr");
+  } else if (path.includes("amr")) {
+    mode = "amr";
 
-  } else if (path.endsWith("nahyi.html")) {
-    setMode("nahyi");
+  } else if (path.includes("nahyi")) {
+    mode = "nahyi";
   }
+
+  pool = [];
+  index = 0;
+  buildPool();
 }
 
 initPage();
+
+// 🔥 paksa mode sesuai halaman
+if (window.location.pathname.includes("madhi")) {
+  mode = "madhi";
+}
 
 window.generateSentence = generateSentence;
 window.showAnswer = showAnswer;
