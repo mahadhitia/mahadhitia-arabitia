@@ -102,10 +102,19 @@ function generateSentence() {
     sentenceAr = verbAr;
     sentenceId = verbId;
     currentLabel = subject.label;
-
+  
   } else {
+  
+    // 🔥 ARAB (tetap normal)
     sentenceAr = subject.ar + " " + verbAr;
-    sentenceId = subject.id + " " + verbId;
+  
+    // 🔥 INDONESIA (dibedakan di sini)
+    if (mode === "madhi") {
+      sentenceId = subject.id + " telah " + verbId;
+    } else if (mode === "mudhari") {
+      sentenceId = subject.id + " " + verbId;
+    }
+  
     currentLabel = subject.label;
   }
 
