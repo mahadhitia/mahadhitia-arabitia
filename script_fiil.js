@@ -73,23 +73,36 @@ function generateSentence() {
   // PILIH BENTUK FI'IL
   // ======================
   if (mode === "madhi") {
-    verbAr = verb.past?.[subject.key] || "؟؟؟";
-    verbId = verb.id_past || verb.id_present || "???";
+    verbAr = verb.past?.[subject.key];
+    verbId = verb.id_past || verb.id_present;
   }
   
   if (mode === "mudhari") {
-    verbAr = verb.present[subject.key];
+    verbAr = verb.present?.[subject.key];
     verbId = verb.id_present;
   }
   
   if (mode === "amr") {
-    verbAr = verb.amr[subject.key];
+    verbAr = verb.amr?.[subject.key];
     verbId = verb.id_command + "!";
   }
   
   if (mode === "nahyi") {
-    verbAr = verb.nahyi[subject.key];
+    verbAr = verb.nahyi?.[subject.key];
     verbId = "jangan " + verb.id_command + "!";
+  }
+
+  // 🔥 ANTI KOSONG (AMAN)
+  if (!verbAr || !verbId) {
+    console.warn("SKIP DATA:", subject, verb);
+  
+    // ambil data berikutnya TANPA recursion
+    if (index < pool.length) {
+      return generateSentence();
+    } else {
+      alert("Data tidak lengkap semua");
+      return;
+    }
   }
 
   // ======================
