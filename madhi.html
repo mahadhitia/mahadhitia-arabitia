@@ -319,7 +319,7 @@
     .btn-topic {
     width: 40%;
     max-width: 200px;
-    margin: 0 auto;
+    margin: 10px auto 15px;
     padding: 14px;
   
     border-radius: 14px;
@@ -421,15 +421,15 @@
   <div class="app">
     <h1 class="title">Fi'il Madhi</h1>
 
-    <div class="card">
+    <!-- TOPIC FILTER -->
+    <div style="margin-bottom:15px;">
+      <button onclick="openTopicModal()" class="btn-topic">
+        <span class="icon">📚</span>
+        <span>Pilih Topik</span>
+      </button>
+    </div>
 
-      <!-- TOPIC FILTER -->
-      <div style="margin-bottom:15px;">
-        <button onclick="openTopicModal()" class="btn-topic">
-          <span class="icon">📚</span>
-          <span>Pilih Topik</span>
-        </button>
-      </div>
+    <div class="card">
       
       <!-- Soal -->
       <div id="questionWrap">
