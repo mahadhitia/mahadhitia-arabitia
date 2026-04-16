@@ -73,20 +73,22 @@ function generateSentence() {
   // PILIH BENTUK FI'IL
   // ======================
   if (mode === "madhi") {
+    if (!verb.past || !verb.past[subject.key]) return generateSentence();
+  
     verbAr = verb.past[subject.key];
     verbId = verb.id_past;
+  }
 
-  } else if (mode === "mudhari") {
-    verbAr = verb.present[subject.key];
-    verbId = verb.id_present;
-
-  } else if (mode === "amr") {
-    verbAr = verb.amr[subject.key];
-    verbId = verb.id_command + "!";
-
-  } else if (mode === "nahyi") {
-    verbAr = verb.nahyi[subject.key];
-    verbId = "jangan " + verb.id_command + "!";
+  if (mode === "mudhari") {
+    if (!verb.present || !verb.present[subject.key]) return generateSentence();
+  }
+  
+  if (mode === "amr") {
+    if (!verb.amr || !verb.amr[subject.key]) return generateSentence();
+  }
+  
+  if (mode === "nahyi") {
+    if (!verb.nahyi || !verb.nahyi[subject.key]) return generateSentence();
   }
 
   // ======================
@@ -186,7 +188,6 @@ function toggleTopic(topic) {
   index = 0;
 
   buildPool();
-  updateActiveTopic();
   updateTopicUI();
 }
                 
@@ -331,18 +332,7 @@ function initPage() {
   }
 }
 
-function updateActiveTopic() {
-  const el = document.getElementById("activeTopic");
-
-  if (selectedTopics.includes("all")) {
-    el.innerText = "Topik: Semua";
-  } else {
-    el.innerText = "Topik: " + selectedTopics.join(", ");
-  }
-}
-
 initPage();
-updateActiveTopic();
 
 window.generateSentence = generateSentence;
 window.showAnswer = showAnswer;
