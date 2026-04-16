@@ -28,7 +28,7 @@
       justify-content: center;
       align-items: center;
     
-      height: 100dvh;
+      height: 105dvh;
       opacity: 0;
       transition: opacity 0.4s ease;
     }
@@ -284,6 +284,128 @@
     .btn-back:active {
       transform: translateY(2px);
     }
+
+    .topic-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px;
+    
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    
+      background: #4B2E4C;
+      color: #F8F9FA;
+    
+      font-size: 14px;
+      font-weight: 600;
+    
+      box-shadow: 0 4px 0 #2E1B2F;
+      transition: all 0.15s ease;
+      transform: translateY(0);
+      letter-spacing: 0.3px;
+    }
+    
+    .topic-btn:hover {
+      transform: translateY(-1px);
+      background: #6a3f6d;
+    }
+    
+    .topic-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #2E1B2F;
+    }
+
+    .btn-topic {
+      width: 60px;
+      height: 60px;
+    
+      margin: 0 auto 15px;
+    
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+    
+      font-size: 26px;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: all 0.15s ease;
+    }
+  
+    .btn-topic:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-topic:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
+  
+    #topicModal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    
+    #topicModal.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    #topicModal > div {
+      transform: scale(0.9);
+      transition: all 0.25s ease;
+    }
+    
+    #topicModal.show > div {
+      transform: scale(1);
+    }
+  
+    .modal-title {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    
+    .btn-close {
+      width: 40%;
+      max-width: 180px;
+      margin: 20px auto 0;
+    
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    
+      background: #F6C32E;
+      color: #2E1B2F;
+      font-weight: 600;
+    
+      display: block;
+    
+      box-shadow: 0 4px 0 #d4a91f;
+      transition: all 0.15s ease;
+    }
+    
+    .btn-close:hover {
+      transform: translateY(-2px);
+    }
+    
+    .btn-close:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #d4a91f;
+    }
+    
   </style>
 </head>
 
@@ -294,6 +416,13 @@
 
     <div class="card">
 
+      <!-- TOPIC FILTER -->
+      <div style="margin-bottom:15px;">
+        <button onclick="openTopicModal()" class="btn-topic">
+          📚
+        </button>
+      </div>
+      
       <!-- Soal -->
       <div id="questionWrap">
         <span class="audio-icon" onclick="playQuestion()">🔊</span>
@@ -327,10 +456,46 @@
     
   </div>
 
+  <!-- MODAL TOPIC -->
+  <div id="topicModal" style="
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:999;
+    justify-content:center;
+    align-items:center;
+  ">
+  
+    <div style="
+      background:#2E1B2F;
+      padding:20px;
+      border-radius:16px;
+      width:90%;
+      max-width:400px;
+      max-height:70vh;
+      overflow-y:auto;
+    ">
+  
+      <h3 class="modal-title">Pilih Topik</h3>
+  
+      <div id="topicList"></div>
+  
+      <button onclick="closeTopicModal()" class="btn-close">
+        Terapkan
+      </button>
+  
+    </div>
+  </div>
+
   <div class="footer">
     Dibuat oleh Mahadhitia
   </div>
 
+  <script src="data/topics.js"></script>
   <script src="data/isim.js"></script>
   <script src="script_isim.js"></script>
   <script>
@@ -338,6 +503,13 @@
   </script>
 
   <script>
+    
+  function playClickSound() {
+    const audio = new Audio("sound/click.mp3");
+    audio.currentTime = 0;
+    audio.play();
+  }
+    
   /* =========================
      🚀 NAVIGASI BACK (ONLY AUDIO)
   ========================= */
@@ -372,6 +544,77 @@
       document.body.classList.add("loaded");
     });
   }
+
+  function renderTopics() {
+    const container = document.getElementById("topicList");
+  
+    let html = "";
+  
+    html += `<button onclick="handleTopicClick('all')" class="topic-btn">Semua</button>`;
+  
+    for (let key in topics) {
+      html += `
+        <button onclick="handleTopicClick('${key}')" class="topic-btn">
+          ${topics[key]}
+        </button>
+      `;
+    }
+  
+    container.innerHTML = html;
+  
+    updateTopicUI(); // 🔥 TAMBAH INI
+  }
+
+  function updateTopicUI() {
+    const buttons = document.querySelectorAll(".topic-btn");
+  
+    buttons.forEach(btn => {
+      const text = btn.innerText;
+  
+      let isActive = false;
+  
+      if (text === "Semua" && selectedTopics.includes("all")) {
+        isActive = true;
+      }
+  
+      for (let key in topics) {
+        if (topics[key] === text && selectedTopics.includes(key)) {
+          isActive = true;
+        }
+      }
+  
+      if (isActive) {
+        btn.style.background = "#F6C32E";
+        btn.style.color = "#2E1B2F";
+      } else {
+        // 🔥 FIX: balikin ke putih normal
+        btn.style.background = "#4B2E4C";
+        btn.style.color = "#F8F9FA";
+      }
+    });
+  }
+
+  function openTopicModal() {
+    playClickSound();
+  
+    const modal = document.getElementById("topicModal");
+    modal.classList.add("show");
+  }
+  
+  function closeTopicModal() {
+    playClickSound();
+  
+    const modal = document.getElementById("topicModal");
+    modal.classList.remove("show");
+  }
+
+  function handleTopicClick(key) {
+    playClickSound(); // 🔊
+    toggleTopic(key);
+  }
+    
+  // 🔥 jalankan saat halaman load
+  renderTopics();
   
   window.addEventListener("load", showPage);
   window.addEventListener("pageshow", showPage);
