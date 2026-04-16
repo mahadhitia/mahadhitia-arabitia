@@ -1,4 +1,4 @@
-let selectedTopic = "all";
+let selectedTopics = ["all"];
 let current = "";
 let currentQuestion = "";
 let currentLabel = "";
@@ -21,12 +21,12 @@ function buildNounPool() {
 
   nouns.forEach(noun => {
 
-    if (
-      selectedTopic !== "all" &&
-      noun.topic &&
-      noun.topic !== selectedTopic
-    ) {
-      return;
+    let topic = noun.topic || "unclassified";
+
+    if (!selectedTopics.includes("all")) {
+      if (!selectedTopics.includes(topic)) {
+        return;
+      }
     }
 
     ["near", "far"].forEach(distance => {
@@ -171,13 +171,28 @@ function playAnswer() {
   speakArabic(current);
 }
 
-function changeTopic(topic) {
-  selectedTopic = topic;
+function toggleTopic(topic) {
 
-  // reset pool
+  if (topic === "all") {
+    selectedTopics = ["all"];
+  } else {
+
+    selectedTopics = selectedTopics.filter(t => t !== "all");
+
+    if (selectedTopics.includes(topic)) {
+      selectedTopics = selectedTopics.filter(t => t !== topic);
+    } else {
+      selectedTopics.push(topic);
+    }
+
+    if (selectedTopics.length === 0) {
+      selectedTopics = ["all"];
+    }
+  }
+
   nounPool = [];
   nounIndex = 0;
 
-  // optional: langsung generate ulang
-  generateSentence();
+  buildNounPool();
+  updateTopicUI();
 }
