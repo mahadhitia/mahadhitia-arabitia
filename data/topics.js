@@ -14,5 +14,6 @@ const topics = {
   tubuh: "Kosakata sekitar anggota badan",
   hewan: "Kosakata sekitar nama-nama hewan",
   alat: "Kosakata sekitar peralatan",
-  transportasi: "Kosakata sekitar transportasi"
+  transportasi: "Kosakata sekitar transportasi",
+  unclassified: "Belum tersedia"
 };
