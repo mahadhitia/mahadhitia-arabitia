@@ -74,6 +74,13 @@ function generateSentence() {
   // ======================
   if (mode === "madhi") {
     verbAr = verb.past?.[subject.key];
+  
+    if (!verbAr) {
+      // fallback ambil salah satu bentuk
+      const anyForm = Object.values(verb.past || {})[0];
+      verbAr = anyForm;
+    }
+  
     verbId = verb.id_past || verb.id_present;
   }
   
