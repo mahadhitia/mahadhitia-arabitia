@@ -285,19 +285,127 @@
       transform: translateY(2px);
     }
 
-    #topicList button {
+    .topic-btn {
       width: 100%;
-      margin-bottom: 8px;
-      padding: 10px;
-      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 12px;
+    
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    
       background: #4B2E4C;
       color: #F8F9FA;
+    
       font-size: 14px;
+      font-weight: 500;
+    
+      box-shadow: 0 4px 0 #2E1B2F;
+      transition: all 0.15s ease;
+      transform: translateY(0);
     }
     
-    #topicList button:hover {
+    .topic-btn:hover {
+      transform: translateY(-2px);
       background: #6a3f6d;
     }
+    
+    .topic-btn:active {
+      transform: translateY(3px) scale(0.98);
+      box-shadow: 0 2px 0 #2E1B2F;
+    }
+
+    .btn-topic {
+    width: 70%;              /* 🔥 lebih kecil dari full */
+    margin: 0 auto;
+    padding: 14px;
+  
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+  
+    background: #F6C32E;
+    color: #2E1B2F;
+  
+    font-weight: 600;
+    font-size: 15px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  
+    box-shadow: 0 4px 0 #d4a91f;
+    transition: all 0.15s ease;
+  }
+  
+  .btn-topic .icon {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .btn-topic:hover {
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  .btn-topic:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d4a91f;
+  }
+
+  #topicModal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  
+  #topicModal.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #topicModal > div {
+    transform: scale(0.9);
+    transition: all 0.25s ease;
+  }
+  
+  #topicModal.show > div {
+    transform: scale(1);
+  }
+
+  .modal-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .btn-close {
+    width: 70%;
+    margin: 15px auto 0;
+  
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+  
+    background: #F6C32E;
+    color: #2E1B2F;
+    font-weight: 600;
+  
+    display: block;
+  
+    box-shadow: 0 4px 0 #d4a91f;
+    transition: all 0.15s ease;
+  }
+  
+  .btn-close:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-close:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d4a91f;
+  }
     
   </style>
 </head>
@@ -311,8 +419,9 @@
 
       <!-- TOPIC FILTER -->
       <div style="margin-bottom:15px;">
-        <button onclick="openTopicModal()" class="btn-main" style="width:100%;">
-          Pilih Topik
+        <button onclick="openTopicModal()" class="btn-topic">
+          <span class="icon">📚</span>
+          <span>Pilih Topik</span>
         </button>
       </div>
       
@@ -351,7 +460,7 @@
 
   <!-- MODAL TOPIC -->
   <div id="topicModal" style="
-    display:none;
+    display:flex;
     position:fixed;
     top:0;
     left:0;
@@ -373,11 +482,11 @@
       overflow-y:auto;
     ">
   
-      <h3 style="margin-top:0;">Pilih Topik</h3>
+      <h3 class="modal-title">Pilih Topik</h3>
   
       <div id="topicList"></div>
   
-      <button onclick="closeTopicModal()" style="margin-top:15px;">
+      <button onclick="closeTopicModal()" class="btn-close">
         Tutup
       </button>
   
@@ -396,6 +505,13 @@
   </script>
 
   <script>
+    
+  function playClickSound() {
+    const audio = new Audio("sound/click.mp3");
+    audio.currentTime = 0;
+    audio.play();
+  }
+    
   /* =========================
      🚀 NAVIGASI BACK (ONLY AUDIO)
   ========================= */
@@ -436,11 +552,11 @@
   
     let html = "";
   
-    html += `<button onclick="toggleTopic('all')" class="topic-btn">Semua</button>`;
+    html += `<button onclick="handleTopicClick('all')" class="topic-btn">Semua</button>`;
   
     for (let key in topics) {
       html += `
-        <button onclick="toggleTopic('${key}')" class="topic-btn">
+        <button onclick="handleTopicClick('${key}')" class="topic-btn">
           ${topics[key]}
         </button>
       `;
@@ -481,13 +597,24 @@
   }
 
   function openTopicModal() {
-    document.getElementById("topicModal").style.display = "flex";
+    playClickSound();
+  
+    const modal = document.getElementById("topicModal");
+    modal.classList.add("show");
   }
   
   function closeTopicModal() {
-    document.getElementById("topicModal").style.display = "none";
-  }
+    playClickSound();
   
+    const modal = document.getElementById("topicModal");
+    modal.classList.remove("show");
+  }
+
+  function handleTopicClick(key) {
+    playClickSound(); // 🔊
+    toggleTopic(key);
+  }
+    
   // 🔥 jalankan saat halaman load
   renderTopics();
   
