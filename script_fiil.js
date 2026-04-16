@@ -132,7 +132,7 @@ function generateSentence() {
   
     // 🔥 INDONESIA (dibedakan di sini)
     if (mode === "madhi") {
-      sentenceId = subject.id + " telah " + verbId;
+      sentenceId = subject.id + " " + verbId.replace(/^telah\s+/i, "");
     } else if (mode === "mudhari") {
       sentenceId = subject.id + " " + verbId;
     }
