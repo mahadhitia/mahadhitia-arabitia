@@ -75,13 +75,12 @@ function generateSentence() {
   if (mode === "madhi") {
     verbAr = verb.past?.[subject.key];
   
-    if (!verbAr) {
-      // fallback ambil salah satu bentuk
-      const anyForm = Object.values(verb.past || {})[0];
-      verbAr = anyForm;
+    // 🔥 fallback kalau kosong
+    if (!verbAr && verb.past) {
+      verbAr = Object.values(verb.past)[0];
     }
   
-    verbId = verb.id_past || verb.id_present;
+    verbId = verb.id_past || verb.id_present || "melakukan";
   }
   
   if (mode === "mudhari") {
@@ -170,23 +169,22 @@ function buildPool() {
 
     verbs.forEach(verb => {
 
-      // 🔥 FILTER DI SINI (PENTING)
       if (mode === "madhi") {
-        if (!verb.past || !verb.past[subject.key]) return;
+        if (!verb.past) return;
       }
-
+      
       if (mode === "mudhari") {
-        if (!verb.present || !verb.present[subject.key]) return;
+        if (!verb.present) return;
       }
-
+      
       if (mode === "amr") {
-        if (!verb.amr || !verb.amr[subject.key]) return;
+        if (!verb.amr) return;
       }
-
+      
       if (mode === "nahyi") {
-        if (!verb.nahyi || !verb.nahyi[subject.key]) return;
+        if (!verb.nahyi) return;
       }
-
+      
       pool.push({
         subject,
         verb
