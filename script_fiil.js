@@ -73,10 +73,10 @@ function generateSentence() {
   // PILIH BENTUK FI'IL
   // ======================
   if (mode === "madhi") {
-    verbAr = verb.past[subject.key];
-    verbId = verb.id_past;
+    verbAr = verb.past?.[subject.key] || "؟؟؟";
+    verbId = verb.id_past || verb.id_present || "???";
   }
-
+  
   if (mode === "mudhari") {
     verbAr = verb.present[subject.key];
     verbId = verb.id_present;
