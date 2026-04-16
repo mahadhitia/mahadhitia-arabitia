@@ -465,18 +465,25 @@
     buttons.forEach(btn => {
       const text = btn.innerText;
   
-      // reset
-      btn.style.background = "#4B2E4C";
+      let isActive = false;
   
-      // aktif
-      if (
-        (text === "Semua" && selectedTopics.includes("all")) ||
-        Object.keys(topics).some(key =>
-          topics[key] === text && selectedTopics.includes(key)
-        )
-      ) {
+      if (text === "Semua" && selectedTopics.includes("all")) {
+        isActive = true;
+      }
+  
+      for (let key in topics) {
+        if (topics[key] === text && selectedTopics.includes(key)) {
+          isActive = true;
+        }
+      }
+  
+      if (isActive) {
         btn.style.background = "#F6C32E";
         btn.style.color = "#2E1B2F";
+      } else {
+        // 🔥 FIX: balikin ke putih normal
+        btn.style.background = "#4B2E4C";
+        btn.style.color = "#F8F9FA";
       }
     });
   }
