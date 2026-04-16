@@ -555,14 +555,14 @@
     for (let key in isimTopics) {
       html += `
         <button onclick="handleTopicClick('${key}')" class="topic-btn">
-          ${topics[key]}
+          ${isimTopics[key]}
         </button>
       `;
     }
   
     container.innerHTML = html;
   
-    updateTopicUI(); // 🔥 TAMBAH INI
+    updateTopicUI();
   }
 
   function updateTopicUI() {
@@ -578,7 +578,7 @@
       }
   
       for (let key in isimTopics) {
-        if (topics[key] === text && selectedTopics.includes(key)) {
+        if (isimTopics[key] === text && selectedTopics.includes(key)) {
           isActive = true;
         }
       }
@@ -587,7 +587,6 @@
         btn.style.background = "#F6C32E";
         btn.style.color = "#2E1B2F";
       } else {
-        // 🔥 FIX: balikin ke putih normal
         btn.style.background = "#4B2E4C";
         btn.style.color = "#F8F9FA";
       }
