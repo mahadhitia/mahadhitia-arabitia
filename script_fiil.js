@@ -172,7 +172,7 @@ function buildPool() {
 
     verbs.forEach(verb => {
 
-      let topic = verb.topic || "unclassified";
+      let topic = verb.topic;
 
       if (!selectedTopics.includes("all")) {
         if (!selectedTopics.includes(topic)) {
