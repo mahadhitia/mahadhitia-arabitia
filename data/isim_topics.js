@@ -4,7 +4,7 @@ const isimTopics = {
   tumbuhan: "Kosakata sekitar alam (tumbuhan)",
 
   aksesoris: "Kosakata sekitar barang pribadi (aksesoris)",
-  kebersihan_diri: "Kosakata sekitar barang pribadi (kebersihan diri)",
+  kebersihan_diri: "Kosakata sekitar barang pribadi (kebersihan)",
   pakaian: "Kosakata sekitar barang pribadi (pakaian)",
 
   benda_ibadah: "Kosakata sekitar keagamaan (benda ibadah)",
