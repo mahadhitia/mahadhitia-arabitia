@@ -4,7 +4,7 @@
 const nouns = [
   {
     id: "atap",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -17,7 +17,7 @@ const nouns = [
 
   {
     id: "jam",
-    topic: "kamar",
+    topic: "waktu",
     gender: "f",
     type: "object",
     pluralType: "salim",
@@ -30,7 +30,7 @@ const nouns = [
 
   {
     id: "pintu",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -43,7 +43,7 @@ const nouns = [
   
   {
     id: "jendela",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -56,7 +56,7 @@ const nouns = [
   
   {
     id: "lantai",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -69,7 +69,7 @@ const nouns = [
   
   {
     id: "lampu",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -82,7 +82,7 @@ const nouns = [
   
   {
     id: "kunci",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -95,7 +95,7 @@ const nouns = [
   
   {
     id: "cermin",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -108,7 +108,7 @@ const nouns = [
   
   {
     id: "kaca",
-    topic: "kamar",
+    topic: "material_alam",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -121,7 +121,7 @@ const nouns = [
   
   {
     id: "korden",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -134,7 +134,7 @@ const nouns = [
 
   {
     id: "lemari",
-    topic: "kamar",
+    topic: "perabot",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -147,7 +147,7 @@ const nouns = [
   
   {
     id: "kasur",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -160,7 +160,7 @@ const nouns = [
   
   {
     id: "ranjang",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -173,7 +173,7 @@ const nouns = [
   
   {
     id: "ventilasi",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -186,7 +186,7 @@ const nouns = [
   
   {
     id: "sapu",
-    topic: "kamar",
+    topic: "alat_kebersihan",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -199,7 +199,7 @@ const nouns = [
   
   {
     id: "alat pel",
-    topic: "kamar",
+    topic: "alat_kebersihan",
     gender: "f",
     type: "object",
     ar: {
@@ -209,7 +209,7 @@ const nouns = [
   
   {
     id: "bantal",
-    topic: "kamar",
+    topic: "perabot",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -222,7 +222,7 @@ const nouns = [
   
   {
     id: "guling",
-    topic: "kamar",
+    topic: "perabot",
     gender: "f",
     type: "object",
     ar: {
@@ -232,7 +232,7 @@ const nouns = [
   
   {
     id: "keset",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -245,7 +245,7 @@ const nouns = [
 
   {
     id: "sisir",
-    topic: "kamar",
+    topic: "kebersihan_diri",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -258,7 +258,7 @@ const nouns = [
   
   {
     id: "sampah",
-    topic: "kamar",
+    topic: "material_alam",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -271,7 +271,7 @@ const nouns = [
   
   {
     id: "tempat sampah",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -284,7 +284,7 @@ const nouns = [
   
   {
     id: "selimut",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -297,7 +297,7 @@ const nouns = [
   
   {
     id: "seprai",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     ar: {
@@ -307,7 +307,7 @@ const nouns = [
   
   {
     id: "jam beker",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -320,7 +320,7 @@ const nouns = [
   
   {
     id: "koper",
-    topic: "kamar",
+    topic: "penyimpanan",
     gender: "f",
     type: "object",
     ar: {
@@ -330,7 +330,7 @@ const nouns = [
   
   {
     id: "rak",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -343,7 +343,7 @@ const nouns = [
   
   {
     id: "sandal",
-    topic: "kamar",
+    topic: "pakaian",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -356,7 +356,7 @@ const nouns = [
   
   {
     id: "hanger",
-    topic: "kamar",
+    topic: "penyimpanan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -369,7 +369,7 @@ const nouns = [
 
   {
     id: "gunting kuku",
-    topic: "kamar",
+    topic: "kebersihan_diri",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -382,7 +382,7 @@ const nouns = [
   
   {
     id: "serokan",
-    topic: "kamar",
+    topic: "alat_kebersihan",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -395,7 +395,7 @@ const nouns = [
   
   {
     id: "jadwal piket",
-    topic: "kamar",
+    topic: "sistem",
     gender: "m",
     type: "object",
     ar: {
@@ -405,7 +405,7 @@ const nouns = [
   
   {
     id: "tingkat/lantai",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -418,7 +418,7 @@ const nouns = [
   
   {
     id: "gantungan kunci",
-    topic: "kamar",
+    topic: "aksesoris",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -431,7 +431,7 @@ const nouns = [
   
   {
     id: "kardus",
-    topic: "kamar",
+    topic: "penyimpanan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -444,7 +444,7 @@ const nouns = [
   
   {
     id: "kalender",
-    topic: "kamar",
+    topic: "waktu",
     gender: "m",
     type: "object",
     ar: {
@@ -454,7 +454,7 @@ const nouns = [
   
   {
     id: "tangga",
-    topic: "kamar",
+    topic: "bangunan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -467,7 +467,7 @@ const nouns = [
   
   {
     id: "lingkungan",
-    topic: "kamar",
+    topic: "area",
     gender: "f",
     type: "object",
     ar: {
@@ -477,7 +477,7 @@ const nouns = [
   
   {
     id: "gembok",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -490,7 +490,7 @@ const nouns = [
 
   {
     id: "tamu",
-    topic: "kamar",
+    topic: "status",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -503,7 +503,7 @@ const nouns = [
   
   {
     id: "tisu",
-    topic: "kamar",
+    topic: "kebersihan_diri",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -516,7 +516,7 @@ const nouns = [
   
   {
     id: "korek kuping",
-    topic: "kamar",
+    topic: "kebersihan_diri",
     gender: "m",
     type: "object",
     ar: {
@@ -526,7 +526,7 @@ const nouns = [
   
   {
     id: "uang",
-    topic: "kamar",
+    topic: "nilai",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -539,7 +539,7 @@ const nouns = [
   
   {
     id: "dompet",
-    topic: "kamar",
+    topic: "aksesoris",
     gender: "f",
     type: "object",
     ar: {
@@ -549,7 +549,7 @@ const nouns = [
   
   {
     id: "jadwal",
-    topic: "kamar",
+    topic: "sistem",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -562,7 +562,7 @@ const nouns = [
   
   {
     id: "peniti",
-    topic: "kamar",
+    topic: "aksesoris",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -575,7 +575,7 @@ const nouns = [
   
   {
     id: "pewangi ruangan",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     ar: {
@@ -585,7 +585,7 @@ const nouns = [
   
   {
     id: "ulas bantal",
-    topic: "kamar",
+    topic: "perabot",
     gender: "m",
     type: "object",
     ar: {
@@ -595,7 +595,7 @@ const nouns = [
   
   {
     id: "perpisahan",
-    topic: "kamar",
+    topic: "kejadian",
     gender: "m",
     type: "object",
     ar: {
@@ -605,7 +605,7 @@ const nouns = [
 
   {
     id: "cucian",
-    topic: "kamar",
+    topic: "status",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -618,7 +618,7 @@ const nouns = [
   
   {
     id: "jam dinding",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     ar: {
@@ -628,7 +628,7 @@ const nouns = [
   
   {
     id: "oleh-oleh",
-    topic: "kamar",
+    topic: "aksesoris",
     gender: "f",
     type: "object",
     ar: {
@@ -638,7 +638,7 @@ const nouns = [
   
   {
     id: "blok",
-    topic: "kamar",
+    topic: "area",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -651,7 +651,7 @@ const nouns = [
   
   {
     id: "hadiah",
-    topic: "kamar",
+    topic: "nilai",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -664,7 +664,7 @@ const nouns = [
   
   {
     id: "hukuman",
-    topic: "kamar",
+    topic: "kejadian",
     gender: "f",
     type: "object",
     pluralType: "taksir",
@@ -677,7 +677,7 @@ const nouns = [
   
   {
     id: "kotak",
-    topic: "kamar",
+    topic: "penyimpanan",
     gender: "m",
     type: "object",
     pluralType: "taksir",
@@ -690,7 +690,7 @@ const nouns = [
   
   {
     id: "solasi",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "f",
     type: "object",
     pluralType: "salim",
@@ -703,7 +703,7 @@ const nouns = [
   
   {
     id: "lem",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     ar: {
@@ -713,7 +713,7 @@ const nouns = [
   
   {
     id: "gunting",
-    topic: "kamar",
+    topic: "peralatan_rumah",
     gender: "m",
     type: "object",
     pluralType: "taksir",
