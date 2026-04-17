@@ -22,7 +22,7 @@ function buildNounPool() {
   nouns.forEach(noun => {
 
     // 🔥 fallback kalau belum ada topic
-    let topic = noun.topic || "unclassified";
+    let topic = noun.topic;
 
     // 🔥 FILTER
     if (!selectedTopics.includes("all")) {
