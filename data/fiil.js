@@ -4,7 +4,7 @@
 window.verbs = [
   {
     key: "jalasa",
-    topic: "harian",
+    topic: "posisi",
     id_present: "duduk",
     id_past: "telah duduk",
     id_command: "duduk",
@@ -64,7 +64,7 @@ window.verbs = [
   
   {
     key: "fataha",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "membuka",
     id_past: "telah membuka",
     id_command: "buka",
@@ -124,7 +124,7 @@ window.verbs = [
   
   {
     key: "dzahaba",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "pergi",
     id_past: "telah pergi",
     id_command: "pergi",
@@ -184,7 +184,7 @@ window.verbs = [
   
   {
     key: "masaka",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "memegang",
     id_past: "telah memegang",
     id_command: "pegang",
@@ -244,7 +244,7 @@ window.verbs = [
 
   {
     key: "jaa",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "datang",
     id_past: "telah datang",
     id_command: "datang",
@@ -304,7 +304,7 @@ window.verbs = [
 
   {
     key: "qaama",
-    topic: "harian",
+    topic: "posisi",
     id_present: "berdiri",
     id_past: "telah berdiri",
     id_command: "berdiri",
@@ -364,7 +364,7 @@ window.verbs = [
 
   {
     key: "aghlaqa",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "menutup",
     id_past: "telah menutup",
     id_command: "tutuplah",
@@ -424,7 +424,7 @@ window.verbs = [
 
   {
     key: "naama",
-    topic: "harian",
+    topic: "posisi",
     id_present: "tidur",
     id_past: "telah tidur",
     id_command: "tidurlah",
@@ -484,7 +484,7 @@ window.verbs = [
 
   {
     key: "kanasa",
-    topic: "harian",
+    topic: "kegiatan_rumah",
     id_present: "menyapu",
     id_past: "telah menyapu",
     id_command: "sapu",
@@ -544,7 +544,7 @@ window.verbs = [
 
   {
     key: "masaha",
-    topic: "harian",
+    topic: "kegiatan_rumah",
     id_present: "mengepel",
     id_past: "telah mengepel",
     id_command: "pel",
@@ -604,7 +604,7 @@ window.verbs = [
 
   {
     key: "wadha'a",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "menaruh",
     id_past: "telah menaruh",
     id_command: "taruh",
@@ -664,7 +664,7 @@ window.verbs = [
 
   {
     key: "akhadza",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "mengambil",
     id_past: "telah mengambil",
     id_command: "ambil",
@@ -724,7 +724,7 @@ window.verbs = [
 
   {
     key: "asy'ala",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "menyalakan lampu",
     id_past: "telah menyalakan lampu",
     id_command: "nyalakan lampu",
@@ -784,7 +784,7 @@ window.verbs = [
 
   {
     key: "athfa'a",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "mematikan lampu",
     id_past: "telah mematikan lampu",
     id_command: "matikan lampu",
@@ -844,7 +844,7 @@ window.verbs = [
 
   {
     key: "istayqazha",
-    topic: "harian",
+    topic: "posisi",
     id_present: "bangun",
     id_past: "telah bangun",
     id_command: "bangun",
@@ -904,7 +904,7 @@ window.verbs = [
 
   {
     key: "ayqazha",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "membangunkan",
     id_past: "telah membangunkan",
     id_command: "bangunkan",
@@ -964,7 +964,7 @@ window.verbs = [
 
   {
     key: "na'isa",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "mengantuk",
     id_past: "telah mengantuk",
     id_command: "ngantuk",
@@ -1024,7 +1024,7 @@ window.verbs = [
 
   {
     key: "ramā",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "membuang",
     id_past: "telah membuang",
     id_command: "buang",
@@ -1084,7 +1084,7 @@ window.verbs = [
 
   {
     key: "nazhafa",
-    topic: "harian",
+    topic: "perawatan_benda",
     id_present: "membersihkan",
     id_past: "telah membersihkan",
     id_command: "bersihkan",
@@ -1144,7 +1144,7 @@ window.verbs = [
 
   {
     key: "rattaba",
-    topic: "harian",
+    topic: "perawatan_benda",
     id_present: "merapikan",
     id_past: "telah merapikan",
     id_command: "rapikan",
@@ -1204,7 +1204,7 @@ window.verbs = [
 
   {
     key: "ra'a",
-    topic: "harian",
+    topic: "berpikir",
     id_present: "melihat",
     id_past: "telah melihat",
     id_command: "lihat",
@@ -1264,7 +1264,7 @@ window.verbs = [
 
   {
     key: "nawwaba",
-    topic: "harian",
+    topic: "sistem",
     id_present: "piket",
     id_past: "telah piket",
     id_command: "piket",
@@ -1324,7 +1324,7 @@ window.verbs = [
 
   {
     key: "dakhala",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "masuk",
     id_past: "telah masuk",
     id_command: "masuk",
@@ -1384,7 +1384,7 @@ window.verbs = [
 
   {
     key: "kharaja",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "keluar",
     id_past: "telah keluar",
     id_command: "keluar",
@@ -1444,7 +1444,7 @@ window.verbs = [
 
   {
     key: "taraqa",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "mengetuk",
     id_past: "telah mengetuk",
     id_command: "ketuk",
@@ -1504,7 +1504,7 @@ window.verbs = [
 
   {
     key: "sallama",
-    topic: "harian",
+    topic: "komunikasi",
     id_present: "mengucapkan salam",
     id_past: "telah mengucapkan salam",
     id_command: "ucapkan salam",
@@ -1564,7 +1564,7 @@ window.verbs = [
 
   {
     key: "labisa",
-    topic: "harian",
+    topic: "perawatan_diri",
     id_present: "memakai pakaian",
     id_past: "telah memakai pakaian",
     id_command: "pakai pakaian",
@@ -1624,7 +1624,7 @@ window.verbs = [
 
   {
     key: "saqatha",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "jatuh",
     id_past: "telah jatuh",
     id_command: "jatuh",
@@ -1684,7 +1684,7 @@ window.verbs = [
 
   {
     key: "ta'iba",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "capek",
     id_past: "telah capek",
     id_command: "capek",
@@ -1744,7 +1744,7 @@ window.verbs = [
 
   {
     key: "sa'ada",
-    topic: "harian",
+    topic: "hubungan",
     id_present: "membantu",
     id_past: "telah membantu",
     id_command: "bantu",
@@ -1804,7 +1804,7 @@ window.verbs = [
 
   {
     key: "thalaba",
-    topic: "harian",
+    topic: "komunikasi",
     id_present: "meminta",
     id_past: "telah meminta",
     id_command: "minta",
@@ -1864,7 +1864,7 @@ window.verbs = [
 
   {
     key: "a'thaa",
-    topic: "harian",
+    topic: "transaksi",
     id_present: "memberi",
     id_past: "telah memberi",
     id_command: "beri",
@@ -1924,7 +1924,7 @@ window.verbs = [
 
   {
     key: "anhaa",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "menghabiskan",
     id_past: "telah menghabiskan",
     id_command: "habiskan",
@@ -1984,7 +1984,7 @@ window.verbs = [
 
   {
     key: "laqiya",
-    topic: "harian",
+    topic: "hubungan",
     id_present: "bertemu",
     id_past: "telah bertemu",
     id_command: "temui",
@@ -2044,7 +2044,7 @@ window.verbs = [
 
   {
     key: "ahabba",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "menyukai",
     id_past: "telah menyukai",
     id_command: "sukai",
@@ -2104,7 +2104,7 @@ window.verbs = [
 
   {
     key: "kariha",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "membenci",
     id_past: "telah membenci",
     id_command: "benci",
@@ -2164,7 +2164,7 @@ window.verbs = [
 
   {
     key: "ista'ara",
-    topic: "harian",
+    topic: "transaksi",
     id_present: "meminjam",
     id_past: "telah meminjam",
     id_command: "pinjam",
@@ -2224,7 +2224,7 @@ window.verbs = [
 
   {
     key: "a'ara",
-    topic: "harian",
+    topic: "transaksi",
     id_present: "meminjamkan",
     id_past: "telah meminjamkan",
     id_command: "pinjamkan",
@@ -2284,7 +2284,7 @@ window.verbs = [
 
   {
     key: "intazhara",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "menunggu",
     id_past: "telah menunggu",
     id_command: "tunggu",
@@ -2344,7 +2344,7 @@ window.verbs = [
 
   {
     key: "abqaa",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "menyisakan",
     id_past: "telah menyisakan",
     id_command: "sisakan",
@@ -2404,7 +2404,7 @@ window.verbs = [
 
   {
     key: "ista'adda",
-    topic: "harian",
+    topic: "keinginan",
     id_present: "bersiap siap",
     id_past: "telah bersiap siap",
     id_command: "bersiap",
@@ -2464,7 +2464,7 @@ window.verbs = [
 
   {
     key: "a'adda",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "menyiapkan",
     id_past: "telah menyiapkan",
     id_command: "siapkan",
@@ -2524,7 +2524,7 @@ window.verbs = [
 
   {
     key: "araada",
-    topic: "harian",
+    topic: "keinginan",
     id_present: "ingin",
     id_past: "telah ingin",
     id_command: "ingin",
@@ -2584,7 +2584,7 @@ window.verbs = [
 
   {
     key: "hamala",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "membawa",
     id_past: "telah membawa",
     id_command: "bawa",
@@ -2644,7 +2644,7 @@ window.verbs = [
 
   {
     key: "istahza'a",
-    topic: "harian",
+    topic: "komunikasi",
     id_present: "mengejek",
     id_past: "telah mengejek",
     id_command: "ejek",
@@ -2704,7 +2704,7 @@ window.verbs = [
 
   {
     key: "da'aa",
-    topic: "harian",
+    topic: "komunikasi",
     id_present: "mengajak",
     id_past: "telah mengajak",
     id_command: "ajak",
@@ -2764,7 +2764,7 @@ window.verbs = [
 
   {
     key: "dahika",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "tertawa",
     id_past: "telah tertawa",
     id_command: "tertawa",
@@ -2824,7 +2824,7 @@ window.verbs = [
 
   {
     key: "khaafa",
-    topic: "harian",
+    topic: "perasaan",
     id_present: "takut",
     id_past: "telah takut",
     id_command: "takut",
@@ -2885,7 +2885,7 @@ window.verbs = [
   {
     key: "tabassama",
     topic: "harian",
-    id_present: "tersenyum",
+    id_present: "perasaan",
     id_past: "telah tersenyum",
     id_command: "tersenyum",
 
@@ -2944,7 +2944,7 @@ window.verbs = [
 
   {
     key: "allaqa",
-    topic: "harian",
+    topic: "manipulasi",
     id_present: "menggantungkan",
     id_past: "telah menggantungkan",
     id_command: "gantungkan",
@@ -3004,7 +3004,7 @@ window.verbs = [
 
   {
     key: "baddala",
-    topic: "harian",
+    topic: "perubahan",
     id_present: "mengganti",
     id_past: "telah mengganti",
     id_command: "ganti",
@@ -3064,7 +3064,7 @@ window.verbs = [
 
   {
     key: "masya",
-    topic: "harian",
+    topic: "perpindahan",
     id_present: "berjalan",
     id_past: "telah berjalan",
     id_command: "berjalan",
@@ -3124,7 +3124,7 @@ window.verbs = [
 
   {
     key: "syahada",
-    topic: "harian",
+    topic: "berpikir",
     id_present: "menonton",
     id_past: "telah menonton",
     id_command: "tonton",
@@ -3184,7 +3184,7 @@ window.verbs = [
 
   {
     key: "wajada",
-    topic: "harian",
+    topic: "berpikir",
     id_present: "menemukan",
     id_past: "telah menemukan",
     id_command: "temukan",
@@ -3244,7 +3244,7 @@ window.verbs = [
 
   {
     key: "jaffafa",
-    topic: "harian",
+    topic: "perawatan_benda",
     id_present: "menjemur",
     id_past: "telah menjemur",
     id_command: "jemur",
@@ -3304,7 +3304,7 @@ window.verbs = [
 
   {
     key: "malaka",
-    topic: "harian",
+    topic: "hubungan",
     id_present: "memiliki",
     id_past: "telah memiliki",
     id_command: "miliki",
@@ -3359,1186 +3359,6 @@ window.verbs = [
       antuma_f: "لَا تَمْلِكَا",
       antum: "لَا تَمْلِكُوا",
       antunna: "لَا تَمْلِكْنَ"
-    }
-  },
-
-  {
-    key: "nasara",
-    id_present: "menolong",
-    id_past: "telah menolong",
-    id_command: "tolong",
-  
-    past: {
-      ana: "نَصَرْتُ",
-      nahnu: "نَصَرْنَا",
-      anta: "نَصَرْتَ",
-      anti: "نَصَرْتِ",
-      antuma_m: "نَصَرْتُمَا",
-      antuma_f: "نَصَرْتُمَا",
-      antum: "نَصَرْتُمْ",
-      antunna: "نَصَرْتُنَّ",
-      huwa: "نَصَرَ",
-      hiya: "نَصَرَتْ",
-      huma_m: "نَصَرَا",
-      huma_f: "نَصَرَتَا",
-      hum: "نَصَرُوا",
-      hunna: "نَصَرْنَ"
-    },
-  
-    present: {
-      ana: "أَنْصُرُ",
-      nahnu: "نَنْصُرُ",
-      anta: "تَنْصُرُ",
-      anti: "تَنْصُرِينَ",
-      antuma_m: "تَنْصُرَانِ",
-      antuma_f: "تَنْصُرَانِ",
-      antum: "تَنْصُرُونَ",
-      antunna: "تَنْصُرْنَ",
-      huwa: "يَنْصُرُ",
-      hiya: "تَنْصُرُ",
-      huma_m: "يَنْصُرَانِ",
-      huma_f: "تَنْصُرَانِ",
-      hum: "يَنْصُرُونَ",
-      hunna: "يَنْصُرْنَ"
-    },
-  
-    amr: {
-      anta: "اُنْصُرْ",
-      anti: "اُنْصُرِي",
-      antuma_m: "اُنْصُرَا",
-      antuma_f: "اُنْصُرَا",
-      antum: "اُنْصُرُوا",
-      antunna: "اُنْصُرْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَنْصُرْ",
-      anti: "لَا تَنْصُرِي",
-      antuma_m: "لَا تَنْصُرَا",
-      antuma_f: "لَا تَنْصُرَا",
-      antum: "لَا تَنْصُرُوا",
-      antunna: "لَا تَنْصُرْنَ"
-    }
-  },
-  
-  {
-    key: "daraba",
-    id_present: "memukul",
-    id_past: "telah memukul",
-    id_command: "pukul",
-  
-    past: {
-      ana: "ضَرَبْتُ",
-      nahnu: "ضَرَبْنَا",
-      anta: "ضَرَبْتَ",
-      anti: "ضَرَبْتِ",
-      antuma_m: "ضَرَبْتُمَا",
-      antuma_f: "ضَرَبْتُمَا",
-      antum: "ضَرَبْتُمْ",
-      antunna: "ضَرَبْتُنَّ",
-      huwa: "ضَرَبَ",
-      hiya: "ضَرَبَتْ",
-      huma_m: "ضَرَبَا",
-      huma_f: "ضَرَبَتَا",
-      hum: "ضَرَبُوا",
-      hunna: "ضَرَبْنَ"
-    },
-  
-    present: {
-      ana: "أَضْرِبُ",
-      nahnu: "نَضْرِبُ",
-      anta: "تَضْرِبُ",
-      anti: "تَضْرِبِينَ",
-      antuma_m: "تَضْرِبَانِ",
-      antuma_f: "تَضْرِبَانِ",
-      antum: "تَضْرِبُونَ",
-      antunna: "تَضْرِبْنَ",
-      huwa: "يَضْرِبُ",
-      hiya: "تَضْرِبُ",
-      huma_m: "يَضْرِبَانِ",
-      huma_f: "تَضْرِبَانِ",
-      hum: "يَضْرِبُونَ",
-      hunna: "يَضْرِبْنَ"
-    },
-  
-    amr: {
-      anta: "اِضْرِبْ",
-      anti: "اِضْرِبِي",
-      antuma_m: "اِضْرِبَا",
-      antuma_f: "اِضْرِبَا",
-      antum: "اِضْرِبُوا",
-      antunna: "اِضْرِبْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَضْرِبْ",
-      anti: "لَا تَضْرِبِي",
-      antuma_m: "لَا تَضْرِبَا",
-      antuma_f: "لَا تَضْرِبَا",
-      antum: "لَا تَضْرِبُوا",
-      antunna: "لَا تَضْرِبْنَ"
-    }
-  },
-
-  {
-    key: "akala",
-    id_present: "makan",
-    id_past: "telah makan",
-    id_command: "makan",
-  
-    past: {
-      ana: "أَكَلْتُ",
-      nahnu: "أَكَلْنَا",
-      anta: "أَكَلْتَ",
-      anti: "أَكَلْتِ",
-      antuma_m: "أَكَلْتُمَا",
-      antuma_f: "أَكَلْتُمَا",
-      antum: "أَكَلْتُمْ",
-      antunna: "أَكَلْتُنَّ",
-      huwa: "أَكَلَ",
-      hiya: "أَكَلَتْ",
-      huma_m: "أَكَلَا",
-      huma_f: "أَكَلَتَا",
-      hum: "أَكَلُوا",
-      hunna: "أَكَلْنَ"
-    },
-  
-    present: {
-      ana: "آكُلُ",
-      nahnu: "نَأْكُلُ",
-      anta: "تَأْكُلُ",
-      anti: "تَأْكُلِينَ",
-      antuma_m: "تَأْكُلَانِ",
-      antuma_f: "تَأْكُلَانِ",
-      antum: "تَأْكُلُونَ",
-      antunna: "تَأْكُلْنَ",
-      huwa: "يَأْكُلُ",
-      hiya: "تَأْكُلُ",
-      huma_m: "يَأْكُلَانِ",
-      huma_f: "تَأْكُلَانِ",
-      hum: "يَأْكُلُونَ",
-      hunna: "تَأْكُلْنَ"
-    },
-  
-    amr: {
-      anta: "كُلْ",
-      anti: "كُلِي",
-      antuma_m: "كُلَا",
-      antuma_f: "كُلَا",
-      antum: "كُلُوا",
-      antunna: "كُلْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَأْكُلْ",
-      anti: "لَا تَأْكُلِي",
-      antuma_m: "لَا تَأْكُلَا",
-      antuma_f: "لَا تَأْكُلَا",
-      antum: "لَا تَأْكُلُوا",
-      antunna: "لَا تَأْكُلْنَ"
-    }
-  },
-  
-  {
-    key: "ghadhiba",
-    id_present: "marah",
-    id_past: "telah marah",
-    id_command: "marah",
-  
-    past: {
-      ana: "غَضِبْتُ",
-      nahnu: "غَضِبْنَا",
-      anta: "غَضِبْتَ",
-      anti: "غَضِبْتِ",
-      antuma_m: "غَضِبْتُمَا",
-      antuma_f: "غَضِبْتُمَا",
-      antum: "غَضِبْتُمْ",
-      antunna: "غَضِبْتُنَّ",
-      huwa: "غَضِبَ",
-      hiya: "غَضِبَتْ",
-      huma_m: "غَضِبَا",
-      huma_f: "غَضِبَتَا",
-      hum: "غَضِبُوا",
-      hunna: "غَضِبْنَ"
-    },
-  
-    present: {
-      ana: "أَغْضَبُ",
-      nahnu: "نَغْضَبُ",
-      anta: "تَغْضَبُ",
-      anti: "تَغْضَبِينَ",
-      antuma_m: "تَغْضَبَانِ",
-      antuma_f: "تَغْضَبَانِ",
-      antum: "تَغْضَبُونَ",
-      antunna: "تَغْضَبْنَ",
-      huwa: "يَغْضَبُ",
-      hiya: "تَغْضَبُ",
-      huma_m: "يَغْضَبَانِ",
-      huma_f: "تَغْضَبَانِ",
-      hum: "يَغْضَبُونَ",
-      hunna: "يَغْضَبْنَ"
-    },
-  
-    amr: {
-      anta: "اِغْضَبْ",
-      anti: "اِغْضَبِي",
-      antuma_m: "اِغْضَبَا",
-      antuma_f: "اِغْضَبَا",
-      antum: "اِغْضَبُوا",
-      antunna: "اِغْضَبْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَغْضَبْ",
-      anti: "لَا تَغْضَبِي",
-      antuma_m: "لَا تَغْضَبَا",
-      antuma_f: "لَا تَغْضَبَا",
-      antum: "لَا تَغْضَبُوا",
-      antunna: "لَا تَغْضَبْنَ"
-    }
-  },
-  
-  {
-    key: "shabara",
-    id_present: "sabar",
-    id_past: "telah sabar",
-    id_command: "sabar",
-  
-    past: {
-      ana: "صَبَرْتُ",
-      nahnu: "صَبَرْنَا",
-      anta: "صَبَرْتَ",
-      anti: "صَبَرْتِ",
-      antuma_m: "صَبَرْتُمَا",
-      antuma_f: "صَبَرْتُمَا",
-      antum: "صَبَرْتُمْ",
-      antunna: "صَبَرْتُنَّ",
-      huwa: "صَبَرَ",
-      hiya: "صَبَرَتْ",
-      huma_m: "صَبَرَا",
-      huma_f: "صَبَرَتَا",
-      hum: "صَبَرُوا",
-      hunna: "صَبَرْنَ"
-    },
-  
-    present: {
-      ana: "أَصْبِرُ",
-      nahnu: "نَصْبِرُ",
-      anta: "تَصْبِرُ",
-      anti: "تَصْبِرِينَ",
-      antuma_m: "تَصْبِرَانِ",
-      antuma_f: "تَصْبِرَانِ",
-      antum: "تَصْبِرُونَ",
-      antunna: "تَصْبِرْنَ",
-      huwa: "يَصْبِرُ",
-      hiya: "تَصْبِرُ",
-      huma_m: "يَصْبِرَانِ",
-      huma_f: "تَصْبِرَانِ",
-      hum: "يَصْبِرُونَ",
-      hunna: "يَصْبِرْنَ"
-    },
-  
-    amr: {
-      anta: "اِصْبِرْ",
-      anti: "اِصْبِرِي",
-      antuma_m: "اِصْبِرَا",
-      antuma_f: "اِصْبِرَا",
-      antum: "اِصْبِرُوا",
-      antunna: "اِصْبِرْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَصْبِرْ",
-      anti: "لَا تَصْبِرِي",
-      antuma_m: "لَا تَصْبِرَا",
-      antuma_f: "لَا تَصْبِرَا",
-      antum: "لَا تَصْبِرُوا",
-      antunna: "لَا تَصْبِرْنَ"
-    }
-  },
-  
-  {
-    key: "rafasya",
-    id_present: "menendang",
-    id_past: "telah menendang",
-    id_command: "tendang",
-  
-    past: {
-      ana: "رَفَشْتُ",
-      nahnu: "رَفَشْنَا",
-      anta: "رَفَشْتَ",
-      anti: "رَفَشْتِ",
-      antuma_m: "رَفَشْتُمَا",
-      antuma_f: "رَفَشْتُمَا",
-      antum: "رَفَشْتُمْ",
-      antunna: "رَفَشْتُنَّ",
-      huwa: "رَفَشَ",
-      hiya: "رَفَشَتْ",
-      huma_m: "رَفَشَا",
-      huma_f: "رَفَشَتَا",
-      hum: "رَفَشُوا",
-      hunna: "رَفَشْنَ"
-    },
-  
-    present: {
-      ana: "أَرْفُشُ",
-      nahnu: "نَرْفُشُ",
-      anta: "تَرْفُشُ",
-      anti: "تَرْفُشِينَ",
-      antuma_m: "تَرْفُشَانِ",
-      antuma_f: "تَرْفُشَانِ",
-      antum: "تَرْفُشُونَ",
-      antunna: "تَرْفُشْنَ",
-      huwa: "يَرْفُشُ",
-      hiya: "تَرْفُشُ",
-      huma_m: "يَرْفُشَانِ",
-      huma_f: "تَرْفُشَانِ",
-      hum: "يَرْفُشُونَ",
-      hunna: "يَرْفُشْنَ"
-    },
-  
-    amr: {
-      anta: "اُرْفُشْ",
-      anti: "اُرْفُشِي",
-      antuma_m: "اُرْفُشَا",
-      antuma_f: "اُرْفُشَا",
-      antum: "اُرْفُشُوا",
-      antunna: "اُرْفُشْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَرْفُشْ",
-      anti: "لَا تَرْفُشِي",
-      antuma_m: "لَا تَرْفُشَا",
-      antuma_f: "لَا تَرْفُشَا",
-      antum: "لَا تَرْفُشُوا",
-      antunna: "لَا تَرْفُشْنَ"
-    }
-  },
-  
-  {
-    key: "nazhara",
-    id_present: "melihat",
-    id_past: "telah melihat",
-    id_command: "lihat",
-  
-    past: {
-      ana: "نَظَرْتُ",
-      nahnu: "نَظَرْنَا",
-      anta: "نَظَرْتَ",
-      anti: "نَظَرْتِ",
-      antuma_m: "نَظَرْتُمَا",
-      antuma_f: "نَظَرْتُمَا",
-      antum: "نَظَرْتُمْ",
-      antunna: "نَظَرْتُنَّ",
-      huwa: "نَظَرَ",
-      hiya: "نَظَرَتْ",
-      huma_m: "نَظَرَا",
-      huma_f: "نَظَرَتَا",
-      hum: "نَظَرُوا",
-      hunna: "نَظَرْنَ"
-    },
-  
-    present: {
-      ana: "أَنْظُرُ",
-      nahnu: "نَنْظُرُ",
-      anta: "تَنْظُرُ",
-      anti: "تَنْظُرِينَ",
-      antuma_m: "تَنْظُرَانِ",
-      antuma_f: "تَنْظُرَانِ",
-      antum: "تَنْظُرُونَ",
-      antunna: "تَنْظُرْنَ",
-      huwa: "يَنْظُرُ",
-      hiya: "تَنْظُرُ",
-      huma_m: "يَنْظُرَانِ",
-      huma_f: "تَنْظُرَانِ",
-      hum: "يَنْظُرُونَ",
-      hunna: "يَنْظُرْنَ"
-    },
-  
-    amr: {
-      anta: "اُنْظُرْ",
-      anti: "اُنْظُرِي",
-      antuma_m: "اُنْظُرَا",
-      antuma_f: "اُنْظُرَا",
-      antum: "اُنْظُرُوا",
-      antunna: "اُنْظُرْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَنْظُرْ",
-      anti: "لَا تَنْظُرِي",
-      antuma_m: "لَا تَنْظُرَا",
-      antuma_f: "لَا تَنْظُرَا",
-      antum: "لَا تَنْظُرُوا",
-      antunna: "لَا تَنْظُرْنَ"
-    }
-  },
-  
-  {
-    key: "sakana",
-    id_present: "tinggal",
-    id_past: "telah tinggal",
-    id_command: "tinggal",
-  
-    past: {
-      ana: "سَكَنْتُ",
-      nahnu: "سَكَنْنَا",
-      anta: "سَكَنْتَ",
-      anti: "سَكَنْتِ",
-      antuma_m: "سَكَنْتُمَا",
-      antuma_f: "سَكَنْتُمَا",
-      antum: "سَكَنْتُمْ",
-      antunna: "سَكَنْتُنَّ",
-      huwa: "سَكَنَ",
-      hiya: "سَكَنَتْ",
-      huma_m: "سَكَنَا",
-      huma_f: "سَكَنَتَا",
-      hum: "سَكَنُوا",
-      hunna: "سَكَنْنَ"
-    },
-  
-    present: {
-      ana: "أَسْكُنُ",
-      nahnu: "نَسْكُنُ",
-      anta: "تَسْكُنُ",
-      anti: "تَسْكُنِينَ",
-      antuma_m: "تَسْكُنَانِ",
-      antuma_f: "تَسْكُنَانِ",
-      antum: "تَسْكُنُونَ",
-      antunna: "تَسْكُنْنَ",
-      huwa: "يَسْكُنُ",
-      hiya: "تَسْكُنُ",
-      huma_m: "يَسْكُنَانِ",
-      huma_f: "تَسْكُنَانِ",
-      hum: "يَسْكُنُونَ",
-      hunna: "يَسْكُنْنَ"
-    },
-  
-    amr: {
-      anta: "اُسْكُنْ",
-      anti: "اُسْكُنِي",
-      antuma_m: "اُسْكُنَا",
-      antuma_f: "اُسْكُنَا",
-      antum: "اُسْكُنُوا",
-      antunna: "اُسْكُنْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَسْكُنْ",
-      anti: "لَا تَسْكُنِي",
-      antuma_m: "لَا تَسْكُنَا",
-      antuma_f: "لَا تَسْكُنَا",
-      antum: "لَا تَسْكُنُوا",
-      antunna: "لَا تَسْكُنْنَ"
-    }
-  },
-
-  {
-    key: "raja'a",
-    id_present: "kembali",
-    id_past: "telah kembali",
-    id_command: "kembali",
-  
-    past: {
-      ana: "رَجَعْتُ",
-      nahnu: "رَجَعْنَا",
-      anta: "رَجَعْتَ",
-      anti: "رَجَعْتِ",
-      antuma_m: "رَجَعْتُمَا",
-      antuma_f: "رَجَعْتُمَا",
-      antum: "رَجَعْتُمْ",
-      antunna: "رَجَعْتُنَّ",
-      huwa: "رَجَعَ",
-      hiya: "رَجَعَتْ",
-      huma_m: "رَجَعَا",
-      huma_f: "رَجَعَتَا",
-      hum: "رَجَعُوا",
-      hunna: "رَجَعْنَ"
-    },
-  
-    present: {
-      ana: "أَرْجِعُ",
-      nahnu: "نَرْجِعُ",
-      anta: "تَرْجِعُ",
-      anti: "تَرْجِعِينَ",
-      antuma_m: "تَرْجِعَانِ",
-      antuma_f: "تَرْجِعَانِ",
-      antum: "تَرْجِعُونَ",
-      antunna: "تَرْجِعْنَ",
-      huwa: "يَرْجِعُ",
-      hiya: "تَرْجِعُ",
-      huma_m: "يَرْجِعَانِ",
-      huma_f: "تَرْجِعَانِ",
-      hum: "يَرْجِعُونَ",
-      hunna: "يَرْجِعْنَ"
-    },
-  
-    amr: {
-      anta: "اِرْجِعْ",
-      anti: "اِرْجِعِي",
-      antuma_m: "اِرْجِعَا",
-      antuma_f: "اِرْجِعَا",
-      antum: "اِرْجِعُوا",
-      antunna: "اِرْجِعْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَرْجِعْ",
-      anti: "لَا تَرْجِعِي",
-      antuma_m: "لَا تَرْجِعَا",
-      antuma_f: "لَا تَرْجِعَا",
-      antum: "لَا تَرْجِعُوا",
-      antunna: "لَا تَرْجِعْنَ"
-    }
-  },
-
-  {
-    key: "kataba",
-    id_present: "menulis",
-    id_past: "telah menulis",
-    id_command: "tulis",
-  
-    past: {
-      ana: "كَتَبْتُ",
-      nahnu: "كَتَبْنَا",
-      anta: "كَتَبْتَ",
-      anti: "كَتَبْتِ",
-      antuma_m: "كَتَبْتُمَا",
-      antuma_f: "كَتَبْتُمَا",
-      antum: "كَتَبْتُمْ",
-      antunna: "كَتَبْتُنَّ",
-      huwa: "كَتَبَ",
-      hiya: "كَتَبَتْ",
-      huma_m: "كَتَبَا",
-      huma_f: "كَتَبَتَا",
-      hum: "كَتَبُوا",
-      hunna: "كَتَبْنَ"
-    },
-  
-    present: {
-      ana: "أَكْتُبُ",
-      nahnu: "نَكْتُبُ",
-      anta: "تَكْتُبُ",
-      anti: "تَكْتُبِينَ",
-      antuma_m: "تَكْتُبَانِ",
-      antuma_f: "تَكْتُبَانِ",
-      antum: "تَكْتُبُونَ",
-      antunna: "تَكْتُبْنَ",
-      huwa: "يَكْتُبُ",
-      hiya: "تَكْتُبُ",
-      huma_m: "يَكْتُبَانِ",
-      huma_f: "تَكْتُبَانِ",
-      hum: "يَكْتُبُونَ",
-      hunna: "يَكْتُبْنَ"
-    },
-  
-    amr: {
-      anta: "اُكْتُبْ",
-      anti: "اُكْتُبِي",
-      antuma_m: "اُكْتُبَا",
-      antuma_f: "اُكْتُبَا",
-      antum: "اُكْتُبُوا",
-      antunna: "اُكْتُبْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَكْتُبْ",
-      anti: "لَا تَكْتُبِي",
-      antuma_m: "لَا تَكْتُبَا",
-      antuma_f: "لَا تَكْتُبَا",
-      antum: "لَا تَكْتُبُوا",
-      antunna: "لَا تَكْتُبْنَ"
-    }
-  },
-
-  {
-    key: "sakata",
-    id_present: "diam",
-    id_past: "telah diam",
-    id_command: "diam",
-  
-    past: {
-      ana: "سَكَتُّ",
-      nahnu: "سَكَتْنَا",
-      anta: "سَكَتَّ",
-      anti: "سَكَتِّ",
-      antuma_m: "سَكَتُّمَا",
-      antuma_f: "سَكَتُّمَا",
-      antum: "سَكَتُّمْ",
-      antunna: "سَكَتْنَ",
-      huwa: "سَكَتَ",
-      hiya: "سَكَتَتْ",
-      huma_m: "سَكَتَا",
-      huma_f: "سَكَتَتَا",
-      hum: "سَكَتُوا",
-      hunna: "سَكَتْنَ"
-    },
-  
-    present: {
-      ana: "أَسْكُتُ",
-      nahnu: "نَسْكُتُ",
-      anta: "تَسْكُتُ",
-      anti: "تَسْكُتِينَ",
-      antuma_m: "تَسْكُتَانِ",
-      antuma_f: "تَسْكُتَانِ",
-      antum: "تَسْكُتُونَ",
-      antunna: "تَسْكُتْنَ",
-      huwa: "يَسْكُتُ",
-      hiya: "تَسْكُتُ",
-      huma_m: "يَسْكُتَانِ",
-      huma_f: "تَسْكُتَانِ",
-      hum: "يَسْكُتُونَ",
-      hunna: "يَسْكُتْنَ"
-    },
-  
-    amr: {
-      anta: "اُسْكُتْ",
-      anti: "اُسْكُتِي",
-      antuma_m: "اُسْكُتَا",
-      antuma_f: "اُسْكُتَا",
-      antum: "اُسْكُتُوا",
-      antunna: "اُسْكُتْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَسْكُتْ",
-      anti: "لَا تَسْكُتِي",
-      antuma_m: "لَا تَسْكُتَا",
-      antuma_f: "لَا تَسْكُتَا",
-      antum: "لَا تَسْكُتُوا",
-      antunna: "لَا تَسْكُتْنَ"
-    }
-  },
-
-  {
-    key: "isytara",
-    id_present: "membeli",
-    id_past: "telah membeli",
-    id_command: "beli",
-  
-    past: {
-      ana: "اِشْتَرَيْتُ",
-      nahnu: "اِشْتَرَيْنَا",
-      anta: "اِشْتَرَيْتَ",
-      anti: "اِشْتَرَيْتِ",
-      antuma_m: "اِشْتَرَيْتُمَا",
-      antuma_f: "اِشْتَرَيْتُمَا",
-      antum: "اِشْتَرَيْتُمْ",
-      antunna: "اِشْتَرَيْتُنَّ",
-      huwa: "اِشْتَرَى",
-      hiya: "اِشْتَرَتْ",
-      huma_m: "اِشْتَرَيَا",
-      huma_f: "اِشْتَرَتَا",
-      hum: "اِشْتَرَوْا",
-      hunna: "اِشْتَرَيْنَ"
-    },
-  
-    present: {
-      ana: "أَشْتَرِي",
-      nahnu: "نَشْتَرِي",
-      anta: "تَشْتَرِي",
-      anti: "تَشْتَرِينَ",
-      antuma_m: "تَشْتَرِيَانِ",
-      antuma_f: "تَشْتَرِيَانِ",
-      antum: "تَشْتَرُونَ",
-      antunna: "تَشْتَرِينَ",
-      huwa: "يَشْتَرِي",
-      hiya: "تَشْتَرِي",
-      huma_m: "يَشْتَرِيَانِ",
-      huma_f: "تَشْتَرِيَانِ",
-      hum: "يَشْتَرُونَ",
-      hunna: "يَشْتَرِينَ"
-    },
-  
-    amr: {
-      anta: "اِشْتَرِ",
-      anti: "اِشْتَرِي",
-      antuma_m: "اِشْتَرِيَا",
-      antuma_f: "اِشْتَرِيَا",
-      antum: "اِشْتَرُوا",
-      antunna: "اِشْتَرِينَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَشْتَرِ",
-      anti: "لَا تَشْتَرِي",
-      antuma_m: "لَا تَشْتَرِيَا",
-      antuma_f: "لَا تَشْتَرِيَا",
-      antum: "لَا تَشْتَرُوا",
-      antunna: "لَا تَشْتَرِينَ"
-    }
-  },
-
-  {
-    key: "tawaddha",
-    id_present: "berwudhu",
-    id_past: "telah berwudhu",
-    id_command: "wudhu",
-  
-    past: {
-      ana: "تَوَضَّأْتُ",
-      nahnu: "تَوَضَّأْنَا",
-      anta: "تَوَضَّأْتَ",
-      anti: "تَوَضَّأْتِ",
-      antuma_m: "تَوَضَّأْتُمَا",
-      antuma_f: "تَوَضَّأْتُمَا",
-      antum: "تَوَضَّأْتُمْ",
-      antunna: "تَوَضَّأْتُنَّ",
-      huwa: "تَوَضَّأَ",
-      hiya: "تَوَضَّأَتْ",
-      huma_m: "تَوَضَّأَا",
-      huma_f: "تَوَضَّأَتَا",
-      hum: "تَوَضَّأُوا",
-      hunna: "تَوَضَّأْنَ"
-    },
-  
-    present: {
-      ana: "أَتَوَضَّأُ",
-      nahnu: "نَتَوَضَّأُ",
-      anta: "تَتَوَضَّأُ",
-      anti: "تَتَوَضَّئِينَ",
-      antuma_m: "تَتَوَضَّئَانِ",
-      antuma_f: "تَتَوَضَّئَانِ",
-      antum: "تَتَوَضَّئُونَ",
-      antunna: "تَتَوَضَّأْنَ",
-      huwa: "يَتَوَضَّأُ",
-      hiya: "تَتَوَضَّأُ",
-      huma_m: "يَتَوَضَّئَانِ",
-      huma_f: "تَتَوَضَّئَانِ",
-      hum: "يَتَوَضَّئُونَ",
-      hunna: "يَتَوَضَّأْنَ"
-    },
-  
-    amr: {
-      anta: "تَوَضَّأْ",
-      anti: "تَوَضَّئِي",
-      antuma_m: "تَوَضَّئَا",
-      antuma_f: "تَوَضَّئَا",
-      antum: "تَوَضَّئُوا",
-      antunna: "تَوَضَّأْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَتَوَضَّأْ",
-      anti: "لَا تَتَوَضَّئِي",
-      antuma_m: "لَا تَتَوَضَّئَا",
-      antuma_f: "لَا تَتَوَضَّئَا",
-      antum: "لَا تَتَوَضَّئُوا",
-      antunna: "لَا تَتَوَضَّأْنَ"
-    }
-  },
-
-  {
-    key: "shalla",
-    id_present: "shalat",
-    id_past: "telah shalat",
-    id_command: "shalat",
-  
-    past: {
-      ana: "صَلَّيْتُ",
-      nahnu: "صَلَّيْنَا",
-      anta: "صَلَّيْتَ",
-      anti: "صَلَّيْتِ",
-      antuma_m: "صَلَّيْتُمَا",
-      antuma_f: "صَلَّيْتُمَا",
-      antum: "صَلَّيْتُمْ",
-      antunna: "صَلَّيْتُنَّ",
-      huwa: "صَلَّى",
-      hiya: "صَلَّتْ",
-      huma_m: "صَلَّيَا",
-      huma_f: "صَلَّتَا",
-      hum: "صَلَّوْا",
-      hunna: "صَلَّيْنَ"
-    },
-  
-    present: {
-      ana: "أُصَلِّي",
-      nahnu: "نُصَلِّي",
-      anta: "تُصَلِّي",
-      anti: "تُصَلِّينَ",
-      antuma_m: "تُصَلِّيَانِ",
-      antuma_f: "تُصَلِّيَانِ",
-      antum: "تُصَلُّونَ",
-      antunna: "تُصَلِّينَ",
-      huwa: "يُصَلِّي",
-      hiya: "تُصَلِّي",
-      huma_m: "يُصَلِّيَانِ",
-      huma_f: "تُصَلِّيَانِ",
-      hum: "يُصَلُّونَ",
-      hunna: "يُصَلِّينَ"
-    },
-  
-    amr: {
-      anta: "صَلِّ",
-      anti: "صَلِّي",
-      antuma_m: "صَلِّيَا",
-      antuma_f: "صَلِّيَا",
-      antum: "صَلُّوا",
-      antunna: "صَلِّينَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تُصَلِّ",
-      anti: "لَا تُصَلِّي",
-      antuma_m: "لَا تُصَلِّيَا",
-      antuma_f: "لَا تُصَلِّيَا",
-      antum: "لَا تُصَلُّوا",
-      antunna: "لَا تُصَلِّينَ"
-    }
-  },
-
-  {
-    key: "qara'a",
-    id_present: "membaca",
-    id_past: "telah membaca",
-    id_command: "baca",
-
-    past: {
-      ana: "قَرَأْتُ",
-      nahnu: "قَرَأْنَا",
-      anta: "قَرَأْتَ",
-      anti: "قَرَأْتِ",
-      antuma_m: "قَرَأْتُمَا",
-      antuma_f: "قَرَأْتُمَا",
-      antum: "قَرَأْتُمْ",
-      antunna: "قَرَأْتُنَّ",
-      huwa: "قَرَأَ",
-      hiya: "قَرَأَتْ",
-      huma_m: "قَرَأَا",
-      huma_f: "قَرَأَتَا",
-      hum: "قَرَأُوا",
-      hunna: "قَرَأْنَ"
-    },
-
-    present: {
-      ana: "أَقْرَأُ",
-      nahnu: "نَقْرَأُ",
-      anta: "تَقْرَأُ",
-      anti: "تَقْرَئِينَ",
-      antuma_m: "تَقْرَئَانِ",
-      antuma_f: "تَقْرَئَانِ",
-      antum: "تَقْرَئُونَ",
-      antunna: "تَقْرَأْنَ",
-      huwa: "يَقْرَأُ",
-      hiya: "تَقْرَأُ",
-      huma_m: "يَقْرَئَانِ",
-      huma_f: "تَقْرَئَانِ",
-      hum: "يَقْرَئُونَ",
-      hunna: "يَقْرَأْنَ"
-    },
-
-    amr: {
-      anta: "اِقْرَأْ",
-      anti: "اِقْرَئِي",
-      antuma_m: "اِقْرَئَا",
-      antuma_f: "اِقْرَئَا",
-      antum: "اِقْرَئُوا",
-      antunna: "اِقْرَأْنَ"
-    },
-
-    nahyi: {
-      anta: "لَا تَقْرَأْ",
-      anti: "لَا تَقْرَئِي",
-      antuma_m: "لَا تَقْرَئَا",
-      antuma_f: "لَا تَقْرَئَا",
-      antum: "لَا تَقْرَئُوا",
-      antunna: "لَا تَقْرَأْنَ"
-    }
-  },
-
-  {
-    key: "takallama",
-    id_present: "berbicara",
-    id_past: "telah berbicara",
-    id_command: "bicara",
-
-    past: {
-      ana: "تَكَلَّمْتُ",
-      nahnu: "تَكَلَّمْنَا",
-      anta: "تَكَلَّمْتَ",
-      anti: "تَكَلَّمْتِ",
-      antuma_m: "تَكَلَّمْتُمَا",
-      antuma_f: "تَكَلَّمْتُمَا",
-      antum: "تَكَلَّمْتُمْ",
-      antunna: "تَكَلَّمْتُنَّ",
-      huwa: "تَكَلَّمَ",
-      hiya: "تَكَلَّمَتْ",
-      huma_m: "تَكَلَّمَا",
-      huma_f: "تَكَلَّمَتَا",
-      hum: "تَكَلَّمُوا",
-      hunna: "تَكَلَّمْنَ"
-    },
-
-    present: {
-      ana: "أَتَكَلَّمُ",
-      nahnu: "نَتَكَلَّمُ",
-      anta: "تَتَكَلَّمُ",
-      anti: "تَتَكَلَّمِينَ",
-      antuma_m: "تَتَكَلَّمَانِ",
-      antuma_f: "تَتَكَلَّمَانِ",
-      antum: "تَتَكَلَّمُونَ",
-      antunna: "تَتَكَلَّمْنَ",
-      huwa: "يَتَكَلَّمُ",
-      hiya: "تَتَكَلَّمُ",
-      huma_m: "يَتَكَلَّمَانِ",
-      huma_f: "تَتَكَلَّمَانِ",
-      hum: "يَتَكَلَّمُونَ",
-      hunna: "تَتَكَلَّمْنَ"
-    },
-
-    amr: {
-      anta: "تَكَلَّمْ",
-      anti: "تَكَلَّمِي",
-      antuma_m: "تَكَلَّمَا",
-      antuma_f: "تَكَلَّمَا",
-      antum: "تَكَلَّمُوا",
-      antunna: "تَكَلَّمْنَ"
-    },
-
-    nahyi: {
-      anta: "لَا تَتَكَلَّمْ",
-      anti: "لَا تَتَكَلَّمِي",
-      antuma_m: "لَا تَتَكَلَّمَا",
-      antuma_f: "لَا تَتَكَلَّمَا",
-      antum: "لَا تَتَكَلَّمُوا",
-      antunna: "لَا تَتَكَلَّمْنَ"
-    }
-  },
-
-  {
-    key: "arafa",
-    id_present: "mengetahui",
-    id_past: "telah mengetahui",
-    id_command: "ketahui",
-  
-    past: {
-      ana: "عَرَفْتُ",
-      nahnu: "عَرَفْنَا",
-      anta: "عَرَفْتَ",
-      anti: "عَرَفْتِ",
-      antuma_m: "عَرَفْتُمَا",
-      antuma_f: "عَرَفْتُمَا",
-      antum: "عَرَفْتُمْ",
-      antunna: "عَرَفْتُنَّ",
-      huwa: "عَرَفَ",
-      hiya: "عَرَفَتْ",
-      huma_m: "عَرَفَا",
-      huma_f: "عَرَفَتَا",
-      hum: "عَرَفُوا",
-      hunna: "عَرَفْنَ"
-    },
-  
-    present: {
-      ana: "أَعْرِفُ",
-      nahnu: "نَعْرِفُ",
-      anta: "تَعْرِفُ",
-      anti: "تَعْرِفِينَ",
-      antuma_m: "تَعْرِفَانِ",
-      antuma_f: "تَعْرِفَانِ",
-      antum: "تَعْرِفُونَ",
-      antunna: "تَعْرِفْنَ",
-      huwa: "يَعْرِفُ",
-      hiya: "تَعْرِفُ",
-      huma_m: "يَعْرِفَانِ",
-      huma_f: "تَعْرِفَانِ",
-      hum: "يَعْرِفُونَ",
-      hunna: "يَعْرِفْنَ"
-    },
-  
-    amr: {
-      anta: "اِعْرِفْ",
-      anti: "اِعْرِفِي",
-      antuma_m: "اِعْرِفَا",
-      antuma_f: "اِعْرِفَا",
-      antum: "اِعْرِفُوا",
-      antunna: "اِعْرِفْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَعْرِفْ",
-      anti: "لَا تَعْرِفِي",
-      antuma_m: "لَا تَعْرِفَا",
-      antuma_f: "لَا تَعْرِفَا",
-      antum: "لَا تَعْرِفُوا",
-      antunna: "لَا تَعْرِفْنَ"
-    }
-  },
-
-  {
-    key: "aflaha",
-    id_present: "berhasil",
-    id_past: "telah berhasil",
-    id_command: "berhasil",
-  
-    past: {
-      ana: "أَفْلَحْتُ",
-      nahnu: "أَفْلَحْنَا",
-      anta: "أَفْلَحْتَ",
-      anti: "أَفْلَحْتِ",
-      antuma_m: "أَفْلَحْتُمَا",
-      antuma_f: "أَفْلَحْتُمَا",
-      antum: "أَفْلَحْتُمْ",
-      antunna: "أَفْلَحْتُنَّ",
-      huwa: "أَفْلَحَ",
-      hiya: "أَفْلَحَتْ",
-      huma_m: "أَفْلَحَا",
-      huma_f: "أَفْلَحَتَا",
-      hum: "أَفْلَحُوا",
-      hunna: "أَفْلَحْنَ"
-    },
-  
-    present: {
-      ana: "أَفْلِحُ",
-      nahnu: "نَفْلِحُ",
-      anta: "تَفْلِحُ",
-      anti: "تَفْلِحِينَ",
-      antuma_m: "تَفْلِحَانِ",
-      antuma_f: "تَفْلِحَانِ",
-      antum: "تَفْلِحُونَ",
-      antunna: "تَفْلِحْنَ",
-      huwa: "يَفْلِحُ",
-      hiya: "تَفْلِحُ",
-      huma_m: "يَفْلِحَانِ",
-      huma_f: "تَفْلِحَانِ",
-      hum: "يَفْلِحُونَ",
-      hunna: "يَفْلِحْنَ"
-    },
-  
-    amr: {
-      anta: "اِفْلِحْ",
-      anti: "اِفْلِحِي",
-      antuma_m: "اِفْلِحَا",
-      antuma_f: "اِفْلِحَا",
-      antum: "اِفْلِحُوا",
-      antunna: "اِفْلِحْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَفْلِحْ",
-      anti: "لَا تَفْلِحِي",
-      antuma_m: "لَا تَفْلِحَا",
-      antuma_f: "لَا تَفْلِحَا",
-      antum: "لَا تَفْلِحُوا",
-      antunna: "لَا تَفْلِحْنَ"
-    }
-  },
-
-  {
-    key: "ista'dzana",
-    id_present: "meminta izin",
-    id_past: "telah meminta izin",
-    id_command: "minta izin",
-  
-    past: {
-      ana: "اِسْتَأْذَنْتُ",
-      nahnu: "اِسْتَأْذَنْنَا",
-      anta: "اِسْتَأْذَنْتَ",
-      anti: "اِسْتَأْذَنْتِ",
-      antuma_m: "اِسْتَأْذَنْتُمَا",
-      antuma_f: "اِسْتَأْذَنْتُمَا",
-      antum: "اِسْتَأْذَنْتُمْ",
-      antunna: "اِسْتَأْذَنْتُنَّ",
-      huwa: "اِسْتَأْذَنَ",
-      hiya: "اِسْتَأْذَنَتْ",
-      huma_m: "اِسْتَأْذَنَا",
-      huma_f: "اِسْتَأْذَنَتَا",
-      hum: "اِسْتَأْذَنُوا",
-      hunna: "اِسْتَأْذَنْنَ"
-    },
-  
-    present: {
-      ana: "أَسْتَأْذِنُ",
-      nahnu: "نَسْتَأْذِنُ",
-      anta: "تَسْتَأْذِنُ",
-      anti: "تَسْتَأْذِنِينَ",
-      antuma_m: "تَسْتَأْذِنَانِ",
-      antuma_f: "تَسْتَأْذِنَانِ",
-      antum: "تَسْتَأْذِنُونَ",
-      antunna: "تَسْتَأْذِنْنَ",
-      huwa: "يَسْتَأْذِنُ",
-      hiya: "تَسْتَأْذِنُ",
-      huma_m: "يَسْتَأْذِنَانِ",
-      huma_f: "تَسْتَأْذِنَانِ",
-      hum: "يَسْتَأْذِنُونَ",
-      hunna: "يَسْتَأْذِنْنَ"
-    },
-  
-    amr: {
-      anta: "اِسْتَأْذِنْ",
-      anti: "اِسْتَأْذِنِي",
-      antuma_m: "اِسْتَأْذِنَا",
-      antuma_f: "اِسْتَأْذِنَا",
-      antum: "اِسْتَأْذِنُوا",
-      antunna: "اِسْتَأْذِنْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَسْتَأْذِنْ",
-      anti: "لَا تَسْتَأْذِنِي",
-      antuma_m: "لَا تَسْتَأْذِنَا",
-      antuma_f: "لَا تَسْتَأْذِنَا",
-      antum: "لَا تَسْتَأْذِنُوا",
-      antunna: "لَا تَسْتَأْذِنْنَ"
-    }
-  },
-
-  {
-    key: "la'iba",
-    id_present: "bermain",
-    id_past: "telah bermain",
-    id_command: "bermain",
-  
-    past: {
-      ana: "لَعِبْتُ",
-      nahnu: "لَعِبْنَا",
-      anta: "لَعِبْتَ",
-      anti: "لَعِبْتِ",
-      antuma_m: "لَعِبْتُمَا",
-      antuma_f: "لَعِبْتُمَا",
-      antum: "لَعِبْتُمْ",
-      antunna: "لَعِبْتُنَّ",
-      huwa: "لَعِبَ",
-      hiya: "لَعِبَتْ",
-      huma_m: "لَعِبَا",
-      huma_f: "لَعِبَتَا",
-      hum: "لَعِبُوا",
-      hunna: "لَعِبْنَ"
-    },
-  
-    present: {
-      ana: "أَلْعَبُ",
-      nahnu: "نَلْعَبُ",
-      anta: "تَلْعَبُ",
-      anti: "تَلْعَبِينَ",
-      antuma_m: "تَلْعَبَانِ",
-      antuma_f: "تَلْعَبَانِ",
-      antum: "تَلْعَبُونَ",
-      antunna: "تَلْعَبْنَ",
-      huwa: "يَلْعَبُ",
-      hiya: "تَلْعَبُ",
-      huma_m: "يَلْعَبَانِ",
-      huma_f: "تَلْعَبَانِ",
-      hum: "يَلْعَبُونَ",
-      hunna: "يَلْعَبْنَ"
-    },
-  
-    amr: {
-      anta: "اِلْعَبْ",
-      anti: "اِلْعَبِي",
-      antuma_m: "اِلْعَبَا",
-      antuma_f: "اِلْعَبَا",
-      antum: "اِلْعَبُوا",
-      antunna: "اِلْعَبْنَ"
-    },
-  
-    nahyi: {
-      anta: "لَا تَلْعَبْ",
-      anti: "لَا تَلْعَبِي",
-      antuma_m: "لَا تَلْعَبَا",
-      antuma_f: "لَا تَلْعَبَا",
-      antum: "لَا تَلْعَبُوا",
-      antunna: "لَا تَلْعَبْنَ"
     }
   },
 ];
